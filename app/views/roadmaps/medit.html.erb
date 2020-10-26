@@ -6,7 +6,7 @@
     <%= message %>
 </div>
 <%end%>
-<%=form_tag("/roadmap/updateedit/#{@roadmapshow.id}") do %>
+<%=form_tag("/roadmap/updatemap/#{@roadmapshow.id}") do %>
 　<p>タイトル</p>
 　<input type="text" value= "<%= @roadmapshow.content %>" name="content">
 　

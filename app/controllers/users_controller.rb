@@ -11,8 +11,6 @@ class UsersController < ApplicationController
     @mymaps = Roadmapshow.where(roadmap_id: @user.mymap)
   end
   
-  def mapedit
-    @user = User.find_by(id: 1)
-    @mymaps = Roadmapshow.where(roadmap_id: @user.mymap)
+  def singup
   end
 end

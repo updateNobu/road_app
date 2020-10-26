@@ -1,3 +1,4 @@
+<!--No10-->
 <h3>My page</h3>
 <%= link_to("プロフィール", "/user/show")%>
 <p>マイページ</p>
@@ -12,4 +13,4 @@
       <%= map.comment %>
     <% end %>
 </div>
-<%= link_to("編集", "/user/mapedit")%>
+<%= link_to("編集", "/roadmap/mapedit/#{@user.id}")%>

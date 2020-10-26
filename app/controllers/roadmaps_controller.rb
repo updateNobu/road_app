@@ -38,6 +38,21 @@ class RoadmapsController < ApplicationController
     end
   end
   
+  def mfini
+    @roadmap_show = Roadmapshow.new(roadmap_show_params)
+    @roadmap = Roadmap.find_by(id: @roadmap_show.roadmap_id)
+    if params[:finish]
+      @roadmap_show.save
+      redirect_to ("user/road")
+      flash[:notice]= "編集成功！"
+    else
+      if !@roadmap_show.save
+        flash[:notice]= "項目をすべて埋めてください"
+      end
+      redirect_to ("/roadmap/mapedit/#{@roadmap_show.roadmap_id}")
+    end
+  end
+  
   def update
     @roadmap = Roadmap.find_by(id: params[:id])
     @roadmap.title = params[:title]
@@ -160,9 +175,15 @@ class RoadmapsController < ApplicationController
   end
   
   def destroyz
-    @roadmapshow = RoadmapShow.find_by(id: params[:id])
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.destroy
     redirect_to("/roadmap/editsend/#{@roadmapshow.roadmap_id}")
+  end
+  
+  def destroymap
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
+    @roadmapshow.destroy
+    redirect_to("/roadmap/mapedit/#{@roadmapshow.roadmap_id}")
   end
   
   def destroyall
@@ -184,5 +205,25 @@ class RoadmapsController < ApplicationController
     else
       render("roadmaps/editz")
     end
+  end
+  
+  def updatemap
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
+    @roadmapshow.content = params[:content]
+    @roadmapshow.method = params[:method]
+    @roadmapshow.time_required = params[:time_required]
+    @roadmapshow.comment = params[:comment]
+    @roadmap = Roadmap.find_by(id: @roadmapshow.roadmap_id)
+    if @roadmapshow.save
+      redirect_to("/roadmap/mapedit/#{@roadmap.user_id}")
+      flash[:notice]= "編集成功！"
+    else
+      render("roadmaps/medit")
+    end
+  end
+  
+  def mapedit
+    @user = User.find_by(id: params[:id])
+    @mymaps = Roadmapshow.where(roadmap_id: @user.mymap)
   end
 end
