@@ -1,4 +1,9 @@
 <!--NO3-->
+<% if flash[:notice]%>
+ <div>
+   <%= flash[:notice]%>
+ </div>
+<% end %>
 <h1>バックエンド</h1>
 <% @roadmaps.each do |roadmap| %>
  <div>
@@ -8,3 +13,4 @@
  </div>
 <% end %>
 <%= link_to("投稿", "/roadmap/new") %>
+<%= link_to("種別選択に戻る", "/") %>

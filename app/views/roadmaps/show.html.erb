@@ -24,3 +24,4 @@
 </div>
 <%= link_to("編集", "/roadmap/edit/#{@roadmap.id}")%>
 <%= link_to("投稿を削除", "/roadmap/destroyall/#{@roadmap.id}", {method: "post"})%>
+<%= link_to("投稿一覧", "/roadmap/#{@roadmap.category_id}")%>

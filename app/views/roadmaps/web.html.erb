@@ -1,4 +1,9 @@
 <!--NO4-->
+<% if flash[:notice]%>
+ <div>
+   <%= flash[:notice]%>
+ </div>
+<% end %>
 <h1>web制作</h1>
 <% @roadmaps.each do |roadmap| %>
  <div> <!--!リンクを張る-->
@@ -7,3 +12,5 @@
   <%= roadmap.created_at%>
  </div>
 <% end %>
+<%= link_to("投稿", "/roadmap/new") %>
+<%= link_to("種別選択に戻る", "/") %>
