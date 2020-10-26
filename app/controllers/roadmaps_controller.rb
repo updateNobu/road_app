@@ -125,7 +125,12 @@ class RoadmapsController < ApplicationController
   def editshow
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
   end
+  
   def editz
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
+  end
+  
+  def medit
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
   end
   

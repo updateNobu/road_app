@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   get "user/new" => "users#new"
-  get "user" => "users#showpage"
+  get "user/show" => "users#showpage"
+  get "user/road" => "users#roadeach"
+  get "user/mapedit" => "users#mapedit"
+  
   get "/" => "home#top"
   get "about" => "home#about"
   
   get "roadmap/editshow/:id" => "roadmaps#editshow"
+  get "roadmap/mapedit/:id" => "roadmaps#medit"
   get "roadmap/editz/:id" => "roadmaps#editz"
   get "roadmap/editsend/:id" => "roadmaps#editsend"
   get "roadmap/edit/:id" => "roadmaps#edit"
