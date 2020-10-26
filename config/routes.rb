@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get "/" => "hometop#top"
-  get "about" => "hometop#about"
+  get "/" => "home#top"
+  get "about" => "home#about"
   
   get "roadmap/editshow/:id" => "roadmaps#editshow"
   get "roadmap/editz/:id" => "roadmaps#editz"
