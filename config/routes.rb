@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/new'
-  get 'users/showpage'
+  get "user/new" => "users#new"
+  get "user" => "users#showpage"
   get "/" => "home#top"
   get "about" => "home#about"
   

@@ -3,5 +3,6 @@ class UsersController < ApplicationController
   end
 
   def showpage
+    @user = User.find_by(id: 1)
   end
 end
