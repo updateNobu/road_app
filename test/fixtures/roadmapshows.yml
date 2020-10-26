@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyString
+  method: MyString
+  time_required: 1
+  comment: MyText
+  roadmap_id: 1
+
+two:
+  content: MyString
+  method: MyString
+  time_required: 1
+  comment: MyText
+  roadmap_id: 1
