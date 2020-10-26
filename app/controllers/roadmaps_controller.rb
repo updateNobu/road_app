@@ -18,13 +18,13 @@ class RoadmapsController < ApplicationController
   end
   
   def editsend
-    @roadmap_shows = RoadmapShow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
     @id = params[:id]
-    # @roadmap_show = RoadmapShow.find_by(roadmap_id: params[:id])
+    # @roadmap_show = Roadmapshow.find_by(roadmap_id: params[:id])
   end
   
   def fini
-    @roadmap_show = RoadmapShow.new(roadmap_show_params)
+    @roadmap_show = Roadmapshow.new(roadmap_show_params)
     @roadmap = Roadmap.find_by(id: @roadmap_show.roadmap_id)
     if params[:finish]
       @roadmap_show.save
@@ -94,16 +94,16 @@ class RoadmapsController < ApplicationController
   def show
     @roadmap = Roadmap.find_by(id: params[:id])
     @user = User.find_by(id: @roadmap.user_id)
-    @roadmap_shows = RoadmapShow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
   end
   
   def new_show
-    @roadmap_shows = RoadmapShow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
     @id = params[:id]
   end
   
   def add #ロードマップ詳細ページでロードマップを増やしたいときに押す　今ある情報をセーブする
-    @roadmap_show = RoadmapShow.new(roadmap_show_params)
+    @roadmap_show = Roadmapshow.new(roadmap_show_params)
     @roadmap = Roadmap.find_by(id: @roadmap_show.roadmap_id)
     if @roadmap_show.save
      if params[:finish]
@@ -123,14 +123,14 @@ class RoadmapsController < ApplicationController
   end
   
   def editshow
-    @roadmapshow = RoadmapShow.find_by(id: params[:id])
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
   end
   def editz
-    @roadmapshow = RoadmapShow.find_by(id: params[:id])
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
   end
   
   def updateshow
-    @roadmapshow = RoadmapShow.find_by(id: params[:id])
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.content = params[:content]
     @roadmapshow.method = params[:method]
     @roadmapshow.time_required = params[:time_required]
@@ -148,8 +148,8 @@ class RoadmapsController < ApplicationController
   # end
   
   def destroyshow
-    @roadmapshow = RoadmapShow.find_by(id: params[:id])
-    @roadmapshow.destroy
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
+    @Roadmapshow.destroy
     redirect_to("/roadmap/new/#{@roadmapshow.roadmap_id}")
     flash[:notice]= "ロードマップを削除しました。"
   end
@@ -168,7 +168,7 @@ class RoadmapsController < ApplicationController
   end
   
   def updateedit
-    @roadmapshow = RoadmapShow.find_by(id: params[:id])
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.content = params[:content]
     @roadmapshow.method = params[:method]
     @roadmapshow.time_required = params[:time_required]

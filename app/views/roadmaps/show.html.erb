@@ -1,0 +1,26 @@
+<!--NO6-->
+<% if flash[:notice]%>
+ <div>
+   <%= flash[:notice]%>
+ </div>
+<% end %>
+<div>
+  <%= @roadmap.title %>
+  <%= @user.name %>
+  <%= @roadmap.created_at %>
+  <%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %>
+  <%= "必要期間: 上記のペースで#{@roadmap.period_stady}ケ月ほど"%>
+  <%= "合計時間目安: #{@roadmap.total_stady_time}時間" %>
+  <%= "コメント: #{@roadmap.total_comment}" %>
+</div>
+<div>
+  <h1>ロードマップ</h1>
+  <% @roadmap_shows.each do |show| %>
+    <%= show.content %>
+    <%= show.method %>
+    <%= "#{show.time_required}分" %>
+    <%= show.comment %>
+  <% end %>
+</div>
+<%= link_to("編集", "/roadmap/edit/#{@roadmap.id}")%>
+<%= link_to("投稿を削除", "/roadmap/destroyall/#{@roadmap.id}", {method: "post"})%>

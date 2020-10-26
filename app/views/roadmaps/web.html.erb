@@ -1,0 +1,9 @@
+<!--NO4-->
+<h1>web制作</h1>
+<% @roadmaps.each do |roadmap| %>
+ <div> <!--!リンクを張る-->
+  <%= link_to(roadmap.title,"/roadmap/3/#{roadmap.id}" ) %>
+  <%= link_to(@user.name,"#" ) %>
+  <%= roadmap.created_at%>
+ </div>
+<% end %>

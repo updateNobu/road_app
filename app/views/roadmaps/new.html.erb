@@ -1,2 +1,41 @@
-<h1>Roadmaps#new</h1>
-<p>Find me in app/views/roadmaps/new.html.erb</p>
+<!--no17-->
+<h3>Create roadmap</h3>
+<h1>ロードマップ投稿</h1>
+<!--<%# @roadmap.errors.full_messages.each do |message| %>-->
+<!--<div>-->
+    <%#= message %>
+<!--</div>-->
+<!--<%#end%>-->
+<% if flash[:notice]%>
+ <div>
+   <%= flash[:notice]%>
+ </div>
+<% end %>
+<div>
+  <%= form_with url: {controller: 'roadmaps', action: 'create' } do  |f| %>
+      <%= f.label :タイトル %>
+      <%= f.text_field :title %>
+
+      <%= f.label :勉強時間平日？時間 %>
+      <%= f.number_field :stady_time_week %>
+      
+      <%= f.label :勉強時間休日？時間 %>
+      <%= f.number_field :stady_time_holiday %>
+      
+      <%= f.label :必要期間？か月 %>
+      <%= f.number_field :period_stady %>
+      
+      <%= f.label :合計時間目安？時間 %>
+      <%= f.number_field :total_stady_time %>
+      
+      <%= f.label :コメント %>
+      <%= f.text_area :total_comment %>
+      
+      
+      <%= f.label :ジャンル %>
+      <%= f.radio_button :category_id, 1 %>フロントエンド <%= f.radio_button :category_id, 2 %>バックエンド
+      <%= f.radio_button :category_id, 3 %>web制作 <%= f.radio_button :category_id, 4 %>フリーランス
+
+   <input type="submit" value="ロードマップ詳細">
+  <% end %>
+</div>

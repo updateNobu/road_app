@@ -1,0 +1,9 @@
+<!--NO5-->
+<h1>フリーランス</h1>
+<% @roadmaps.each do |roadmap| %>
+ <div>
+  <%= link_to(roadmap.title,"/roadmap/4/#{roadmap.id}" ) %>
+  <%= link_to(@user.name,"#" ) %>
+  <%= roadmap.created_at%>
+ </div>
+<% end %>

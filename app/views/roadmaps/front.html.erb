@@ -1,0 +1,15 @@
+<!--NO2-->
+<% if flash[:notice]%>
+ <div>
+   <%= flash[:notice]%>
+ </div>
+<% end %>
+<h1>フロントエンド</h1>
+<% @roadmaps.each do |roadmap| %>
+ <div>
+  <%= link_to(roadmap.title,"/roadmap/1/#{roadmap.id}" ) %>
+  <%= link_to(@user.name,"#" ) %>
+  <%= roadmap.created_at%>
+ </div>
+<% end %>
+<%= link_to("投稿", "/roadmap/new") %>
