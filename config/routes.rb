@@ -33,8 +33,9 @@ Rails.application.routes.draw do
   get "roadmap/mapedit/:id" => "roadmaps#mapedit"
   
   get "user/new" => "users#new"
-  get "user/show" => "users#showpage"
-  get "user/road" => "users#roadeach"
+  get "user/show/:id" => "users#showpage"
+  get "user/road/:id" => "users#roadeach"
+  post "user/create" => "users#create"
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

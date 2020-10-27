@@ -1,7 +1,12 @@
 <!--No9-->
+<% if flash[:notice]%>
+ <div>
+   <%= flash[:notice]%>
+ </div>
+<% end %>
 <h3>My page</h3>
 <p>プロフィール</p>
-<%= link_to("ロードマップ", "/user/road")%>
+<%= link_to("ロードマップ", "/user/road/#{@user.id}")%>
 <%= link_to("お気に入り", "#")%>
 <%= link_to("投稿", "#")%>
 

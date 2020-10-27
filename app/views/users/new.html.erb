@@ -1,2 +1,22 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<!--no8-->
+<h3>ユーザー登録</h3>
+<% @user.errors.full_messages.each do |message| %>
+<div>
+    <%= message %>
+</div>
+<%end%>
+<%=form_tag("/user/create") do %>
+　<p>ユーザーネーム</p>
+　<input type="text" value= "<%= @user.name %>" name="name">
+　
+　<p>メールアドレス</p>
+　<input type="email" value= "<%= @user.email %>" name="email">
+　
+　<p>パスワード</p>
+　<input type="password" value= "<%= @user.password %>" name="password">
+　
+　<p>アイコン</p>
+　
+　
+　<input type="submit" value="登録">
+<%end%>
