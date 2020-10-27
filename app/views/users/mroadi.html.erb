@@ -1,0 +1,12 @@
+<!--no12-->
+<h3>My page</h3>
+<%= link_to("プロフィール", "/user/show/#{@user.id}")%>
+<%= link_to("ロードマップ", "/user/road/#{@user.id}")%>
+<%= link_to("お気に入り", "#")%>
+<p>投稿</p>
+<% @roadmaps.each do |roadmap| %>
+ <div>
+  <%= link_to(roadmap.title,"/roadmap/myshow/#{roadmap.id}") %>
+  <%= roadmap.created_at%>
+ </div>
+<% end %>

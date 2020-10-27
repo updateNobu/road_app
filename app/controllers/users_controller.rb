@@ -26,4 +26,9 @@ class UsersController < ApplicationController
     @mymaps = Roadmapshow.where(roadmap_id: @user.mymap)
   end
   
+  def mroadi
+    @user = User.find_by(id: params[:id])
+    @roadmaps = Roadmap.where(user_id: @user.id)
+  end
+  
 end

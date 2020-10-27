@@ -1,5 +1,5 @@
 class Roadmap < ApplicationRecord
-  has_many :roadmapShows, dependent: :destroy
+  has_many :roadmapshows, dependent: :destroy
   
   validates :title, {presence: true, length: {maximum: 140}}
   validates :stady_time_week, {presence: true}

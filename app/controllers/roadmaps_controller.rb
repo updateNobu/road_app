@@ -43,7 +43,7 @@ class RoadmapsController < ApplicationController
     @roadmap = Roadmap.find_by(id: @roadmap_show.roadmap_id)
     if params[:finish]
       @roadmap_show.save
-      redirect_to ("user/road")
+      redirect_to ("/user/road/#{@roadmap.user_id}")
       flash[:notice]= "編集成功！"
     else
       if !@roadmap_show.save
@@ -107,6 +107,12 @@ class RoadmapsController < ApplicationController
   end
   
   def show
+    @roadmap = Roadmap.find_by(id: params[:id])
+    @user = User.find_by(id: @roadmap.user_id)
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+  end
+  
+  def myshow
     @roadmap = Roadmap.find_by(id: params[:id])
     @user = User.find_by(id: @roadmap.user_id)
     @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
@@ -193,6 +199,13 @@ class RoadmapsController < ApplicationController
     flash[:notice]= "投稿を削除しました。"
   end
   
+  def destroymy
+    @roadmap = Roadmap.find_by(id: params[:id])
+    @roadmap.destroy
+    redirect_to("/user/mroadi/#{@roadmap.user_id}")
+    flash[:notice]= "投稿を削除しました。"
+  end
+  
   def updateedit
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.content = params[:content]
@@ -224,6 +237,7 @@ class RoadmapsController < ApplicationController
   
   def mapedit
     @user = User.find_by(id: params[:id])
+    @id = @user.mymap
     @mymaps = Roadmapshow.where(roadmap_id: @user.mymap)
   end
 end

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post "roadmap/destroyz/:id" => "roadmaps#destroyz"
   post "roadmap/destroyall/:id" => "roadmaps#destroyall"
   post "roadmap/destroymap/:id" => "roadmaps#destroymap"
+  post "roadmap/destroymy/:id" => "roadmaps#destroymy"
   post "roadmap/create" => "roadmaps#create"
   get "roadmap/new" => "roadmaps#new"
   get "roadmap/new/:id" => "roadmaps#new_show"
@@ -30,11 +31,13 @@ Rails.application.routes.draw do
   get "roadmap/2/:id" => "roadmaps#show"
   get "roadmap/3/:id" => "roadmaps#show"
   get "roadmap/4/:id" => "roadmaps#show"
+  get "roadmap/myshow/:id" => "roadmaps#myshow"
   get "roadmap/mapedit/:id" => "roadmaps#mapedit"
   
   get "user/new" => "users#new"
   get "user/show/:id" => "users#showpage"
   get "user/road/:id" => "users#roadeach"
+  get "user/mroadi/:id" => "users#mroadi"
   post "user/create" => "users#create"
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
