@@ -1,4 +1,3 @@
-<!--No20-->
 <h3>Edit roadmap</h3>
 <h1>ロードマップ編集</h1>
 <% if flash[:notice]%>
@@ -6,7 +5,7 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
-<%=form_tag("/roadmap/update/#{@roadmap.id}") do %>
+<%=form_tag("/roadmap/updatemyre/#{@roadmap.id}") do %>
 　<p>タイトル</p>
 　<textarea name="title"><%= @roadmap.title%></textarea>
 　

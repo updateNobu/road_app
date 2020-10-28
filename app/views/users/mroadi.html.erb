@@ -4,6 +4,7 @@
 <%= link_to("ロードマップ", "/user/road/#{@user.id}")%>
 <%= link_to("お気に入り", "#")%>
 <p>投稿</p>
+<h3>投稿</h3>
 <% @roadmaps.each do |roadmap| %>
  <div>
   <%= link_to(roadmap.title,"/roadmap/myshow/#{roadmap.id}") %>

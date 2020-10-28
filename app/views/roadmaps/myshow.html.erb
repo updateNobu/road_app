@@ -22,6 +22,6 @@
     <%= show.comment %>
   <% end %>
 </div>
-<%= link_to("編集", "/roadmap/edit/#{@roadmap.id}")%>
+<%= link_to("編集", "/roadmap/myre/#{@roadmap.id}")%>
 <%= link_to("投稿を削除", "/roadmap/destroymy/#{@roadmap.id}", {method: "post"})%>
 <%= link_to("一覧へ", "/user/mroadi/#{@user.id}")%>

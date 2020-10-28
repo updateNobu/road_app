@@ -1,0 +1,35 @@
+<h3>Edit roadmap</h3>
+<h2>ロードマップ詳細</h2>
+<div>
+  <% @roadmap_shows.each do |show| %>
+      <%= show.content %>
+      <%= show.method %>
+      <%= "#{show.time_required}分" %>
+      <%= show.comment %>
+      <%= link_to("編集", "/roadmap/mreiz/#{show.id}")%>
+      <%= link_to("削除", "/roadmap/destroymre/#{show.id}", {method: "post"}) %>
+  <% end %>
+</div>
+<% if flash[:notice]%>
+ <div>
+   <%= flash[:notice]%>
+ </div>
+<% end %>
+<div>
+    <%= form_with url: {controller: 'roadmaps', action: 'mrefini' } do  |f| %>
+      <%= f.label :タイトル %>
+      <%= f.text_field :content %>
+      
+      <%= f.label :勉強方法、教材など %>
+      <%= f.text_field :method %>
+            
+      <%= f.label :所要時間 %>
+      <%= f.number_field :time_required %>分
+              
+      <%= f.label :コメント %>
+      <%= f.text_area :comment %>
+      <%= f.hidden_field :roadmap_id, value: @id %>
+     <input type="submit" value="add" name="continue">
+  　 <input type="submit" value="編集完了" name="finish">
+    <%end%>
+</div>

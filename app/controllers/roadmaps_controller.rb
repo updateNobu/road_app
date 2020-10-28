@@ -17,7 +17,26 @@ class RoadmapsController < ApplicationController
     end
   end
   
+  def myre
+    @roadmap = Roadmap.find_by(id: params[:id])
+    if @roadmap.category_id == 1
+      @a = "checked"
+    elsif @roadmap.category_id == 2
+      @b = "checked"
+    elsif @roadmap.category_id == 3
+      @c = "checked"
+    elsif @roadmap.category_id == 4
+      @d = "checked"
+    end
+  end
+  
   def editsend
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+    @id = params[:id]
+    # @roadmap_show = Roadmapshow.find_by(roadmap_id: params[:id])
+  end
+  
+  def mrei
     @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
     @id = params[:id]
     # @roadmap_show = Roadmapshow.find_by(roadmap_id: params[:id])
@@ -35,6 +54,21 @@ class RoadmapsController < ApplicationController
         flash[:notice]= "項目をすべて埋めてください"
       end
       redirect_to ("/roadmap/editsend/#{@roadmap_show.roadmap_id}")
+    end
+  end
+  
+  def mrefini
+    @roadmap_show = Roadmapshow.new(roadmap_show_params)
+    @roadmap = Roadmap.find_by(id: @roadmap_show.roadmap_id)
+    if params[:finish]
+      @roadmap_show.save
+      redirect_to ("/user/mroadi/#{@roadmap.user_id}")
+      flash[:notice]= "編集成功！"
+    else
+      if !@roadmap_show.save
+        flash[:notice]= "項目をすべて埋めてください"
+      end
+      redirect_to ("/roadmap/mrei/#{@roadmap_show.roadmap_id}")
     end
   end
   
@@ -62,12 +96,39 @@ class RoadmapsController < ApplicationController
     @roadmap.total_stady_time = params[:total_stady_time]
     @roadmap.total_comment = params[:total_comment]
     @roadmap.category_id = params[:category_id]
-    @roadmap.save
-    if params[:continue]
+    if @roadmap.save
+     if params[:continue]
       redirect_to("/roadmap/editsend/#{@roadmap.id}")
-    else
+     else
       redirect_to("/roadmap/#{@roadmap.category_id}/#{@roadmap.id}")
       flash[:notice]= "編集成功！"
+     end
+    else
+      redirect_to("/roadmap/edit/#{@roadmap.id}")
+      flash[:notice]= "空欄の場所がありました"
+    end
+  end
+  
+  def updatemyre
+    @roadmap = Roadmap.find_by(id: params[:id])
+    @roadmap.title = params[:title]
+    @roadmap.stady_time_week = params[:stady_time_week]
+    @roadmap.stady_time_holiday = params[:stady_time_holiday]
+    @roadmap.period_stady = params[:period_stady]
+    @roadmap.total_stady_time = params[:total_stady_time]
+    @roadmap.total_comment = params[:total_comment]
+    @roadmap.category_id = params[:category_id]
+    @roadmap.save
+    if @roadmap.save
+     if params[:continue]
+      redirect_to("/roadmap/mrei/#{@roadmap.id}")
+     else
+      redirect_to("/user/mroadi/#{@roadmap.id}")
+      flash[:notice]= "編集成功！"
+     end
+    else
+      redirect_to("/roadmap/myre/#{@roadmap.id}")
+      flash[:notice]= "空欄の場所がありました"
     end
   end
   
@@ -146,8 +207,11 @@ class RoadmapsController < ApplicationController
   def editshow
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
   end
-  
   def editz
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
+  end
+  
+  def mreiz
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
   end
   
@@ -181,6 +245,12 @@ class RoadmapsController < ApplicationController
   end
   
   def destroyz
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
+    @roadmapshow.destroy
+    redirect_to("/roadmap/mrei/#{@roadmapshow.roadmap_id}")
+  end
+  
+  def destroymre
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.destroy
     redirect_to("/roadmap/editsend/#{@roadmapshow.roadmap_id}")
@@ -217,6 +287,20 @@ class RoadmapsController < ApplicationController
       flash[:notice]= "編集成功！"
     else
       render("roadmaps/editz")
+    end
+  end
+  
+  def updatemrei
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
+    @roadmapshow.content = params[:content]
+    @roadmapshow.method = params[:method]
+    @roadmapshow.time_required = params[:time_required]
+    @roadmapshow.comment = params[:comment]
+    if @roadmapshow.save
+      redirect_to("/roadmap/mrei/#{@roadmapshow.roadmap_id}")
+      flash[:notice]= "編集成功！"
+    else
+      render("roadmaps/mreiz")
     end
   end
   
