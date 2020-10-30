@@ -22,6 +22,8 @@ class UsersController < ApplicationController
       redirect_to("/user/show/#{@user.id}")
     else
       @error_massage = "メールアドレスまたはパスワードが間違っています"
+      @email = params[:email]
+      @password = params[:password]
       render("users/login_form")
     end
   end
