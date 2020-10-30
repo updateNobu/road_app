@@ -11,7 +11,7 @@
 <%= link_to("投稿", "/user/mroadi/#{@user.id}")%>
 
 <h1>プロフィール</h1>
-<p>アイコン</p>
+<img src="<%= "/user_images/#{@user.image_name}"%>">
 <%= "#{@user.name}" %>
 <%= "#{@user.comment}" %>
 <%= "#{@user.link}" %>

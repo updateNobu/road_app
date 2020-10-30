@@ -9,5 +9,7 @@
  <div>
   <%= link_to(roadmap.title,"/roadmap/myshow/#{roadmap.id}") %>
   <%= roadmap.created_at%>
+  <img src="<%= "/user_images/#{@user.image_name}"%>">
+ </div>
  </div>
 <% end %>

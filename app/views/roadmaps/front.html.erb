@@ -8,8 +8,9 @@
 <% @roadmaps.each do |roadmap| %>
  <div>
   <%= link_to(roadmap.title,"/roadmap/1/#{roadmap.id}" ) %>
-  <%= link_to(@user.name,"#" ) %>
+  <%= link_to(@user.name,"/user/show/#{@user.id}" ) %>
   <%= roadmap.created_at%>
+  <img src="<%= "/user_images/#{@user.image_name}"%>">
  </div>
 <% end %>
 <%= link_to("投稿", "/roadmap/new") %>
