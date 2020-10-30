@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_current_user
-  before_action :authenticate_user, only[:logout, :showedit]
-  before_action :forbid_login_user, only[:login_form, :login, :new, :create]
+  before_action :authenticate_user, {only: [:logout, :showedit]}
+  before_action :forbid_login_user, {only: [:login_form, :login, :new, :create]}
   
   
   def new

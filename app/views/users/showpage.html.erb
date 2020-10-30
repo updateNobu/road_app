@@ -4,7 +4,7 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
-<%= if @user.id == @current_user.id %>
+<%if @user.id == @current_user.id %>
   <h3>My page</h3>
 <%else%>
   <h3><%= @user.name %> page</h3>
@@ -19,7 +19,7 @@
 <%= "#{@user.name}" %>
 <%= "#{@user.comment}" %>
 <%= "#{@user.link}" %>
-<%= if @user.id == @current_user.id %>
+<%if @user.id == @current_user.id %>
   <%= "#{@user.email}" %>
   <%= link_to("編集", "/user/showedit/#{@user.id}")%>
 <%end%>
