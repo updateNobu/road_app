@@ -1,11 +1,19 @@
 <!--No10-->
-<h3>My page</h3>
+<%= if @user.id == @current_user.id %>
+  <h3>My page</h3>
+<%else%>
+  <h3><%= @user.name}%> page</h3>
+<%end%>
 <%= link_to("プロフィール", "/user/show/#{@user.id}")%>
 <p>マイページ</p>
 <%= link_to("お気に入り", "#")%>
 <%= link_to("投稿", "#")%>
 <div>
+<%= if @user.id == @current_user.id %>
   <h1>My ロードマップ</h1>
+<%else%>
+  <h1><%= @user.name %> ロードマップ</h1>
+<%end%>
   <% @mymaps.each do |map| %>
       <%= map.content %>
       <%= map.method %>
@@ -13,4 +21,6 @@
       <%= map.comment %>
     <% end %>
 </div>
-<%= link_to("編集", "/roadmap/mapedit/#{@user.id}")%>
+<%= if @user.id == @current_user.id %>
+  <%= link_to("編集", "/roadmap/mapedit/#{@user.id}")%>
+<%end%>

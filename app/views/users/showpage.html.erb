@@ -4,7 +4,11 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
-<h3>My page</h3>
+<%= if @user.id == @current_user.id %>
+  <h3>My page</h3>
+<%else%>
+  <h3><%= @user.name %> page</h3>
+<%end%>
 <p>プロフィール</p>
 <%= link_to("ロードマップ", "/user/road/#{@user.id}")%>
 <%= link_to("お気に入り", "#")%>
@@ -15,4 +19,7 @@
 <%= "#{@user.name}" %>
 <%= "#{@user.comment}" %>
 <%= "#{@user.link}" %>
-<%= "#{@user.email}" %>
+<%= if @user.id == @current_user.id %>
+  <%= "#{@user.email}" %>
+  <%= link_to("編集", "/user/showedit/#{@user.id}")%>
+<%end%>

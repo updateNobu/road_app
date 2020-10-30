@@ -1,0 +1,25 @@
+<h3>My page</h3>
+<h3>プロフィール</h3>
+<h1>プロフィール　編集</h1>
+<% @user.errors.full_messages.each do |message| %>
+<div>
+    <%= message %>
+</div>
+<%end%>
+<%=form_tag("/user/updateshow/#{@user.id}", {multipart: true}) do %>
+　<img src="<%= "/user_images/#{@user.image_name}"%>">
+　<input type="file" name="image">
+　
+　<input type="text" value= "<%= @user.name %>" name="name">
+　
+　<p>コメント</p>
+　<textarea name="comment"><%= @user.comment%></textarea>
+　
+　<p>リンク先</p>
+　<input type="text" value= "<%= @user.link %>" name="link">
+　
+　<p>メールアドレス</p>
+　<input type="text" value= "<%= @user.email %>" name="email">
+　
+　<input type="submit" value="完了">
+<%end%>

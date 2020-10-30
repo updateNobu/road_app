@@ -1,4 +1,7 @@
 class RoadmapsController < ApplicationController
+  before_action :set_current_user
+  before_action :authenticate_user, only[:mapedit, :medit, :myre, :mrei, :mreiz, :new, :new_show, :editshow, :edit, :editsend, :editz]
+  # before_action :ensure_correct_user, only[]
   
   def new
    @roadmap = Roadmap.new
