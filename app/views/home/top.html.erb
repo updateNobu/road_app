@@ -1,4 +1,9 @@
 <!--No1-->
+<% if flash[:notice]%>
+ <div>
+   <%= flash[:notice]%>
+ </div>
+<% end %>
 <h1>ロードマップアップデート</h1>
 <div>
   <%= link_to("フロントエンド", "/roadmap/1") %>
@@ -19,3 +24,5 @@
   <%= link_to("フリーランス", "/roadmap/4") %>
   <p>フリーランス説明</p>
 </div>
+
+<%= link_to("logout", "/logout", {method: "post"}) %>

@@ -1,7 +1,8 @@
 class RoadmapsController < ApplicationController
   before_action :set_current_user
-  before_action :authenticate_user, {only: [:mapedit, :medit, :myre, :mrei, :mreiz, :new, :new_show, :editshow, :edit, :editsend, :editz]}
-  # before_action :ensure_correct_user, {only: []
+  before_action :authenticate_user, {only: [:new, :new_show, :add, :editshow]}
+  before_action :ensure_correct_user, {only: [:edit, :myre, :editsend, :mrei, :update, :updatemyre, :editz, :mreiz, :medit, :updateshow, :destroyshow, :destroyz, :destroymre, :destroymap, :destroyall, :destroyall, :destroymy, :updateedit, :updatemrei, :updatemap, :mapedit]}
+  
   
   def new
    @roadmap = Roadmap.new
@@ -138,7 +139,7 @@ class RoadmapsController < ApplicationController
   
   def create
     @roadmap = Roadmap.new(roadmap_params)
-    @roadmap.user_id= "1"    # 本来はcurrentuserに送りたい
+    @roadmap.user_id= @current_user.id    # 本来はcurrentuserに送りたい
     if @roadmap.save
      redirect_to ("/roadmap/new/#{@roadmap.id}")
     else

@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_current_user
-  before_action :authenticate_user, {only: [:logout, :showedit]}
+  before_action :authenticate_user, {only: [:logout]}
   before_action :forbid_login_user, {only: [:login_form, :login, :new, :create]}
+  before_action :ensure_correct_user, {only: [:showedit, :updateshow]}
   
   
   def new
@@ -9,6 +10,7 @@ class UsersController < ApplicationController
   end
   
   def login_form
+    @user = User.new
   end
   
   
@@ -27,7 +29,7 @@ class UsersController < ApplicationController
   def logout
       session[:user_id] = nil
       flash[:notice] = "ログアウトしました"
-      redirect_to("/login")
+      redirect_to("/")
   end
   
   def create
