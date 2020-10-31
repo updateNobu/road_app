@@ -5,13 +5,21 @@
  </div>
 <% end %>
 <h1>フリーランス</h1>
-<% @roadmaps.each do |roadmap| %>
+<% @roadmaps.zip(@users) do |roadmap, user| %>
  <div>
   <%= link_to(roadmap.title,"/roadmap/4/#{roadmap.id}" ) %>
-  <%= link_to(@user.name,"/user/show/#{@user.id}" ) %>
+  <%= link_to(user.name,"/user/show/#{user.id}" ) %>
+  <%if Like.find_by(user_id: @current_user.id, roadmap_id: roadmap.id)%>
+    <%= link_to("いいね！外す", "/like/#{roadmap.id}/destroy", {method: "post"})%>
+  <%else%>
+    <%= link_to("いいね！する", "/like/#{roadmap.id}/create", {method: "post"})%>
+  <%end%>
+  <%= Like.where(roadmap_id: roadmap.id).count %>
   <%= roadmap.created_at%>
-  <img src="<%= "/user_images/#{@user.image_name}"%>">
+  <img src="<%= "/user_images/#{user.image_name}"%>">
  </div>
 <% end %>
-<%= link_to("投稿", "/roadmap/new") %>
+<% if @current_user %>
+  <%= link_to("投稿", "/roadmap/new") %>
+<% end %>
 <%= link_to("種別選択に戻る", "/") %>

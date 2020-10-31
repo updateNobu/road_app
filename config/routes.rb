@@ -51,5 +51,8 @@ Rails.application.routes.draw do
   post "login" => "users#login"
   post "logout" => "users#logout"
   post "user/updateshow/:id" => "users#updateshow"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  
+  post "like/:roadmap_id/create" => "likes#create"
+  post "like/:roadmap_id/destroy" => "likes#destroy"
 end
