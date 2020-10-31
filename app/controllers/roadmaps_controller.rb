@@ -1,5 +1,4 @@
 class RoadmapsController < ApplicationController
-  before_action :set_current_user
   before_action :authenticate_user, {only: [:new, :new_show, :add, :editshow]}
   before_action :ensure_correct_user, {only: [:edit, :myre, :editsend, :mrei, :update, :updatemyre, :editz, :mreiz, :medit, :updateshow, :destroyshow, :destroyz, :destroymre, :destroymap, :destroyall, :destroyall, :destroymy, :updateedit, :updatemrei, :updatemap, :mapedit]}
   
