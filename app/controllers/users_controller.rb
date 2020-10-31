@@ -3,6 +3,13 @@ class UsersController < ApplicationController
   before_action :forbid_login_user, {only: [:login_form, :login, :new, :create]}
   before_action :ensure_correct_user, {only: [:showedit, :updateshow]}
   
+  def ensure_correct_user
+    if @current_user.id != params[:id].to_i
+      flash[:notice]= "権限がありません"
+      redirect_to("/")
+    end
+  end
+  
   
   def new
     @user = User.new
@@ -85,6 +92,11 @@ class UsersController < ApplicationController
     else
       render("users/showedit")
     end
+  end
+  
+  def likepage
+    @user = User.find_by(id: params[:id])
+    @likes = Like.where(user_id: @user.id)
   end
   
   

@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   get "user/showedit/:id" => "users#showedit"
   get "user/road/:id" => "users#roadeach"
   get "user/mroadi/:id" => "users#mroadi"
+  get "user/:id/likepage" => "users#likepage"
   post "user/create" => "users#create"
   post "login" => "users#login"
   post "logout" => "users#logout"
@@ -55,4 +56,6 @@ Rails.application.routes.draw do
   
   post "like/:roadmap_id/create" => "likes#create"
   post "like/:roadmap_id/destroy" => "likes#destroy"
+  post "like/:roadmap_id/createshow" => "likes#createshow"
+  post "like/:roadmap_id/destroyshow" => "likes#destroyshow"
 end

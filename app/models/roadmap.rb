@@ -1,5 +1,6 @@
 class Roadmap < ApplicationRecord
   has_many :roadmapshows, dependent: :destroy
+  has_many :likes, dependent: :destroy
   belongs_to :users, optional: true
   
   validates :title, {presence: true, length: {maximum: 140}}

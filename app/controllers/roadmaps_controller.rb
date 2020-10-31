@@ -2,6 +2,13 @@ class RoadmapsController < ApplicationController
   before_action :authenticate_user, {only: [:new, :new_show, :add, :editshow]}
   before_action :ensure_correct_user, {only: [:edit, :myre, :editsend, :mrei, :update, :updatemyre, :editz, :mreiz, :medit, :updateshow, :destroyshow, :destroyz, :destroymre, :destroymap, :destroyall, :destroyall, :destroymy, :updateedit, :updatemrei, :updatemap, :mapedit]}
   
+  def ensure_correct_user
+    @roadmap = Roadmap.find_by(id: params[:id])
+    if @current_user.id != @roadmap.user_id
+      flash[:notice]= "権限がありません"
+      redirect_to("/")
+    end
+  end
   
   def new
    @roadmap = Roadmap.new
