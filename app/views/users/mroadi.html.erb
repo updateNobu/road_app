@@ -1,5 +1,9 @@
 <!--no12-->
-<h3>My page</h3>
+<%if @user.id == @current_user.id %>
+  <h3>My page</h3>
+<%else%>
+  <h3><%= @user.name%> page</h3>
+<%end%>
 <%= link_to("プロフィール", "/user/show/#{@user.id}")%>
 <%= link_to("ロードマップ", "/user/road/#{@user.id}")%>
 <%= link_to("お気に入り", "#")%>
@@ -11,5 +15,9 @@
   <%= roadmap.created_at%>
   <img src="<%= "/user_images/#{@user.image_name}"%>">
  </div>
- </div>
+<% end %>
+<%if @user.id == @current_user.id %>
+<div>
+  <%= link_to("投稿", "/roadmap/new")%>
+</div>
 <% end %>

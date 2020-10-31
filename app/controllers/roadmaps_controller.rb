@@ -155,20 +155,34 @@ class RoadmapsController < ApplicationController
   
   def front
     @roadmaps = Roadmap.where(category_id: 1)
-    @user = User.find_by(id: Roadmap.find_by(category_id: 1).user_id)
+    @users = []
+    @roadmaps.each do |roadmap|
+      @users.push(User.find_by(id: roadmap.user_id))
+    end
   end
   
   def back
     @roadmaps = Roadmap.where(category_id: 2)
-    @user = User.find_by(id: Roadmap.find_by(category_id: 1).user_id)
+    @users = []
+    @roadmaps.each do |roadmap|
+      @users.push(User.find_by(id: roadmap.user_id))
+    end
   end
   
   def web
     @roadmaps = Roadmap.where(category_id: 3)
+    @users = []
+    @roadmaps.each do |roadmap|
+      @users.push(User.find_by(id: roadmap.user_id))
+    end
   end
   
   def free
     @roadmaps = Roadmap.where(category_id: 4)
+    @users = []
+    @roadmaps.each do |roadmap|
+      @users.push(User.find_by(id: roadmap.user_id))
+    end
   end
   
   def show
