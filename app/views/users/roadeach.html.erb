@@ -1,5 +1,5 @@
 <!--No10-->
-<%if @user.id == @current_user.id %>
+<%if @current_user && @user.id == @current_user.id %>
   <h3>My page</h3>
 <%else%>
   <h3><%= @user.name%> page</h3>
@@ -9,7 +9,7 @@
 <%= link_to("お気に入り", "#")%>
 <%= link_to("投稿", "/user/mroadi/#{@user.id}")%>
 <div>
-<%if @user.id == @current_user.id %>
+<%if @current_user && @user.id == @current_user.id %>
   <h1>My ロードマップ</h1>
 <%else%>
   <h1><%= @user.name %> ロードマップ</h1>
@@ -21,6 +21,6 @@
       <%= map.comment %>
     <% end %>
 </div>
-<%if @user.id == @current_user.id %>
+<%if @current_user && @user.id == @current_user.id %>
   <%= link_to("編集", "/roadmap/mapedit/#{@user.id}")%>
 <%end%>

@@ -1,5 +1,5 @@
 <!--no12-->
-<%if @user.id == @current_user.id %>
+<%if @current_user && @user.id == @current_user.id %>
   <h3>My page</h3>
 <%else%>
   <h3><%= @user.name%> page</h3>
@@ -16,7 +16,7 @@
   <img src="<%= "/user_images/#{@user.image_name}"%>">
  </div>
 <% end %>
-<%if @user.id == @current_user.id %>
+<%if @current_user && @user.id == @current_user.id %>
 <div>
   <%= link_to("投稿", "/roadmap/new")%>
 </div>
