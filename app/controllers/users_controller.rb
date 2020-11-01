@@ -66,6 +66,7 @@ class UsersController < ApplicationController
   
   def roadeach
     @user = User.find_by(id: params[:id])
+    @roadmap = Roadmap.find_by(id: @user.mymap)
     @mymaps = Roadmapshow.where(roadmap_id: @user.mymap)
   end
   

@@ -1,10 +1,27 @@
 class RoadmapsController < ApplicationController
-  before_action :authenticate_user, {only: [:new, :new_show, :add, :editshow]}
-  before_action :ensure_correct_user, {only: [:edit, :myre, :editsend, :mrei, :update, :updatemyre, :editz, :mreiz, :medit, :updateshow, :destroyshow, :destroyz, :destroymre, :destroymap, :destroyall, :destroyall, :destroymy, :updateedit, :updatemrei, :updatemap, :mapedit]}
+  before_action :authenticate_user, {only: [:new, :new_show, :add, :editshow, :destroyshow, :updateshow]}
+  before_action :ensure_correct_user, {only: [:edit, :editsend, :myre, :mrei, :update, :updatemyre, :destroyall, :destroymy]}
+  before_action :ensure_correct_user_show, {only: [:mreiz, :updatemrei, :destroymre, :destroyz, :editz, :updateedit, :updatemap, :destroymap]}
+  # before_action :ensure_correct_user_mapedit, {only: [:mapedit]}
   
   def ensure_correct_user
     @roadmap = Roadmap.find_by(id: params[:id])
     if @current_user.id != @roadmap.user_id
+      flash[:notice]= "権限がありません"
+      redirect_to("/")
+    end
+  end
+  
+  def ensure_correct_user_show
+    @roadmap = Roadmap.find_by(id: Roadmapshow.find_by(id: params[:id]).roadmap_id)
+    if @current_user.id != @roadmap.user_id
+      flash[:notice]= "権限がありません"
+      redirect_to("/")
+    end
+  end
+  
+  def ensure_correct_user_mapedit
+    if @current_user.id != params[:id].to_i
       flash[:notice]= "権限がありません"
       redirect_to("/")
     end
@@ -28,6 +45,19 @@ class RoadmapsController < ApplicationController
   end
   
   def myre
+    @roadmap = Roadmap.find_by(id: params[:id])
+    if @roadmap.category_id == 1
+      @a = "checked"
+    elsif @roadmap.category_id == 2
+      @b = "checked"
+    elsif @roadmap.category_id == 3
+      @c = "checked"
+    elsif @roadmap.category_id == 4
+      @d = "checked"
+    end
+  end
+  
+  def myroad
     @roadmap = Roadmap.find_by(id: params[:id])
     if @roadmap.category_id == 1
       @a = "checked"
@@ -93,7 +123,7 @@ class RoadmapsController < ApplicationController
       if !@roadmap_show.save
         flash[:notice]= "項目をすべて埋めてください"
       end
-      redirect_to ("/roadmap/mapedit/#{@roadmap_show.roadmap_id}")
+      redirect_to ("/roadmap/mapedit/#{@roadmap.user_id}")
     end
   end
   
@@ -133,11 +163,34 @@ class RoadmapsController < ApplicationController
      if params[:continue]
       redirect_to("/roadmap/mrei/#{@roadmap.id}")
      else
-      redirect_to("/user/mroadi/#{@roadmap.id}")
+      redirect_to("/user/mroadi/#{@roadmap.user_id}")
       flash[:notice]= "編集成功！"
      end
     else
       redirect_to("/roadmap/myre/#{@roadmap.id}")
+      flash[:notice]= "空欄の場所がありました"
+    end
+  end
+  
+  def updatemyroad
+    @roadmap = Roadmap.find_by(id: params[:id])
+    @roadmap.title = params[:title]
+    @roadmap.stady_time_week = params[:stady_time_week]
+    @roadmap.stady_time_holiday = params[:stady_time_holiday]
+    @roadmap.period_stady = params[:period_stady]
+    @roadmap.total_stady_time = params[:total_stady_time]
+    @roadmap.total_comment = params[:total_comment]
+    @roadmap.category_id = params[:category_id]
+    @roadmap.save
+    if @roadmap.save
+     if params[:continue]
+      redirect_to("/roadmap/mapedit/#{@roadmap.user_id}")
+     else
+      redirect_to("/user/roadeach/#{@roadmap.user_id}")
+      flash[:notice]= "編集成功！"
+     end
+    else
+      redirect_to("/roadmap/myrroad/#{@roadmap.id}")
       flash[:notice]= "空欄の場所がありました"
     end
   end
@@ -237,6 +290,7 @@ class RoadmapsController < ApplicationController
   def editshow
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
   end
+  
   def editz
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
   end
@@ -269,7 +323,7 @@ class RoadmapsController < ApplicationController
   
   def destroyshow
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
-    @Roadmapshow.destroy
+    @roadmapshow.destroy
     redirect_to("/roadmap/new/#{@roadmapshow.roadmap_id}")
     flash[:notice]= "ロードマップを削除しました。"
   end
@@ -277,19 +331,20 @@ class RoadmapsController < ApplicationController
   def destroyz
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.destroy
-    redirect_to("/roadmap/mrei/#{@roadmapshow.roadmap_id}")
+    redirect_to("/roadmap/editsend/#{@roadmapshow.roadmap_id}")
   end
   
   def destroymre
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.destroy
-    redirect_to("/roadmap/editsend/#{@roadmapshow.roadmap_id}")
+    redirect_to("/roadmap/mrei/#{@roadmapshow.roadmap_id}")
   end
   
   def destroymap
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.destroy
-    redirect_to("/roadmap/mapedit/#{@roadmapshow.roadmap_id}")
+    @roadmap = Roadmap(id: @roadmapshow.roadmap_id)
+    redirect_to("/roadmap/mapedit/#{@roadmap.user_id}")
   end
   
   def destroyall

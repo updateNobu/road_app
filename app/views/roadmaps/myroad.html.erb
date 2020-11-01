@@ -1,0 +1,36 @@
+<h3>My roadmap edit</h3>
+<h1>My ロードマップ</h1>
+<%= link_to("ロードマップを新規作成する", "#")%>
+<%= link_to("お気に入りからロードマップにする", "#")%>
+<%= link_to("自分の投稿からロードマップにする", "#")%>
+<% if flash[:notice]%>
+ <div>
+   <%= flash[:notice]%>
+ </div>
+<% end %>
+<%=form_tag("/roadmap/updatemyroad/#{@roadmap.id}") do %>
+　<p>タイトル</p>
+　<textarea name="title"><%= @roadmap.title%></textarea>
+　
+　<p>勉強時間:　平日</p>
+　<input type="number" value= "<%= @roadmap.stady_time_week %>" name="stady_time_week">時間
+　
+　<p>休日</p>
+　<input type="number" value= "<%= @roadmap.stady_time_holiday %>" name="stady_time_holiday">時間
+　
+　<p>必要期間:</p>
+　上記のペースで<input type="number" value= "<%= @roadmap.period_stady %>" name="period_stady">ヶ月
+　
+　<p>合計時間目安:</p>
+　<input type="number" value= "<%= @roadmap.total_stady_time %>" name="total_stady_time">時間
+　
+　<p>コメント:</p>
+　<textarea name="total_comment"><%= @roadmap.total_comment%></textarea>
+
+  <p>ジャンル</p>
+  <input type="radio" name="category_id" value="1" <%= @a %> >フロントエンド <input type="radio" name="category_id" value="2" <%= @b %> >バックエンド
+  <input type="radio" name="category_id" value="3" <%= @c %> >web制作 <input type="radio" name="category_id" value="4" <%= @d %> >フリーランス
+　
+　<input type="submit" value="ロードマップも編集する" name="continue">
+　<input type="submit" value="編集完了" name="finish">
+<%end%>

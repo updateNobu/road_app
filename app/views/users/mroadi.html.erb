@@ -12,6 +12,7 @@
 <% @roadmaps.each do |roadmap| %>
  <div>
   <%= link_to(roadmap.title,"/roadmap/myshow/#{roadmap.id}") %>
+  <%= @user.name%>
   <%if @current_user%>
       <%if Like.find_by(user_id: @current_user.id, roadmap_id: roadmap.id)%>
         <%= link_to("いいね！外す", "/like/#{roadmap.id}/destroymroadi", {method: "post"})%>

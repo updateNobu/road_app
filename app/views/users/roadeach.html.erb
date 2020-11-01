@@ -14,13 +14,19 @@
 <%else%>
   <h1><%= @user.name %> ロードマップ</h1>
 <%end%>
+<%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %>
+<%= "必要期間: 上記のペースで#{@roadmap.period_stady}ケ月ほど"%>
+<%= "合計時間目安: #{@roadmap.total_stady_time}時間" %>
+<%= "コメント: #{@roadmap.total_comment}" %>
+</div>
+<div>
   <% @mymaps.each do |map| %>
       <%= map.content %>
       <%= map.method %>
       <%= "#{map.time_required}分" %>
       <%= map.comment %>
-    <% end %>
+  <% end %>
 </div>
 <%if @current_user && @user.id == @current_user.id %>
-  <%= link_to("編集", "/roadmap/mapedit/#{@user.id}")%>
+  <%= link_to("編集", "/roadmap/myroad/#{@roadmap.id}")%>
 <%end%>

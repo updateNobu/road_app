@@ -1,15 +1,12 @@
 <!--no10(2)-->
 <h3>My roadmap edit</h3>
 <h1>My ロードマップ</h1>
-<%= link_to("ロードマップを新規作成する", "#")%>
-<%= link_to("お気に入りからロードマップにする", "#")%>
-<%= link_to("自分の投稿からロードマップにする", "#")%>
 <% @mymaps.each do |map| %>
       <%= map.content %>
       <%= map.method %>
       <%= "#{map.time_required}分" %>
       <%= map.comment %>
-      <%= link_to("編集", "/roadmap/medit/#{map.id}")%>
+      <%= link_to("編集", "/roadmap/roadedit/#{map.id}")%>
       <%= link_to("削除", "/roadmap/destroymap/#{map.id}", {method: "post"}) %>
   <% end %>
   <% if flash[:notice]%>
