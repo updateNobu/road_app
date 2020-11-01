@@ -5,10 +5,14 @@
 <% end %>
 <div>
   <%= @roadmap.title %>
-  <%if Like.find_by(user_id: @current_user.id, roadmap_id: @roadmap.id)%>
-    <%= link_to("いいね！外す", "/like/#{@roadmap.id}/destroylksw", {method: "post"})%>
+  <%if @current_user%>
+      <%if Like.find_by(user_id: @current_user.id, roadmap_id: @roadmap.id)%>
+        <%= link_to("いいね！外す", "/like/#{@roadmap.id}/destroylksw", {method: "post"})%>
+      <%else%>
+        <%= link_to("いいね！する", "/like/#{@roadmap.id}/createlksw", {method: "post"})%>
+      <%end%>
   <%else%>
-    <%= link_to("いいね！する", "/like/#{@roadmap.id}/createlksw", {method: "post"})%>
+      <%= link_to("いいね!", "/login") %>
   <%end%>
   <%= Like.where(roadmap_id: @roadmap.id).count %>
   <%= @user.name %>

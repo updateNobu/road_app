@@ -9,10 +9,14 @@
  <div>
   <%= link_to(roadmap.title,"/roadmap/2/#{roadmap.id}" ) %>
   <%= link_to(user.name,"/user/show/#{user.id}" ) %>
-  <%if Like.find_by(user_id: @current_user.id, roadmap_id: roadmap.id)%>
-    <%= link_to("いいね！外す", "/like/#{roadmap.id}/destroy", {method: "post"})%>
+  <%if @current_user%>
+      <%if Like.find_by(user_id: @current_user.id, roadmap_id: roadmap.id)%>
+        <%= link_to("いいね！外す", "/like/#{roadmap.id}/destroy", {method: "post"})%>
+      <%else%>
+        <%= link_to("いいね！する", "/like/#{roadmap.id}/create", {method: "post"})%>
+      <%end%>
   <%else%>
-    <%= link_to("いいね！する", "/like/#{roadmap.id}/create", {method: "post"})%>
+      <%= link_to("いいね!", "/login") %>
   <%end%>
   <%= Like.where(roadmap_id: roadmap.id).count %>
   <%= roadmap.created_at%>
