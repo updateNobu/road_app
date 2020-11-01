@@ -203,6 +203,12 @@ class RoadmapsController < ApplicationController
     @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
   end
   
+  def likeshow
+    @roadmap = Roadmap.find_by(id: params[:id])
+    @user = User.find_by(id: @roadmap.user_id)
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+  end
+  
   def new_show
     @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
     @id = params[:id]

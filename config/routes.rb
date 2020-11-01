@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get "roadmap/4/:id" => "roadmaps#show"
   get "roadmap/myshow/:id" => "roadmaps#myshow"
   get "roadmap/mapedit/:id" => "roadmaps#mapedit"
+  get "roadmap/likeshow/:id" => "roadmaps#likeshow"
   
   get "user/new" => "users#new"
   get "login" => "users#login_form"
@@ -58,4 +59,12 @@ Rails.application.routes.draw do
   post "like/:roadmap_id/destroy" => "likes#destroy"
   post "like/:roadmap_id/createshow" => "likes#createshow"
   post "like/:roadmap_id/destroyshow" => "likes#destroyshow"
+  post "like/:roadmap_id/createlike" => "likes#createlike"
+  post "like/:roadmap_id/destroylike" => "likes#destroylike"
+  post "like/:roadmap_id/createlksw" => "likes#createlksw"
+  post "like/:roadmap_id/destroylksw" => "likes#destroylksw"
+  post "like/:roadmap_id/createmroadi" => "likes#createmroadi"
+  post "like/:roadmap_id/destroymroadi" => "likes#destroymroadi"
+  post "like/:roadmap_id/createmrims" => "likes#createmrims"
+  post "like/:roadmap_id/destroymrims" => "likes#destroymrims"
 end
