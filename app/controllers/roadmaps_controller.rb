@@ -31,6 +31,10 @@ class RoadmapsController < ApplicationController
    @roadmap = Roadmap.new
   end
   
+  def cmroad
+   @roadmap = Roadmap.new
+  end
+  
   def edit
     @roadmap = Roadmap.find_by(id: params[:id])
     if @roadmap.category_id == 1
@@ -114,7 +118,7 @@ class RoadmapsController < ApplicationController
   
   def mfini
     @roadmap_show = Roadmapshow.new(roadmap_show_params)
-    @roadmap = Roadmap.find_by(id: @roadmap_show.roadmap_id)
+    @roadmap = Roadmap.find_by(id: params[:roadmap_id])
     if params[:finish]
       @roadmap_show.save
       redirect_to ("/user/road/#{@roadmap.user_id}")
@@ -184,9 +188,9 @@ class RoadmapsController < ApplicationController
     @roadmap.save
     if @roadmap.save
      if params[:continue]
-      redirect_to("/roadmap/mapedit/#{@roadmap.user_id}")
+      redirect_to("/roadmap/mapedit/#{@current_user.id}")
      else
-      redirect_to("/user/roadeach/#{@roadmap.user_id}")
+      redirect_to("/user/road/#{@current_user.id}")
       flash[:notice]= "編集成功！"
      end
     else
@@ -203,6 +207,17 @@ class RoadmapsController < ApplicationController
      redirect_to ("/roadmap/new/#{@roadmap.id}")
     else
      redirect_to ("/roadmap/new")
+     flash[:notice]= "項目をすべて埋めてください"
+    end
+  end
+  
+  def cmr
+    @roadmap = Roadmap.new(roadmap_params)
+    @roadmap.user_id= 1    # 本来はcurrentuserに送りたい
+    if @roadmap.save
+     redirect_to ("/roadmap/cmroad/#{@roadmap.id}")
+    else
+     redirect_to ("/roadmap/cmroad")
      flash[:notice]= "項目をすべて埋めてください"
     end
   end
@@ -267,6 +282,11 @@ class RoadmapsController < ApplicationController
     @id = params[:id]
   end
   
+  def cmroads
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+    @id = params[:id]
+  end
+  
   def add #ロードマップ詳細ページでロードマップを増やしたいときに押す　今ある情報をセーブする
     @roadmap_show = Roadmapshow.new(roadmap_show_params)
     @roadmap = Roadmap.find_by(id: @roadmap_show.roadmap_id)
@@ -280,6 +300,23 @@ class RoadmapsController < ApplicationController
     else 
        flash[:notice]= "項目をすべて埋めてください"
        redirect_to ("/roadmap/new/#{@roadmap_show.roadmap_id}")
+    end
+  end
+  
+  def finicmr #ロードマップ詳細ページでロードマップを増やしたいときに押す　今ある情報をセーブする
+    @roadmap_show = Roadmapshow.new(roadmap_show_params)
+    @roadmap = Roadmap.find_by(id: @roadmap_show.roadmap_id)
+    if @roadmap_show.save
+     if params[:finish]
+        User.find_by(id: "#{@roadmap.user_id}").update(mymap: "#{@roadmap.id}")
+        redirect_to ("/user/road/#{@current_user.id}")
+        flash[:notice]= "投稿完了！"
+     else
+        redirect_to("/roadmap/cmroad/#{@roadmap_show.roadmap_id}")
+     end
+    else 
+       flash[:notice]= "項目をすべて埋めてください"
+       redirect_to ("/roadmap/cmroad/#{@roadmap_show.roadmap_id}")
     end
   end
   
@@ -317,6 +354,20 @@ class RoadmapsController < ApplicationController
     end
   end
   
+  def updatecmr
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
+    @roadmapshow.content = params[:content]
+    @roadmapshow.method = params[:method]
+    @roadmapshow.time_required = params[:time_required]
+    @roadmapshow.comment = params[:comment]
+    if @roadmapshow.save
+      redirect_to("/roadmap/cmroad/#{@roadmapshow.roadmap_id}")
+      flash[:notice]= "投稿完了！"
+    else
+      render("roadmaps/cmrsedit")
+    end
+  end
+  
   # def roadmapshow_params
   #   params.permit(:content, :method, :time_required, :comment)
   # end
@@ -325,6 +376,13 @@ class RoadmapsController < ApplicationController
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.destroy
     redirect_to("/roadmap/new/#{@roadmapshow.roadmap_id}")
+    flash[:notice]= "ロードマップを削除しました。"
+  end
+  
+  def destroycmr
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
+    @roadmapshow.destroy
+    redirect_to("/roadmap/cmroad/#{@roadmapshow.roadmap_id}")
     flash[:notice]= "ロードマップを削除しました。"
   end
   

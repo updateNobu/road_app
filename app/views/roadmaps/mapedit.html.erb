@@ -6,7 +6,7 @@
       <%= map.method %>
       <%= "#{map.time_required}分" %>
       <%= map.comment %>
-      <%= link_to("編集", "/roadmap/roadedit/#{map.id}")%>
+      <%= link_to("編集", "/roadmap/medit/#{map.id}")%>
       <%= link_to("削除", "/roadmap/destroymap/#{map.id}", {method: "post"}) %>
   <% end %>
   <% if flash[:notice]%>

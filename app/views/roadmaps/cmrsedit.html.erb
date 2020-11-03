@@ -1,0 +1,22 @@
+<h3>Create My roadmap</h3>
+<h1>ロードマップ編集</h1>
+<% @roadmapshow.errors.full_messages.each do |message| %>
+<div>
+    <%= message %>
+</div>
+<%end%>
+<%=form_tag("/roadmap/updatecmr/#{@roadmapshow.id}") do %>
+　<p>タイトル</p>
+　<input type="text" value= "<%= @roadmapshow.content %>" name="content">
+　
+　<p>勉強方法、教材など</p>
+　<input type="text" value= "<%= @roadmapshow.method %>" name="method">
+　
+　<p>所要時間</p>
+　<input type="number" value= "<%= @roadmapshow.time_required %>" name="time_required">
+　
+　<p>コメント</p>
+　<textarea name="comment"><%= @roadmapshow.comment%></textarea>
+　
+　<input type="submit" value="編集完了">
+<%end%>

@@ -1,0 +1,21 @@
+<h3>My page</h3>
+<h2>お気に入りから選ぶ</h2>
+<% @likes.each do |like| %>
+ <% @roadmap = Roadmap.find_by(id: like.roadmap_id)%>
+ <div>
+  <%= link_to(@roadmap.title,"/roadmap/likeshow/#{@roadmap.id}") %>
+  <%if @current_user%>
+      <%if Like.find_by(user_id: @current_user.id, roadmap_id: @roadmap.id)%>
+        <%= link_to("いいね！外す", "/like/#{@roadmap.id}/destroylike", {method: "post"})%>
+      <%else%>
+        <%= link_to("いいね！する", "/like/#{@roadmap.id}/createlike", {method: "post"})%>
+      <%end%>
+  <%else%>
+      <%= link_to("いいね!", "/login") %>
+  <%end%>
+  <%= Like.where(roadmap_id: @roadmap.id).count %>
+  
+  <%= @roadmap.created_at%>
+  <img src="<%= "/user_images/#{@user.image_name}"%>">
+ </div>
+<% end %>
