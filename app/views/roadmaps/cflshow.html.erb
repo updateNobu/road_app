@@ -1,0 +1,27 @@
+<% if flash[:notice]%>
+ <div>
+   <%= flash[:notice]%>
+ </div>
+<% end %>
+<div>
+  <%= @roadmap.title %>
+  <p>いいね！</p>
+  <%= Like.where(roadmap_id: @roadmap.id).count %>
+  <%= @user.name %>
+  <%= @roadmap.created_at %>
+  <%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %>
+  <%= "必要期間: 上記のペースで#{@roadmap.period_stady}ケ月ほど"%>
+  <%= "合計時間目安: #{@roadmap.total_stady_time}時間" %>
+  <%= "コメント: #{@roadmap.total_comment}" %>
+</div>
+<div>
+  <h1>ロードマップ</h1>
+  <% @roadmap_shows.each do |show| %>
+    <%= show.content %>
+    <%= show.method %>
+    <%= "#{show.time_required}分" %>
+    <%= show.comment %>
+  <% end %>
+</div>
+<%= link_to("投稿一覧", "/user/#{@user.id}/cflike")%>
+<%= link_to("My ロードマップにする", "/roadmap/choosefl/#{@roadmap.id}",  {method: "post"})%>

@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   post "roadmap/fini" => "roadmaps#fini"
   post "roadmap/mfini" => "roadmaps#mfini"
   post "roadmap/mrefini" => "roadmaps#mrefini"
+  post "/roadmap/choosefl/:id" => "roadmaps#choosefl"
   get "roadmap/1" => "roadmaps#front"
   get "roadmap/2" => "roadmaps#back"
   get "roadmap/3" => "roadmaps#web"
@@ -49,6 +50,7 @@ Rails.application.routes.draw do
   get "roadmap/myshow/:id" => "roadmaps#myshow"
   get "roadmap/mapedit/:id" => "roadmaps#mapedit"
   get "roadmap/likeshow/:id" => "roadmaps#likeshow"
+  get "roadmap/cflshow/:id" => "roadmaps#cflshow"
   
   get "user/new" => "users#new"
   get "login" => "users#login_form"
@@ -57,6 +59,7 @@ Rails.application.routes.draw do
   get "user/road/:id" => "users#roadeach"
   get "user/mroadi/:id" => "users#mroadi"
   get "user/:id/likepage" => "users#likepage"
+  get "user/:id/cflike" => "users#cflike"
   post "user/create" => "users#create"
   post "login" => "users#login"
   post "logout" => "users#logout"
