@@ -1,8 +1,8 @@
 class RoadmapsController < ApplicationController
-  before_action :authenticate_user, {only: [:new, :new_show, :add, :editshow, :destroyshow, :updateshow]}
-  before_action :ensure_correct_user, {only: [:edit, :editsend, :myre, :mrei, :update, :updatemyre, :destroyall, :destroymy]}
-  before_action :ensure_correct_user_show, {only: [:mreiz, :updatemrei, :destroymre, :destroyz, :editz, :updateedit, :updatemap, :destroymap]}
-  # before_action :ensure_correct_user_mapedit, {only: [:mapedit]}
+  # before_action :authenticate_user, {only: [:new, :new_show, :add, :editshow, :destroyshow, :updateshow]}
+  # before_action :ensure_correct_user, {only: [:edit, :editsend, :myre, :mrei, :update, :updatemyre, :destroyall, :destroymy]}
+  # before_action :ensure_correct_user_show, {only: [:mreiz, :updatemrei, :destroymre, :destroyz, :editz, :updateedit, :updatemap, :destroymap]}
+  # # before_action :ensure_correct_user_mapedit, {only: [:mapedit]}
   
   def ensure_correct_user
     @roadmap = Roadmap.find_by(id: params[:id])
@@ -213,7 +213,7 @@ class RoadmapsController < ApplicationController
   
   def cmr
     @roadmap = Roadmap.new(roadmap_params)
-    @roadmap.user_id = 1    # 本来はcurrentuserに送りたい
+    @roadmap.user_id = @current_user.id   # 本来はcurrentuserに送りたい
     if @roadmap.save
      redirect_to ("/roadmap/cmroad/#{@roadmap.id}")
     else
@@ -482,7 +482,7 @@ class RoadmapsController < ApplicationController
   
   def choosefl
     @roadmap = Roadmap.find_by(id: params[:id])
-    @myroadmap = Roadmap.create(title: @roadmap.title, stady_time_week: @roadmap.stady_time_week, stady_time_holiday: @roadmap.stady_time_holiday, period_stady: @roadmap.period_stady, total_stady_time: @roadmap.total_stady_time, total_comment: @roadmap.total_comment, user_id: 1, category_id: @roadmap.category_id)
+    @myroadmap = Roadmap.create(title: @roadmap.title, stady_time_week: @roadmap.stady_time_week, stady_time_holiday: @roadmap.stady_time_holiday, period_stady: @roadmap.period_stady, total_stady_time: @roadmap.total_stady_time, total_comment: @roadmap.total_comment, user_id: @current_user.id, category_id: @roadmap.category_id)
     @myroadmap.save
     @user = User.find_by(id: @current_user.id)
     @user.update(mymap: "#{@myroadmap.id}")
@@ -496,7 +496,7 @@ class RoadmapsController < ApplicationController
   
   def choosefm
     @roadmap = Roadmap.find_by(id: params[:id])
-    @myroadmap = Roadmap.create(title: @roadmap.title, stady_time_week: @roadmap.stady_time_week, stady_time_holiday: @roadmap.stady_time_holiday, period_stady: @roadmap.period_stady, total_stady_time: @roadmap.total_stady_time, total_comment: @roadmap.total_comment, user_id: 1, category_id: @roadmap.category_id)
+    @myroadmap = Roadmap.create(title: @roadmap.title, stady_time_week: @roadmap.stady_time_week, stady_time_holiday: @roadmap.stady_time_holiday, period_stady: @roadmap.period_stady, total_stady_time: @roadmap.total_stady_time, total_comment: @roadmap.total_comment, user_id: @current_user.id, category_id: @roadmap.category_id)
     @myroadmap.save
     @user = User.find_by(id: @current_user.id)
     @user.update(mymap: "#{@myroadmap.id}")
