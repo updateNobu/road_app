@@ -23,3 +23,8 @@
   <%= "#{@user.email}" %>
   <%= link_to("編集", "/user/showedit/#{@user.id}")%>
 <%end%>
+<% if @current_user.admin? && !(@current_user.id == @user.id) %>
+  <%= link_to("削除", "/user/destroy/#{@user.id}", method: :post,
+                                  data: { confirm: "You sure?" }) %>
+<%end%>
+  

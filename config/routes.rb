@@ -67,6 +67,7 @@ Rails.application.routes.draw do
   post "login" => "users#login"
   post "logout" => "users#logout"
   post "user/updateshow/:id" => "users#updateshow"
+  post "/user/destroy/:id" => "users#destroy"
   
   
   post "like/:roadmap_id/create" => "likes#create"

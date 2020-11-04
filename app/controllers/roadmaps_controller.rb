@@ -213,7 +213,7 @@ class RoadmapsController < ApplicationController
   
   def cmr
     @roadmap = Roadmap.new(roadmap_params)
-    @roadmap.user_id= 1    # 本来はcurrentuserに送りたい
+    @roadmap.user_id = 1    # 本来はcurrentuserに送りたい
     if @roadmap.save
      redirect_to ("/roadmap/cmroad/#{@roadmap.id}")
     else

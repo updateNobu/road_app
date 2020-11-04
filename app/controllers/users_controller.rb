@@ -1,8 +1,13 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user, {only: [:logout]}
+  before_action :authenticate_user, {only: [:logout, :destroy]}
   before_action :forbid_login_user, {only: [:login_form, :login, :new, :create]}
   before_action :ensure_correct_user, {only: [:showedit, :updateshow]}
+  before_action :admin_user,     only: :destroy
   
+  def admin_user
+      redirect_to("/") unless @current_user.admin?
+  end
+    
   def ensure_correct_user
     if @current_user.id != params[:id].to_i
       flash[:notice]= "権限がありません"
@@ -21,8 +26,8 @@ class UsersController < ApplicationController
   
   
   def login
-    @user = User.find_by(email: params[:email], password: [:password])
-    if @user
+    @user = User.find_by(email: params[:email])
+    if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       flash[:notice] = "ログインしました"
       redirect_to("/user/show/#{@user.id}")
@@ -45,7 +50,8 @@ class UsersController < ApplicationController
       name: params[:name],
       email: params[:email],
       password: params[:password],
-      image_name: "default.png"
+      image_name: "default.png",
+      mymap: 1
     )
     if @user.save
       session[:user_id]=@user.id
@@ -109,6 +115,13 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @likes = Like.where(user_id: @user.id)
   end
+  
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "ユーザーを削除しました"
+    redirect_to("/")
+  end
+
   
   
 end
