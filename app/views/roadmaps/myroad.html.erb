@@ -2,7 +2,7 @@
 <h1>My ロードマップ</h1>
 <%= link_to("ロードマップを新規作成する", "/roadmap/cmroad")%>
 <%= link_to("お気に入りからロードマップにする", "/user/#{@current_user.id}/cflike")%>
-<%= link_to("自分の投稿からロードマップにする", "#")%>
+<%= link_to("自分の投稿からロードマップにする", "/user/cfmroad/#{@current_user.id}")%>
 <% if flash[:notice]%>
  <div>
    <%= flash[:notice]%>

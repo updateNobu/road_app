@@ -1,0 +1,11 @@
+<h3>My roadmap</h3>
+<h2>自分の投稿から選ぶ</h2>
+<% @roadmaps.each do |roadmap| %>
+ <div>
+  <%= link_to(roadmap.title,"/roadmap/cfmrshow/#{roadmap.id}") %>
+  <p>いいね！</p>
+  <%= Like.where(roadmap_id: roadmap.id).count %>
+  <%= roadmap.created_at%>
+  <img src="<%= "/user_images/#{@user.image_name}"%>">
+ </div>
+<% end %>

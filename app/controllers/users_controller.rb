@@ -75,6 +75,11 @@ class UsersController < ApplicationController
     @roadmaps = Roadmap.where(user_id: @user.id)
   end
   
+  def cfmroad
+    @user = User.find_by(id: params[:id])
+    @roadmaps = Roadmap.where(user_id: @current_user.id)
+  end
+  
   def updateshow
     @user = User.find_by(id: params[:id])
     # @user.写真 = params[:content]

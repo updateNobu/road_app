@@ -271,6 +271,12 @@ class RoadmapsController < ApplicationController
     @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
   end
   
+  def cfmrshow
+    @roadmap = Roadmap.find_by(id: params[:id])
+    @user = User.find_by(id: @roadmap.user_id)
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+  end
+  
   def likeshow
     @roadmap = Roadmap.find_by(id: params[:id])
     @user = User.find_by(id: @roadmap.user_id)
@@ -475,6 +481,20 @@ class RoadmapsController < ApplicationController
   end
   
   def choosefl
+    @roadmap = Roadmap.find_by(id: params[:id])
+    @myroadmap = Roadmap.create(title: @roadmap.title, stady_time_week: @roadmap.stady_time_week, stady_time_holiday: @roadmap.stady_time_holiday, period_stady: @roadmap.period_stady, total_stady_time: @roadmap.total_stady_time, total_comment: @roadmap.total_comment, user_id: 1, category_id: @roadmap.category_id)
+    @myroadmap.save
+    @user = User.find_by(id: @current_user.id)
+    @user.update(mymap: "#{@myroadmap.id}")
+    @roadmapshows = Roadmapshow.where(roadmap_id: params[:id])
+    @roadmapshows.each do |roadmapshow|
+      myroadmapshow = Roadmapshow.new
+      myroadmapshow.update(content: "#{roadmapshow.content}", method: "#{roadmapshow.method}", time_required: "#{roadmapshow.time_required}", comment: "#{roadmapshow.comment}", roadmap_id: "#{@myroadmap.id}")
+    end
+    redirect_to("/user/road/#{@current_user.id}")
+  end
+  
+  def choosefm
     @roadmap = Roadmap.find_by(id: params[:id])
     @myroadmap = Roadmap.create(title: @roadmap.title, stady_time_week: @roadmap.stady_time_week, stady_time_holiday: @roadmap.stady_time_holiday, period_stady: @roadmap.period_stady, total_stady_time: @roadmap.total_stady_time, total_comment: @roadmap.total_comment, user_id: 1, category_id: @roadmap.category_id)
     @myroadmap.save
