@@ -13,7 +13,7 @@ before_action :authenticate_user
   
   def destroy
     @like = Like.find_by(
-      User_id: @current_user.id,
+      user_id: @current_user.id,
       roadmap_id: params[:roadmap_id]
     )
     @like.destroy
@@ -33,7 +33,7 @@ before_action :authenticate_user
   
   def destroyshow
     @like = Like.find_by(
-      User_id: @current_user.id,
+      user_id: @current_user.id,
       roadmap_id: params[:roadmap_id]
     )
     @like.destroy
@@ -52,7 +52,7 @@ before_action :authenticate_user
   
   def destroylike
     @like = Like.find_by(
-      User_id: @current_user.id,
+      user_id: @current_user.id,
       roadmap_id: params[:roadmap_id]
     )
     @like.destroy
@@ -71,7 +71,7 @@ before_action :authenticate_user
   
   def destroylksw
     @like = Like.find_by(
-      User_id: @current_user.id,
+      user_id: @current_user.id,
       roadmap_id: params[:roadmap_id]
     )
     @like.destroy
@@ -91,7 +91,7 @@ before_action :authenticate_user
   
   def destroymroadi
     @like = Like.find_by(
-      User_id: @current_user.id,
+      user_id: @current_user.id,
       roadmap_id: params[:roadmap_id]
     )
     @like.destroy
@@ -111,7 +111,7 @@ before_action :authenticate_user
   
   def destroymrims
     @like = Like.find_by(
-      User_id: @current_user.id,
+      user_id: @current_user.id,
       roadmap_id: params[:roadmap_id]
     )
     @like.destroy
