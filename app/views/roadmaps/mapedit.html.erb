@@ -2,10 +2,10 @@
 <h3>My roadmap edit</h3>
 <h1>My ロードマップ</h1>
 <% @mymaps.each do |map| %>
-      <%= map.content %>
-      <%= map.method %>
-      <%= "#{map.time_required}分" %>
-      <%= map.comment %>
+      <%= "・#{map.content}" %>
+      <%= "アプローチ：#{map.method}" %>
+      <%= "所要時間：#{map.time_required}分" %>
+      <%= "コメント：#{map.comment}" %>
       <%= link_to("編集", "/roadmap/medit/#{map.id}")%>
       <%= link_to("削除", "/roadmap/destroymap/#{map.id}", {method: "post"}) %>
   <% end %>

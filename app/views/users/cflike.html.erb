@@ -1,13 +1,13 @@
 <h3>My page</h3>
 <h2>お気に入りから選ぶ</h2>
 <% @likes.each do |like| %>
- <% @roadmap = Roadmap.find_by(id: like.roadmap_id)%>
+ <% @roadmap = Roadmap.find_by(id: like.roadmap_id, display: true)%>
  <div>
   <%= link_to(@roadmap.title,"/roadmap/cflshow/#{@roadmap.id}") %>
   <p>いいね！済み</p>
   <%= Like.where(roadmap_id: @roadmap.id).count %>
   
-  <%= @roadmap.created_at%>
+  <%= @roadmap.updated_at%>
   <img src="<%= "/user_images/#{User.find_by(id: @roadmap.user_id).image_name}"%>">
  </div>
 <% end %>

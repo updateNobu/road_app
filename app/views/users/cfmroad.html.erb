@@ -5,7 +5,7 @@
   <%= link_to(roadmap.title,"/roadmap/cfmrshow/#{roadmap.id}") %>
   <p>いいね！</p>
   <%= Like.where(roadmap_id: roadmap.id).count %>
-  <%= roadmap.created_at%>
+  <%= roadmap.updated_at%>
   <img src="<%= "/user_images/#{@user.image_name}"%>">
  </div>
 <% end %>

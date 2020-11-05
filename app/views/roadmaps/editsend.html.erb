@@ -3,10 +3,10 @@
 <h2>ロードマップ詳細</h2>
 <div>
   <% @roadmap_shows.each do |show| %>
-      <%= show.content %>
-      <%= show.method %>
-      <%= "#{show.time_required}分" %>
-      <%= show.comment %>
+      <%= "・#{show.content}" %>
+      <%= "アプローチ：#{show.method}" %>
+      <%= "所要時間：#{show.time_required}分" %>
+      <%= "コメント：#{show.comment}" %>
       <%= link_to("編集", "/roadmap/editz/#{show.id}")%>
       <%= link_to("削除", "/roadmap/destroyz/#{show.id}", {method: "post"}) %>
   <% end %>

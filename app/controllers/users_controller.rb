@@ -79,12 +79,12 @@ class UsersController < ApplicationController
   
   def mroadi
     @user = User.find_by(id: params[:id])
-    @roadmaps = Roadmap.where(user_id: @user.id)
+    @roadmaps = Roadmap.where(user_id: @user.id).where(display: true).order(updated_at: "DESC")
   end
   
   def cfmroad
     @user = User.find_by(id: params[:id])
-    @roadmaps = Roadmap.where(user_id: @current_user.id)
+    @roadmaps = Roadmap.where(user_id: @current_user.id).where(display: true).order(updated_at: "DESC")
   end
   
   def updateshow
@@ -109,12 +109,12 @@ class UsersController < ApplicationController
   
   def likepage
     @user = User.find_by(id: params[:id])
-    @likes = Like.where(user_id: @user.id)
+    @likes = Like.where(user_id: @user.id).order(updated_at: "DESC")
   end
   
   def cflike
     @user = User.find_by(id: params[:id])
-    @likes = Like.where(user_id: @user.id)
+    @likes = Like.where(user_id: @user.id).order(updated_at: "DESC")
   end
   
   def destroy

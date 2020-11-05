@@ -228,7 +228,7 @@ class RoadmapsController < ApplicationController
   
   
   def front
-    @roadmaps = Roadmap.where(category_id: 1)
+    @roadmaps = Roadmap.where(category_id: 1).where(display: true).order(updated_at: "DESC")
     @users = []
     @roadmaps.each do |roadmap|
       @users.push(User.find_by(id: roadmap.user_id))
@@ -236,7 +236,7 @@ class RoadmapsController < ApplicationController
   end
   
   def back
-    @roadmaps = Roadmap.where(category_id: 2)
+    @roadmaps = Roadmap.where(category_id: 2).where(display: true).order(updated_at: "DESC")
     @users = []
     @roadmaps.each do |roadmap|
       @users.push(User.find_by(id: roadmap.user_id))
@@ -244,7 +244,7 @@ class RoadmapsController < ApplicationController
   end
   
   def web
-    @roadmaps = Roadmap.where(category_id: 3)
+    @roadmaps = Roadmap.where(category_id: 3).where(display: true).order(updated_at: "DESC")
     @users = []
     @roadmaps.each do |roadmap|
       @users.push(User.find_by(id: roadmap.user_id))
@@ -252,7 +252,7 @@ class RoadmapsController < ApplicationController
   end
   
   def free
-    @roadmaps = Roadmap.where(category_id: 4)
+    @roadmaps = Roadmap.where(category_id: 4).where(display: true).order(updated_at: "DESC")
     @users = []
     @roadmaps.each do |roadmap|
       @users.push(User.find_by(id: roadmap.user_id))
@@ -320,9 +320,13 @@ class RoadmapsController < ApplicationController
     @roadmap = Roadmap.find_by(id: @roadmap_show.roadmap_id)
     if @roadmap_show.save
      if params[:finish]
-        User.find_by(id: @roadmap.user_id).update_attribute(:mymap, @roadmap.id)
+        Roadmap.find_by(id: @current_user.mymap).destroy
+        user = User.find_by(id: @current_user.id)
+        user.update_attribute(:mymap, @roadmap.id)
+        roadmap = Roadmap.find_by(id: @roadmap.id)
+        roadmap.update(display: false)
         redirect_to ("/user/road/#{@current_user.id}")
-        flash[:notice]= "投稿完了！"
+        flash[:notice]= "更新完了！"
      else
         redirect_to("/roadmap/cmroad/#{@roadmap_show.roadmap_id}")
      end
@@ -487,22 +491,29 @@ class RoadmapsController < ApplicationController
     @roadmap = Roadmap.find_by(id: params[:id])
     @myroadmap = Roadmap.create(title: @roadmap.title, stady_time_week: @roadmap.stady_time_week, stady_time_holiday: @roadmap.stady_time_holiday, period_stady: @roadmap.period_stady, total_stady_time: @roadmap.total_stady_time, total_comment: @roadmap.total_comment, user_id: @current_user.id, category_id: @roadmap.category_id)
     @myroadmap.save
-    @user = User.find_by(id: @current_user.id)
-    @user.update_attribute(:mymap, @myroadmap.id)
+    Roadmap.find_by(id: @current_user.mymap).destroy
+    user = User.find_by(id: @current_user.id)
+    user.update_attribute(:mymap, @myroadmap.id)
+    roadmap = Roadmap.find_by(id: @myroadmap.id)
+    roadmap.update(display: false)
     @roadmapshows = Roadmapshow.where(roadmap_id: params[:id])
     @roadmapshows.each do |roadmapshow|
       myroadmapshow = Roadmapshow.new
       myroadmapshow.update(content: "#{roadmapshow.content}", method: "#{roadmapshow.method}", time_required: "#{roadmapshow.time_required}", comment: "#{roadmapshow.comment}", roadmap_id: "#{@myroadmap.id}")
     end
     redirect_to("/user/road/#{@current_user.id}")
+    flash[:notice]= "投稿完了！"
   end
   
   def choosefm
     @roadmap = Roadmap.find_by(id: params[:id])
     @myroadmap = Roadmap.create(title: @roadmap.title, stady_time_week: @roadmap.stady_time_week, stady_time_holiday: @roadmap.stady_time_holiday, period_stady: @roadmap.period_stady, total_stady_time: @roadmap.total_stady_time, total_comment: @roadmap.total_comment, user_id: @current_user.id, category_id: @roadmap.category_id)
     @myroadmap.save
-    @user = User.find_by(id: @current_user.id)
-    @user.update_attribute(:mymap, @myroadmap.id)
+    Roadmap.find_by(id: @current_user.mymap).destroy
+    user = User.find_by(id: @current_user.id)
+    user.update_attribute(:mymap, @myroadmap.id)
+    roadmap = Roadmap.find_by(id: @myroadmap.id)
+    roadmap.update(display: false)
     @roadmapshows = Roadmapshow.where(roadmap_id: params[:id])
     @roadmapshows.each do |roadmapshow|
       myroadmapshow = Roadmapshow.new
