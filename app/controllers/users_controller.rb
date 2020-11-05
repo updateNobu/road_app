@@ -99,7 +99,7 @@ class UsersController < ApplicationController
       image = params[:image]
       File.binwrite("public/user_images/#{@user.image_name}", image.read)
     end
-    if @user.save
+    if @user.save(validate: false)
       redirect_to("/user/show/#{@user.id}")
       flash[:notice]= "投稿完了！"
     else
