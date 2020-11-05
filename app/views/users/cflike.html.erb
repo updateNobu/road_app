@@ -8,6 +8,6 @@
   <%= Like.where(roadmap_id: @roadmap.id).count %>
   
   <%= @roadmap.created_at%>
-  <img src="<%= "/user_images/#{@user.image_name}"%>">
+  <img src="<%= "/user_images/#{User.find_by(id: @roadmap.user_id).image_name}"%>">
  </div>
 <% end %>

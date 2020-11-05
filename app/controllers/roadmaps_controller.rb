@@ -1,8 +1,8 @@
 class RoadmapsController < ApplicationController
-  # before_action :authenticate_user, {only: [:new, :new_show, :add, :editshow, :destroyshow, :updateshow]}
-  # before_action :ensure_correct_user, {only: [:edit, :editsend, :myre, :mrei, :update, :updatemyre, :destroyall, :destroymy]}
-  # before_action :ensure_correct_user_show, {only: [:mreiz, :updatemrei, :destroymre, :destroyz, :editz, :updateedit, :updatemap, :destroymap]}
-  # # before_action :ensure_correct_user_mapedit, {only: [:mapedit]}
+  before_action :authenticate_user, {only: [:new, :new_show, :add, :editshow, :destroyshow, :updateshow]}
+  before_action :ensure_correct_user, {only: [:edit, :editsend, :myre, :mrei, :update, :updatemyre, :destroyall, :destroymy]}
+  before_action :ensure_correct_user_show, {only: [:mreiz, :updatemrei, :destroymre, :destroyz, :editz, :updateedit, :updatemap, :destroymap]}
+  # before_action :ensure_correct_user_mapedit, {only: [:mapedit]}
   
   def ensure_correct_user
     @roadmap = Roadmap.find_by(id: params[:id])
@@ -320,7 +320,7 @@ class RoadmapsController < ApplicationController
     @roadmap = Roadmap.find_by(id: @roadmap_show.roadmap_id)
     if @roadmap_show.save
      if params[:finish]
-        User.find_by(id: "#{@roadmap.user_id}").update(mymap: "#{@roadmap.id}")
+        User.find_by(id: @roadmap.user_id).update_attribute(:mymap, @roadmap.id)
         redirect_to ("/user/road/#{@current_user.id}")
         flash[:notice]= "投稿完了！"
      else
@@ -337,6 +337,10 @@ class RoadmapsController < ApplicationController
   end
   
   def editshow
+    @roadmapshow = Roadmapshow.find_by(id: params[:id])
+  end
+  
+  def cmrsedit
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
   end
   
@@ -413,8 +417,7 @@ class RoadmapsController < ApplicationController
   def destroymap
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.destroy
-    @roadmap = Roadmap(id: @roadmapshow.roadmap_id)
-    redirect_to("/roadmap/mapedit/#{@roadmap.user_id}")
+    redirect_to("/roadmap/mapedit/#{@current_user.id}")
   end
   
   def destroyall
@@ -485,7 +488,7 @@ class RoadmapsController < ApplicationController
     @myroadmap = Roadmap.create(title: @roadmap.title, stady_time_week: @roadmap.stady_time_week, stady_time_holiday: @roadmap.stady_time_holiday, period_stady: @roadmap.period_stady, total_stady_time: @roadmap.total_stady_time, total_comment: @roadmap.total_comment, user_id: @current_user.id, category_id: @roadmap.category_id)
     @myroadmap.save
     @user = User.find_by(id: @current_user.id)
-    @user.update(mymap: "#{@myroadmap.id}")
+    @user.update_attribute(:mymap, @myroadmap.id)
     @roadmapshows = Roadmapshow.where(roadmap_id: params[:id])
     @roadmapshows.each do |roadmapshow|
       myroadmapshow = Roadmapshow.new
@@ -499,7 +502,7 @@ class RoadmapsController < ApplicationController
     @myroadmap = Roadmap.create(title: @roadmap.title, stady_time_week: @roadmap.stady_time_week, stady_time_holiday: @roadmap.stady_time_holiday, period_stady: @roadmap.period_stady, total_stady_time: @roadmap.total_stady_time, total_comment: @roadmap.total_comment, user_id: @current_user.id, category_id: @roadmap.category_id)
     @myroadmap.save
     @user = User.find_by(id: @current_user.id)
-    @user.update(mymap: "#{@myroadmap.id}")
+    @user.update_attribute(:mymap, @myroadmap.id)
     @roadmapshows = Roadmapshow.where(roadmap_id: params[:id])
     @roadmapshows.each do |roadmapshow|
       myroadmapshow = Roadmapshow.new

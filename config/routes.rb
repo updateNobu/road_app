@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "about" => "home#about"
   
   get "roadmap/editshow/:id" => "roadmaps#editshow"
+  get "roadmap/cmrsedit/:id" => "roadmaps#cmrsedit"
   get "roadmap/medit/:id" => "roadmaps#medit"
   get "roadmap/editz/:id" => "roadmaps#editz"
   get "roadmap/mreiz/:id" => "roadmaps#mreiz"

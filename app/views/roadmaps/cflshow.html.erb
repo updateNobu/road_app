@@ -23,5 +23,5 @@
     <%= show.comment %>
   <% end %>
 </div>
-<%= link_to("投稿一覧", "/user/#{@user.id}/cflike")%>
+<%= link_to("投稿一覧", "/user/#{@current_user.id}/cflike")%>
 <%= link_to("My ロードマップにする", "/roadmap/choosefl/#{@roadmap.id}",  {method: "post"})%>

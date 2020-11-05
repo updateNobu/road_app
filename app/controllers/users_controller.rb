@@ -51,10 +51,11 @@ class UsersController < ApplicationController
       email: params[:email],
       password: params[:password],
       image_name: "default.png",
-      mymap: 1
     )
     if @user.save
       session[:user_id]=@user.id
+      @roadmap = Roadmap.create(title: "-", stady_time_week: 0, stady_time_holiday: 0, period_stady: 0, total_stady_time: 0, total_comment: "My ロードマップを作ろう", user_id: "#{@user.id}", category_id: 1)
+      @user.update(mymap: "#{@roadmap.id}")
       flash[:notice] = "ユーザー登録が完了しました"
       redirect_to("/user/show/#{@user.id}")
     else

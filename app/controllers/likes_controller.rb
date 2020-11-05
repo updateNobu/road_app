@@ -47,8 +47,7 @@ before_action :authenticate_user
       roadmap_id: params[:roadmap_id]
     )
     @like.save
-    @roadmap = Roadmap.find_by(id: params[:roadmap_id])
-    redirect_to("/user/#{@roadmap.user_id}/likepage")
+    redirect_to("/user/#{@current_user.id}/likepage")
   end
   
   def destroylike
@@ -57,8 +56,7 @@ before_action :authenticate_user
       roadmap_id: params[:roadmap_id]
     )
     @like.destroy
-    @roadmap = Roadmap.find_by(id: params[:roadmap_id])
-    redirect_to("/user/#{@roadmap.user_id}/likepage")
+    redirect_to("/user/#{@current_user.id}/likepage")
   end
   
   def createlksw
