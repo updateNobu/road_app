@@ -71,9 +71,26 @@
 
 .qes {
   font-size: 60px;
+  margin-bottom: 10px;
 }
 
 .detail {
   font-size: 18px;
-  padding: 2px 40px 10px 40px;
+  padding: 0px 40px 10px 40px;
+  margin-top: 0px;
+  display: inline-block;
+  text-align: left;
+}
+
+.send {
+  font-size: 18px;
+  margin-top: 15px;
+  display: inline-block;
+  text-align: left;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  border-bottom: solid white 2px;
 }
