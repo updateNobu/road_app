@@ -31,10 +31,27 @@
 }
 
 .ti{
-  padding-top: 15px;
+  padding-top: 0px;
   margin: 0px;
 }
 .lo {
   padding-bottom: 15px;
 }
 
+.front {
+  width: 100%;
+  hight: 60%;
+  border-bottom: solid rgb(9, 221, 206) 7px;
+}
+
+.back {
+  width: 100%;
+  hight: 60%;
+  border-bottom: solid rgb(9, 221, 206) 7px;
+}
+
+.free {
+  width: 100%;
+  hight: 60%;
+  border-bottom: solid rgb(9, 221, 206) 7px;
+}
