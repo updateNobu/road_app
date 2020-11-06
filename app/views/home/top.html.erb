@@ -4,23 +4,28 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
-<img src="/user_images/home.jpg">
-<div>
-  <%= link_to("フロントエンド", "/roadmap/1") %>
-  <p>フロントエンド説明</p>
+<div class = "top-wrapper">
+  <div class = "container">
+    <img class = "main-logo"  src="/user_images/home.jpg">
+  </div>
 </div>
-
-<div>
-  <%= link_to("バックエンド", "/roadmap/2") %>
-  <p>バックエンド説明</p>
-</div>
-
-<div>
-  <%= link_to("web制作", "/roadmap/3") %>
-  <p>web制作説明</p>
-</div>
-
-<div>
-  <%= link_to("フリーランス", "/roadmap/4") %>
-  <p>フリーランス説明</p>
+<div clas="contents">
+  <div class="content" >
+    <%= link_to("/roadmap/1") do %>
+    <p class="ti">フロントエンドエンジニア</p>
+    <p class="lo">フロントエンド説明</p>
+    <%end%>
+  </div>
+  <div class="content">
+    <%= link_to("/roadmap/2") do %>
+    <p class="ti">バックエンドエンジニア</p>
+    <p class="lo">バックエンド説明</p>
+    <%end%>
+  </div>
+  <div class="content">
+    <%= link_to("/roadmap/4") do %>
+    <p class="ti">フリーランスエンジニア</p>
+    <p class="lo">フリーランス説明</p>
+    <%end%>
+  </div>
 </div>
