@@ -37,9 +37,15 @@
 .ti{
   padding-top: 0px;
   margin: 0px;
+  font-size: 25px;
 }
 .lo {
   padding-bottom: 15px;
+  font-size: 20px;
+  padding: 0px 40px 0px 40px;
+  margin: 10px 0;
+  display: inline-block;
+  text-align: left;
 }
 
 .front {
@@ -58,17 +64,6 @@
   width: 100%;
   hight: 60%;
   border-bottom: solid rgb(9, 221, 206) 7px;
-}
-
-.ti {
-  font-size: 25px;
-}
-.lo {
-  font-size: 15px;
-  padding: 0px 40px 0px 40px;
-  margin: 10px 0;
-  display: inline-block;
-  text-align: left;
 }
 
 .what {
@@ -90,7 +85,7 @@
 }
 
 .detail {
-  font-size: 18px;
+  font-size: 25px;
   padding: 0px 40px 0px 40px;
   margin-top: 0px;
   display: inline-block;
@@ -98,7 +93,7 @@
 }
 
 .send {
-  font-size: 18px;
+  font-size: 25px;
   margin-top: 0px;
   display: inline-block;
   text-align: left;
