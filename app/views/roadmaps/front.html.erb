@@ -28,7 +28,7 @@
       <%end%>
   <%else%>
       <%= link_to("/login") do %>
-        <span class="fa fa-heart like-btn-unlike"></span>
+        <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
       <%end%>
   <%end%>
   <%= Like.where(roadmap_id: roadmap.id).count %>
@@ -39,8 +39,8 @@
  <% end %>
 <% end %>
 <div class="low">
+<%= link_to("種別選択に戻る", "/", {class: "choise"}) %>
 <% if @current_user %>
   <%= link_to("投稿", "/roadmap/new", {class: "up"}) %>
 <% end %>
-<%= link_to("種別選択に戻る", "/", {class: "choise"}) %>
 </div>
