@@ -1,3 +1,4 @@
+// topページ
 .main-logo {
   width: 270px;
   display: block;
@@ -10,7 +11,7 @@
 }
 .top-wrapper {
   width: 90%;
-  margin: 40px auto 30px auto;
+  margin: 75px auto 30px auto;
   padding: 15px 0;
   background-color: rgb(9, 221, 206);
 }
@@ -87,6 +88,7 @@
   margin-top: 15px;
   display: inline-block;
   text-align: left;
+  padding: 0px 0px 0px 40px;
 }
 
 .link {
@@ -94,3 +96,65 @@
   text-decoration: none;
   border-bottom: solid white 2px;
 }
+
+// header部分
+.head-logo {
+  width: 150px;
+  float: left;
+  margin: 0px 0px auto 10px;
+}
+
+li {
+  float: right;
+  line-height: 25px;
+  margin: auto 10px auto 0px;
+  size: 9px;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(17, 17, 17, 0.7);
+  position:fixed;
+  top: 0px;
+  z-index:10;
+}
+
+ul {
+  list-style: none;
+  padding-right: 10px;
+}
+
+.head a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+// hooter部分
+
+.hooter {
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(17, 17, 17, 0.7);
+  // background-color: cover;
+}
+
+.hoot {
+  width: 120px;
+  float: left;
+  margin: 10px 0px auto 10px;
+}
+
+.return {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  float: right;
+  line-height: 50px;
+  margin-right: 10px;
+}
+  
+  
+  
+  

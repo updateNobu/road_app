@@ -11,16 +11,17 @@
 
   <body>
     <header>
-      <div>
-          <%= link_to("Roadmap update", "/") %>
-      </div>
+      <div class="head">
+        <%= link_to("/") do %>
+          <img class = "head-logo"  src="/user_images/head.jpg">
+        <%end%>
       <ul>
         <% if @current_user %>
           <li>
             <%= link_to(@current_user.name, "/user/show/#{@current_user.id}") %>
           </li>
           <li>
-            <%= link_to("アプリについて", "/about") %>
+            <%= link_to("How to use", "/about") %>
           </li>
           <li>
             <%= link_to("logout", "/logout", {method: :post}) %>
@@ -30,7 +31,7 @@
           </li>
         <% else %>
           <li>
-            <%= link_to("アプリについて", "/about") %>
+            <%= link_to("How to use", "/about") %>
           </li>
           <li>
             <%= link_to("ログイン", "/login") %>
@@ -40,14 +41,15 @@
           </li>
         <% end %>
       </ul>
+      </div>
     </header>
     <%= yield %>
     <hooter>
-      <div>
-        <%= link_to("Roadmap update", "/") %>
-      </div>
-      <div>
-        <%= link_to("ロードマップ一覧", "/") %>
+      <div class="hooter">
+      <%= link_to("/") do %>
+          <img class = "hoot"  src="/user_images/head.jpg">
+      <%end%>
+        <%= link_to("ロードマップ一覧", "/", {class: "return"}) %>
       </div>
     </hooter>
   </body>
