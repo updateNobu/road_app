@@ -35,15 +35,13 @@
 }
 
 .ti{
-  padding-top: 0px;
-  margin: 0px;
+  margin: 15px auto 0px;
   font-size: 25px;
 }
 .lo {
-  padding-bottom: 15px;
-  font-size: 20px;
+  font-size: 15.2px;
   padding: 0px 40px 0px 40px;
-  margin: 10px 0;
+  margin-bottom: 20px;
   display: inline-block;
   text-align: left;
 }
@@ -51,19 +49,19 @@
 .front {
   width: 100%;
   hight: 60%;
-  border-bottom: solid rgb(9, 221, 206) 7px;
+  border-bottom: solid rgb(9, 221, 206) 12px;
 }
 
 .back {
   width: 100%;
   hight: 60%;
-  border-bottom: solid rgb(9, 221, 206) 7px;
+  border-bottom: solid rgb(9, 221, 206) 12px;
 }
 
 .free {
   width: 100%;
   hight: 60%;
-  border-bottom: solid rgb(9, 221, 206) 7px;
+  border-bottom: solid rgb(9, 221, 206) 12px;
 }
 
 .what {
@@ -72,22 +70,36 @@
   background-color: rgb(9, 221, 206);
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 
 .sub-logo {
   width: 270px;
-  margin-top: 20px;
+  right: 10%;
+  position: absolute;
+  top: 16%;
+  transform: translate(-50%, -50%);
 }
 
 .qes {
   font-size: 60px;
-  margin-bottom: 10px;
+  left: 28%;
+  position: absolute;
+  top: 4%;
+  transform: translate(-50%, -70%);
+}
+
+.mark{
+  font-size: 60px;
+  right: 15%;
+  position: absolute;
+  top: 4%;
+  transform: translate(-50%, -70%);
 }
 
 .detail {
   font-size: 25px;
-  padding: 0px 40px 0px 40px;
-  margin-top: 0px;
+  padding: 120px 40px 0px 40px;
   display: inline-block;
   text-align: left;
 }
@@ -177,6 +189,4 @@ ul {
   transform: translate(-20%, -50%);
 }
   
-  
-  
-  
+// フロントエンド
