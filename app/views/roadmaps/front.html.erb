@@ -4,7 +4,9 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
-<h1>フロントエンド</h1>
+<div class="bigtitle">
+  <p>フロントエンドエンジニア</p>
+</div>
 <% @roadmaps.zip(@users) do |roadmap, user| %>
  <div>
   <%= link_to(roadmap.title,"/roadmap/1/#{roadmap.id}" ) %>
