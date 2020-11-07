@@ -238,9 +238,10 @@ header {
 
 .index{
   width: 80%;
-  height: 140px;
+  height: 120px;
   background-color: rgb(234, 234, 234);
   margin: 0 auto 40px;
+  position: relative;
 }
 .index a {
   text-decoration: none;
@@ -252,16 +253,23 @@ header {
 }
 
 .user{
-  font-size: 22px;
-  padding-bottom: 10px;
+  font-size: 25px;
+  left: 5%;
+  position: absolute;
+  top: 60%;
 }
 
-.index ul {
-  list-style: none;
+.icon {
+  right: 0%;
+  position: absolute;
+  top: 0%;
+  height: 120px;
+  width: 140px;
 }
 
-.index li {
-  float: left;
+.time {
   font-size: 20px;
-  padding: 0 5px 10px 10px;
+  right: 30%;
+  position: absolute;
+  top: 45%;
 }

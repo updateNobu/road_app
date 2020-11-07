@@ -14,11 +14,7 @@
   <%= link_to("/roadmap/1/#{roadmap.id}") do %>
   <div class="index">
   <p class="roadtitle"><%= "#{roadmap.title}"%></p>
-  <ul>
-  <li>
   <%= link_to(user.name,"/user/show/#{user.id}", {class: "user"}) %>
-  </li>
-  <li>
   <%if @current_user%>
       <%if Like.find_by(user_id: @current_user.id, roadmap_id: roadmap.id)%>
         <%= link_to("いいね！外す", "/like/#{roadmap.id}/destroy", {method: "post"})%>
@@ -29,11 +25,8 @@
       <%= link_to("いいね!", "/login") %>
   <%end%>
   <%= Like.where(roadmap_id: roadmap.id).count %>
-  </li>
-  <li>
-  <%= "#{roadmap.updated_at}"%>
-  </li>
-  <img src="<%= "/user_images/#{user.image_name}"%>">
+  <p class="time"><%= "#{roadmap.updated_at}"%></p>
+  <img src="<%= "/user_images/#{user.image_name}"%>" class="icon">
   </div>
  <% end %>
 <% end %>
