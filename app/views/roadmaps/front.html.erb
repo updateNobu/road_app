@@ -4,13 +4,21 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
+<div class="sam">
 <div class="bigtitle">
   <p>フロントエンドエンジニア</p>
 </div>
+<img class = "samlogo"  src="/user_images/fsphone.jpg">
+</div>
 <% @roadmaps.zip(@users) do |roadmap, user| %>
- <div>
-  <%= link_to(roadmap.title,"/roadmap/1/#{roadmap.id}" ) %>
-  <%= link_to(user.name,"/user/show/#{user.id}" ) %>
+  <%= link_to("/roadmap/1/#{roadmap.id}") do %>
+  <div class="index">
+  <p class="roadtitle"><%= "#{roadmap.title}"%></p>
+  <ul>
+  <li>
+  <%= link_to(user.name,"/user/show/#{user.id}", {class: "user"}) %>
+  </li>
+  <li>
   <%if @current_user%>
       <%if Like.find_by(user_id: @current_user.id, roadmap_id: roadmap.id)%>
         <%= link_to("いいね！外す", "/like/#{roadmap.id}/destroy", {method: "post"})%>
@@ -21,9 +29,13 @@
       <%= link_to("いいね!", "/login") %>
   <%end%>
   <%= Like.where(roadmap_id: roadmap.id).count %>
-  <%= roadmap.updated_at%>
+  </li>
+  <li>
+  <%= "#{roadmap.updated_at}"%>
+  </li>
   <img src="<%= "/user_images/#{user.image_name}"%>">
- </div>
+  </div>
+ <% end %>
 <% end %>
 <% if @current_user %>
   <%= link_to("投稿", "/roadmap/new") %>

@@ -138,10 +138,6 @@
   transform: translate(-50%, -50%);
 }
 
-li {
-  float: right;
-  margin: auto 15px auto 0px;
-}
 
 header {
   width: 100%;
@@ -158,12 +154,17 @@ header {
   position: relative;
 }
 
-ul {
+.head ul {
   list-style: none;
-  right: 3%;
+  right: 8%;
   position: absolute;
-  top: 30%;
+  top: 33%;
   transform: translate(0%,-50%);
+}
+
+.head li {
+  float: right;
+  margin: auto 20px auto 0px;
 }
 
 .head a {
@@ -202,15 +203,65 @@ ul {
   
 // 各カテゴリーごとのページ
 .bigtitle{
-  width: 70%;
+  width: 85.7%;
   background-color: rgb(9, 221, 206);
   height: 180px;
-  margin-top: 105px;
+  right: 0%;
+  position: absolute;
+  top: 0%;
 }
 
 .bigtitle p{
-  font-size: 45px;
+  font-size: 50px;
   color: white;
-  text-align: center;
-  line-height: 180px;
+  right: 7%;
+  position: absolute;
+  top: 5%;
+}
+
+.samlogo{
+  width: 26.3%;
+  height: 180;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  // transform: translate(50%, 0%);
+}
+
+.sam {
+  width: 100%;
+  height: 180px;
+  margin-top: 105px;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.index{
+  width: 80%;
+  height: 140px;
+  background-color: rgb(234, 234, 234);
+  margin: 0 auto 40px;
+}
+.index a {
+  text-decoration: none;
+  color: black;
+}
+.roadtitle {
+  padding: 20px 0px 0 60px;
+  font-size: 30px;
+}
+
+.user{
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+.index ul {
+  list-style: none;
+}
+
+.index li {
+  float: left;
+  font-size: 20px;
+  padding: 0 5px 10px 10px;
 }
