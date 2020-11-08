@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_05_022453) do
+ActiveRecord::Schema.define(version: 2020_11_08_020726) do
 
   create_table "likes", force: :cascade do |t|
     t.integer "user_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_11_05_022453) do
     t.integer "roadmap_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "hour_required", default: 0
   end
 
   create_table "users", force: :cascade do |t|
