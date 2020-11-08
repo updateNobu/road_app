@@ -32,19 +32,23 @@
   <p class="stadytime"><%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %></p>
   <p class="period"><%= "必要期間: 上記のペースで#{@roadmap.period_stady}ケ月ほど"%></p>
   <p class="totaltime"><%= "合計時間目安: #{@roadmap.total_stady_time}時間" %></p>
-  <p class="comment">コメント:１２３４５６７８９１０１１１２１３１４１５１６１７１８１９２０２１２２２３２４</p>
+  <p class="comment"><%= "コメント: #{@roadmap.total_comment}" %></p>
 </div>
-<div>
+<div class="road">
   <h1>ロードマップ</h1>
-  <% @roadmap_shows.each do |show| %>
-    <%= "・#{show.content}" %>
-    <%= "アプローチ：#{show.method}" %>
-    <%= "所要時間：#{show.time_required}分" %>
-    <%= "コメント：#{show.comment}" %>
-  <% end %>
 </div>
-<%if @current_user && @user.id == @current_user.id %>
-  <%= link_to("編集", "/roadmap/edit/#{@roadmap.id}")%>
-  <%= link_to("投稿を削除", "/roadmap/destroyall/#{@roadmap.id}", {method: "post"})%>
-<%end%>
-<%= link_to("投稿一覧", "/roadmap/#{@roadmap.category_id}")%>
+  <% @roadmap_shows.each do |show| %>
+   <div class="roadmap">
+    <p class="minititle"><%= "・#{show.content}" %></p>
+    <p class="method"><%= "アプローチ：#{show.method}" %></p>
+    <p class="require"><%= "所要時間：#{show.time_required}分" %></p>
+    <p class="minicomment"><%= "コメント：#{show.comment}" %></p>
+   </div>
+  <% end %>
+  <div class="showbottom">
+   <%= link_to("投稿一覧", "/roadmap/#{@roadmap.category_id}", {class: "backindex"})%>
+   <%if @current_user && @user.id == @current_user.id %>
+     <%= link_to("編集", "/roadmap/edit/#{@roadmap.id}", {class: "goedit"})%>
+     <%= link_to("投稿を削除", "/roadmap/destroyall/#{@roadmap.id}", {method: "post", class: "showdelite"})%>
+   <%end%>
+  </div>
