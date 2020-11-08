@@ -41,7 +41,11 @@
    <div class="roadmap">
     <p class="minititle"><%= "・#{show.content}" %></p>
     <p class="method"><%= "アプローチ：#{show.method}" %></p>
-    <p class="require"><%= "所要時間：#{show.time_required}分" %></p>
+    <% if show.hour_required != 0 %>
+    <p class="require"><%= "所要時間：#{show.time_required}時間　#{show.hour_required}分" %></p>
+    <%else%>
+    <p class="require"><%= "所要時間：#{show.time_required}時間" %></p>
+    <%end%>
     <p class="minicomment"><%= "コメント：#{show.comment}" %></p>
    </div>
   <% end %>

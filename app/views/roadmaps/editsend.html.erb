@@ -5,7 +5,7 @@
   <% @roadmap_shows.each do |show| %>
       <%= "・#{show.content}" %>
       <%= "アプローチ：#{show.method}" %>
-      <%= "所要時間：#{show.time_required}分" %>
+      <%= "所要時間：#{show.time_required}時間" %>
       <%= "コメント：#{show.comment}" %>
       <%= link_to("編集", "/roadmap/editz/#{show.id}")%>
       <%= link_to("削除", "/roadmap/destroyz/#{show.id}", {method: "post"}) %>
@@ -25,7 +25,7 @@
       <%= f.text_field :method %>
             
       <%= f.label :所要時間 %>
-      <%= f.number_field :time_required %>分
+      <%= f.number_field :time_required %>時間
               
       <%= f.label :コメント %>
       <%= f.text_area :comment %>

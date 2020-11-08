@@ -23,7 +23,11 @@
   <% @mymaps.each do |map| %>
       <%= "・#{map.content}" %>
       <%= "アプローチ：#{map.method}" %>
-      <%= "所要時間：#{map.time_required}分" %>
+      <% if map.hour_required != 0 %>
+      <p class=""><%= "所要時間：#{map.time_required}時間　#{map.hour_required}分" %></p>
+      <%else%>
+      <p class=""><%= "所要時間：#{map.time_required}時間" %></p>
+      <%end%>
       <%= "コメント：#{map.comment}" %>
   <% end %>
 </div>
