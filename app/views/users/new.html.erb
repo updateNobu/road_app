@@ -1,19 +1,23 @@
 <!--no8-->
-<h3>ユーザー登録</h3>
+<div class="signtitle">
+<h3 class="uptitle">ユーザー登録</h3>
+</div>
 <% @user.errors.full_messages.each do |message| %>
 <div>
     <%= message %>
 </div>
 <%end%>
+<div class="form">
 <%=form_tag("/user/create") do %>
-　<p>ユーザーネーム</p>
-　<input type="text" value= "<%= @user.name %>" name="name">
+　<p class="newname">ユーザーネーム</p>
+　<input type="text" value= "<%= @user.name %>" name="name" class="newuser">
 　
-　<p>メールアドレス</p>
-　<input type="email" value= "<%= @user.email %>" name="email">
+　<p class="newadress">メールアドレス</p>
+　<input type="email" value= "<%= @user.email %>" name="email" class="newmail">
 　
-　<p>パスワード</p>
-　<input type="password" value= "<%= @user.password %>" name="password">
+　<p class="newpass">パスワード</p>
+　<input type="password" value= "<%= @user.password %>" name="password" class="newpassword">
 　
-　<input type="submit" value="登録">
+　<input type="submit" value="登録" class="newsubmit">
+</div>
 <%end%>
