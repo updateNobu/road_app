@@ -4,24 +4,35 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
-<div>
-  <%= @roadmap.title %>
+ <div class="show">
+  <p class="showtitle"><%= @roadmap.title %></p>
+  <p class="showuser"><%= @user.name %></p>
+  <div class="showlike">
   <%if @current_user%>
       <%if Like.find_by(user_id: @current_user.id, roadmap_id: @roadmap.id)%>
-        <%= link_to("いいね！外す", "/like/#{@roadmap.id}/destroyshow", {method: "post"})%>
+        <%= link_to("/like/#{@roadmap.id}/destroyshow", {method: "post"}) do %>
+          <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
+        <%end%>
       <%else%>
-        <%= link_to("いいね！する", "/like/#{@roadmap.id}/createshow", {method: "post"})%>
+        <%= link_to("/like/#{@roadmap.id}/createshow", {method: "post"}) do %>
+          <span class="fa fa-heart like-btn-unlike fa-black fa-lg"></span>
+        <%end%>
       <%end%>
   <%else%>
-      <%= link_to("いいね!", "/login") %>
+      <%= link_to("/login") do %>
+        <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
+      <%end%>
   <%end%>
   <%= Like.where(roadmap_id: @roadmap.id).count %>
-  <%= @user.name %>
-  <%= @roadmap.updated_at %>
-  <%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %>
-  <%= "必要期間: 上記のペースで#{@roadmap.period_stady}ケ月ほど"%>
-  <%= "合計時間目安: #{@roadmap.total_stady_time}時間" %>
-  <%= "コメント: #{@roadmap.total_comment}" %>
+  </div>
+  <img src="<%= "/user_images/#{@user.image_name}"%>" class="samicon">
+  <p class="timeshow"><%= @roadmap.updated_at %></p>
+  </div>
+  <div class="showdetail">
+  <p class="stadytime"><%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %></p>
+  <p class="period"><%= "必要期間: 上記のペースで#{@roadmap.period_stady}ケ月ほど"%></p>
+  <p class="totaltime"><%= "合計時間目安: #{@roadmap.total_stady_time}時間" %></p>
+  <p class="comment">コメント:１２３４５６７８９１０１１１２１３１４１５１６１７１８１９２０２１２２２３２４</p>
 </div>
 <div>
   <h1>ロードマップ</h1>

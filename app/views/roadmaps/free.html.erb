@@ -4,26 +4,43 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
-<h1>フリーランス</h1>
+<div class="sam">
+<div class="bigtitle">
+  <p>フリーランスエンジニア</p>
+</div>
+<img class = "samlogo"  src="/user_images/frsphone.jpg">
+</div>
 <% @roadmaps.zip(@users) do |roadmap, user| %>
- <div>
-  <%= link_to(roadmap.title,"/roadmap/4/#{roadmap.id}" ) %>
-  <%= link_to(user.name,"/user/show/#{user.id}" ) %>
+  <%= link_to("/roadmap/4/#{roadmap.id}") do %>
+  <div class="index">
+  <p class="roadtitle"><%= "#{roadmap.title}"%></p>
+  <%= link_to(user.name,"/user/show/#{user.id}", {class: "user"}) %>
+  <div class="like">
   <%if @current_user%>
       <%if Like.find_by(user_id: @current_user.id, roadmap_id: roadmap.id)%>
-        <%= link_to("いいね！外す", "/like/#{roadmap.id}/destroy", {method: "post"})%>
+        <%= link_to("/like/#{roadmap.id}/destroy", {method: "post"}) do %>
+          <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
+        <%end%>
       <%else%>
-        <%= link_to("いいね！する", "/like/#{roadmap.id}/create", {method: "post"})%>
+        <%= link_to("/like/#{roadmap.id}/create", {method: "post"}) do %>
+          <span class="fa fa-heart like-btn-unlike fa-lg"></span>
+        <%end%>
       <%end%>
   <%else%>
-      <%= link_to("いいね!", "/login") %>
+      <%= link_to("/login") do %>
+        <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
+      <%end%>
   <%end%>
   <%= Like.where(roadmap_id: roadmap.id).count %>
-  <%= roadmap.updated_at%>
-  <img src="<%= "/user_images/#{user.image_name}"%>">
- </div>
+  </div>
+  <p class="time"><%= "#{roadmap.updated_at}"%></p>
+  <img src="<%= "/user_images/#{user.image_name}"%>" class="icon">
+  </div>
+ <% end %>
 <% end %>
+<div class="low">
+<%= link_to("種別選択に戻る", "/", {class: "choise"}) %>
 <% if @current_user %>
-  <%= link_to("投稿", "/roadmap/new") %>
+  <%= link_to("投稿", "/roadmap/new", {class: "up"}) %>
 <% end %>
-<%= link_to("種別選択に戻る", "/") %>
+</div>
