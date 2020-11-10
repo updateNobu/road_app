@@ -743,3 +743,139 @@ color: #ff1493;
   border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
   font-size: 60px;
 }
+
+
+
+
+
+
+
+.roadmaptop {
+  width: 100%;
+  height: 600px;
+  margin-top: 80px;
+  position: relative;
+}
+
+.miniroadt {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(234, 234, 234);
+}
+
+.minirtitle {
+  font-size: 25px;
+  left: 18%;
+  position: absolute;
+  top: -0.5%;
+  font-weight: bold;
+}
+
+.inputsize {
+  width: 500px;
+  height: 28px;
+  left: 33%;
+  position: absolute;
+  top: 3.7%;
+  border-radius: 8px;
+}
+
+
+
+
+
+.newshowmap {
+  width: 100%;
+  background-color: cover;
+  background-color: rgba(17, 17, 17, 0.7);
+  margin-top: -20px;
+}
+
+
+.inputstadytime {
+  color: white;
+  font-size: 22px;
+  padding: 15px 0 0 20px;
+}
+
+.weekstady {
+  left: 20.7%;
+  position: absolute;
+  top: 16%;
+  border-radius: 8px;
+  height: 27px;
+  width: 27px;
+  font-size: 22px;
+}
+
+.inputholiday {
+  color: white;
+  font-size: 22px;
+  left: 33%;
+  position: absolute;
+  top: 12.5%;
+}
+
+.holidaystady {
+  border-radius: 8px;
+  height: 27px;
+  width: 27px;
+  left: 38%;
+  position: absolute;
+  top: 16%;
+  font-size: 22px;
+}
+
+.needperiod {
+  color: white;
+  font-size: 22px;
+  margin: -20px 0 0 20px;
+}
+
+.needmonth {
+  border-radius: 8px;
+  height: 27px;
+  width: 27px;
+  left: 32.3%;
+  position: absolute;
+  top: 22%;
+  font-size: 22px;
+}
+
+.totaltimetitle {
+  color: white;
+  font-size: 22px;
+  margin: 4px 0 0 20px;
+}
+
+.totaltimeinput {
+  height: 27px;
+  width: 48px;
+  left: 23%;
+  position: absolute;
+  top: 28%;
+  border-radius: 8px;
+  font-size: 22px;
+}
+
+.commentall {
+  color: white;
+  font-size: 22px;
+  margin: 4px 0 0 20px;
+}
+
+.commentallinput {
+  height: 50px;
+  width: 600px;
+  left: 15.5%;
+  position: absolute;
+  top: 35%;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.genre {
+  color: white;
+  font-size: 22px;
+  margin: 35px 0 0 20px;
+}

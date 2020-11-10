@@ -15,30 +15,32 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
-<div>
+<div class="roadmaptop">
+  <div class="miniroadt">
   <%= form_with url: {controller: 'roadmaps', action: 'create' } do  |f| %>
-      <%= f.label :タイトル %>
-      <%= f.text_field :title %>
-
-      <%= f.label :勉強時間平日？時間 %>
-      <%= f.number_field :stady_time_week %>
+      <p class="minirtitle">タイトル：</p><%= f.text_field :title, class: "inputsize" %>
+  </div>
+  <div class="newshowmap">
+      <p class="inputstadytime">勉強時間：　平日　　時間</p>
+      <%= f.number_field :stady_time_week, class: "weekstady" %>
       
-      <%= f.label :勉強時間休日？時間 %>
-      <%= f.number_field :stady_time_holiday %>
+      <p class="inputholiday">休日　　時間</p>
+      <%= f.number_field :stady_time_holiday, class: "holidaystady" %>
       
-      <%= f.label :必要期間？か月 %>
-      <%= f.number_field :period_stady %>
+      <p class="needperiod">必要期間：　上記のペースで　　か月</p>
+      <%= f.number_field :period_stady, class: "needmonth" %>
       
-      <%= f.label :合計時間目安？時間 %>
-      <%= f.number_field :total_stady_time %>
+      <p class="totaltimetitle">合計時間：　目安　　　　時間</p>
+      <%= f.number_field :total_stady_time, class: "totaltimeinput" %>
       
-      <%= f.label :コメント %>
-      <%= f.text_area :total_comment %>
+      <p class="commentall">コメント：</p>
+      <%= f.text_area :total_comment, class: "commentallinput" %>
       
       
-      <%= f.label :ジャンル %>
+      <p class="genre">ジャンル：</p>
       <%= f.radio_button :category_id, 1 %>フロントエンド <%= f.radio_button :category_id, 2 %>バックエンド
-      <%= f.radio_button :category_id, 3 %>web制作 <%= f.radio_button :category_id, 4 %>フリーランス
+      <%= f.radio_button :category_id, 4 %>フリーランス
+    </div>
 
    <input type="submit" value="ロードマップ詳細">
   <% end %>
