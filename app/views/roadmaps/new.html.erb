@@ -17,7 +17,7 @@
 <% end %>
 <div class="roadmaptop">
   <div class="miniroadt">
-  <%= form_with url: {controller: 'roadmaps', action: 'create' } do  |f| %>
+  <%= form_with url: {controller: 'roadmaps', action: 'create'} do |f| %>
       <p class="minirtitle">タイトル：</p><%= f.text_field :title, class: "inputsize" %>
   </div>
   <div class="newshowmap">
@@ -41,7 +41,6 @@
       <%= f.radio_button :category_id, 1, class: "genrefront" %><p class="fronttitle">フロントエンド</p> <%= f.radio_button :category_id, 2, class: "genreback" %><p class="backtitle">バックエンド</p>
       <%= f.radio_button :category_id, 4, class: "genrefree" %><p class="freetitle">フリーランス</p>
     </div>
-
-   <input type="submit" value="ロードマップ詳細" class="roadnewsubmit">
-  <% end %>
+     <%= f.submit "ロードマップ詳細", class: "roadnewsubmit"%>
+    <% end %>
 </div>

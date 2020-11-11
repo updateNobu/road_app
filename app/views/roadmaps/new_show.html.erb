@@ -1,8 +1,12 @@
 <!--no18-->
-<h3>Create roadmap</h3>
-<h2>ロードマップ詳細</h2>
-<div>
+<div class="maketitle">
+<h3 class="makename">Create roadmap</h3>
+</div>
+<div class="makesubsub">
+<h1 class="makesubsubname">ロードマップ詳細</h2>
+</div>
 <% @roadmap_shows.each do |show| %>
+ <div class="roadmapshow">
     <%= "・#{show.content}" %>
     <%= "アプローチ：#{show.method}" %>
     <%= "所要時間：#{show.time_required}時間" %>
