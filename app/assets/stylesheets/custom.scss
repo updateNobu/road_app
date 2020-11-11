@@ -968,5 +968,152 @@ color: #ff1493;
 
 
 .roadmapshow {
-  
+  width: 90%;
+  background-color: rgb(234, 234, 234);
+  background-color: cover;
+  margin: 0px auto 20px;
+}
+
+.showedit {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 53px;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  line-height: 53px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  margin: -40px 0 20px 220px;
+}
+
+.showdestroy {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 53px;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  line-height: 53px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  margin: -40px 0 25px 120px;
+}
+
+
+
+.mapshowsubmit {
+  width: 100%;
+  height: 600px;
+  margin: 0px auto 20px;
+  position: relative;
+}
+
+.mapshowbottom {
+  width: 90%;
+  background-color: rgb(234, 234, 234);
+  height: 250px;
+  margin: 0px auto 20px;
+}
+
+.mstitle {
+  left: 7%;
+  position: absolute;
+  top: 3.2%;
+  font-size: 23px;
+}
+
+.inputmstitle {
+  left: 19%;
+  position: absolute;
+  top: 3.2%;
+  width: 680px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.msmethod {
+  left: 7%;
+  position: absolute;
+  top: 12%;
+  font-size: 23px;
+}
+
+.msmethodinput {
+  left: 32%;
+  position: absolute;
+  top: 11.8%;
+  width: 450px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.msrequired {
+  left: 7%;
+  position: absolute;
+  top: 20%;
+  font-size: 23px;
+}
+
+.msrequiredinput {
+  left: 32%;
+  position: absolute;
+  top: 19.5%;
+  width: 50px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.mscomment {
+  left: 7%;
+  position: absolute;
+  top: 28%;
+  font-size: 23px;
+}
+
+.mscommentinput {
+  left: 20%;
+  position: absolute;
+  top: 28%;
+  width: 600px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.mssend {
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 35px;
+  height: 100px;
+  width: 400px;
+  display: inline-block;
+  text-align: center;
+  line-height: 53px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 29%;
+  position: absolute;
+  top: 82%;
+  border-radius: 10px;
+}
+
+.icn_search {
+  font-family: FontAwesome;
+}
+
+.plus {
+  font-size: 130px;
+  border: none;
+  background-color: white;
+  color: rgb(9, 221, 206);
+  right: 10%;
+  position: absolute;
+  top: 45%;
 }
