@@ -1,23 +1,30 @@
 <!--NO19-->
-<h3>Create roadmap</h3>
-<h1>ロードマップ編集</h1>
+<div class="maketitle">
+<h3 class="makename">Create roadmap</h3>
+</div>
+<div class="makesub">
+<h1 class="makesubname">ロードマップ編集</h1>
+</div>
 <% @roadmapshow.errors.full_messages.each do |message| %>
 <div>
     <%= message %>
 </div>
 <%end%>
 <%=form_tag("/roadmap/updateshow/#{@roadmapshow.id}") do %>
-　<p>タイトル</p>
-　<input type="text" value= "<%= @roadmapshow.content %>" name="content">
+ <div class="updatenewshow">
+  <div class="updateshowbottom">
+　<p class="ustitle">タイトル：</p>
+　<input type="text" value= "<%= @roadmapshow.content %>" name="content" class="inputustitle">
 　
-　<p>勉強方法、教材など</p>
-　<input type="text" value= "<%= @roadmapshow.method %>" name="method">
+　<p class="usmethod">勉強方法、教材など：</p>
+　<input type="text" value= "<%= @roadmapshow.method %>" name="method" class="inputusmethod">
 　
-　<p>所要時間</p>
-　<input type="number" value= "<%= @roadmapshow.time_required %>" name="time_required">
+　<p class="usrequired">所要時間：　　　　　　　　　時間</p>
+　<input type="number" value= "<%= @roadmapshow.time_required %>" name="time_required" class="inputusrequired">
 　
-　<p>コメント</p>
-　<textarea name="comment"><%= @roadmapshow.comment%></textarea>
-　
-　<input type="submit" value="編集完了">
+　<p class="uscomment">コメント：</p>
+　<textarea name="comment" class="inputuscomment"><%= @roadmapshow.comment%></textarea>
+　</div>
+　<input type="submit" value="編集完了" class="ussend">
+ </div>
 <%end%>
