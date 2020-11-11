@@ -205,9 +205,9 @@ class RoadmapsController < ApplicationController
     @roadmap.user_id= @current_user.id    # 本来はcurrentuserに送りたい
     if @roadmap.save
      redirect_to ("/roadmap/new/#{@roadmap.id}")
-    # else
-    # render("roadmaps/new")
-    # flash[:notice]= "項目をすべて埋めてください"
+    else
+    render("roadmaps/new")
+    flash[:notice]= "項目をすべて埋めてください"
     end
   end
   
