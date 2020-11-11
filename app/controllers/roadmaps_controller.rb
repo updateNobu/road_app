@@ -207,7 +207,7 @@ class RoadmapsController < ApplicationController
      redirect_to ("/roadmap/new/#{@roadmap.id}")
     else
     render("roadmaps/new")
-    flash[:notice]= "項目をすべて埋めてください"
+    
     end
   end
   
