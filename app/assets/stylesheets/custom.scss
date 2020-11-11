@@ -753,7 +753,7 @@ color: #ff1493;
 .roadmaptop {
   width: 100%;
   height: 600px;
-  margin-top: 80px;
+  margin: 80px auto 500px;
   position: relative;
 }
 
@@ -765,19 +765,20 @@ color: #ff1493;
 
 .minirtitle {
   font-size: 25px;
-  left: 18%;
+  left: 10%;
   position: absolute;
   top: -0.5%;
   font-weight: bold;
 }
 
 .inputsize {
-  width: 500px;
-  height: 28px;
-  left: 33%;
+  width: 670px;
+  height: 43px;
+  left: 23%;
   position: absolute;
-  top: 3.7%;
+  top: 2.7%;
   border-radius: 8px;
+  font-size: 20px;
 }
 
 
@@ -786,7 +787,7 @@ color: #ff1493;
 
 .newshowmap {
   width: 100%;
-  background-color: cover;
+  height: 280px;
   background-color: rgba(17, 17, 17, 0.7);
   margin-top: -20px;
 }
@@ -871,11 +872,78 @@ color: #ff1493;
   position: absolute;
   top: 35%;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 12px;
 }
 
 .genre {
   color: white;
   font-size: 22px;
   margin: 35px 0 0 20px;
+}
+
+.genrefront {
+  left: 5%;
+  position: absolute;
+  top: 52%;
+  width: 23px;
+  height: 23px;
+}
+
+.fronttitle{
+  font-size: 20px;
+  color: white;
+  left: 9%;
+  position: absolute;
+  top: 49%;
+}
+
+.genreback {
+  left: 26%;
+  position: absolute;
+  top: 52%;
+  width: 23px;
+  height: 23px;
+}
+
+.backtitle{
+  font-size: 20px;
+  color: white;
+  left: 30%;
+  position: absolute;
+  top: 49%;
+}
+
+.genrefree {
+  left: 45%;
+  position: absolute;
+  top: 52%;
+  width: 23px;
+  height: 23px;
+}
+
+.freetitle{
+  font-size: 20px;
+  color: white;
+  left: 49%;
+  position: absolute;
+  top: 49%;
+}
+
+
+.roadnewsubmit {
+  width: 80%;
+  height: 100px;
+  font-size: 35px;
+  text-align: center;
+  line-height: 100px;
+  left: 50%;
+  position: absolute;
+  top: 72%;
+  transform: translate(-50%, 0%);
+  background-color: rgb(9, 221, 206);
+  border-radius: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin: 100px auto;
 }

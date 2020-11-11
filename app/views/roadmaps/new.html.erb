@@ -38,10 +38,10 @@
       
       
       <p class="genre">ジャンル：</p>
-      <%= f.radio_button :category_id, 1 %>フロントエンド <%= f.radio_button :category_id, 2 %>バックエンド
-      <%= f.radio_button :category_id, 4 %>フリーランス
+      <%= f.radio_button :category_id, 1, class: "genrefront" %><p class="fronttitle">フロントエンド</p> <%= f.radio_button :category_id, 2, class: "genreback" %><p class="backtitle">バックエンド</p>
+      <%= f.radio_button :category_id, 4, class: "genrefree" %><p class="freetitle">フリーランス</p>
     </div>
 
-   <input type="submit" value="ロードマップ詳細">
+   <input type="submit" value="ロードマップ詳細" class="roadnewsubmit">
   <% end %>
 </div>
