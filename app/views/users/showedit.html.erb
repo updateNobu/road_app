@@ -12,7 +12,7 @@
 </div>
 <%end%>
 <div class="editusermain">
-<div class="imageuseredit">
+<div class="imageuseredit"></div>
 <%=form_tag("/user/updateshow/#{@user.id}", {multipart: true}) do %>
 　<img src="<%= "/user_images/#{@user.image_name}"%>" class="showimg">
 　<label for="file_edit">
@@ -20,7 +20,7 @@
 　<input type="file" name="image" id="file_edit" class="editfile" value="&#xf067;" class="editphoto">
 　</label>
 　<input type="text" value= "<%= @user.name %>" name="name" class="editname">
-</div>
+
 　<p class="editusercomment">コメント</p>
 　<textarea name="comment" class="editcommentinput"><%= @user.comment%></textarea>
 　
