@@ -222,11 +222,10 @@ header {
 
 .samlogo{
   width: 26.3%;
-  height: 180;
+  height: 180px;
   left: 0%;
   position: absolute;
   top: 0%;
-  // transform: translate(50%, 0%);
 }
 
 .sam {
@@ -266,6 +265,7 @@ header {
   top: 0%;
   height: 130px;
   width: 150px;
+  object-fit: cover;
 }
 
 .time {
@@ -383,6 +383,7 @@ color: #ff1493;
   position: absolute;
   top: 0%;
   background-color: white;
+  object-fit: cover;
 }
 
 
@@ -1475,9 +1476,9 @@ color: #ff1493;
 .profilemiddle {
   width: 100%;
   text-align: center;
-  line-height: 130px;
+  line-height: 120px;
   border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
-  font-size: 60px;
+  font-size: 65px;
   left: 50%;
   position: absolute;
   top: 85%;
@@ -1499,8 +1500,33 @@ color: #ff1493;
 .usermain {
   width: 100%;
   height: 1200px;
+  margin-top: 88px;
+  position: relative;
 }
 
-.user {
-  
+.imagezone {
+  width: 100%;
+  height: 580px;
+  background-color: rgb(9, 221, 206);
+}
+
+.circleimg {
+  left: 50%;
+  position: absolute;
+  top: 22%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+}
+
+.username {
+  font-size: 45px;
+  color: white;
+  left: 50%;
+  position: absolute;
+  top: 31%;
+  transform: translate(-50%, -50%);
 }

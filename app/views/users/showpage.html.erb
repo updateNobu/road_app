@@ -17,13 +17,13 @@
 <%= link_to("ロードマップ", "/user/road/#{@user.id}", {class: "goroadfp"})%>
 <%= link_to("お気に入り", "/user/#{@user.id}/likepage", {class: "golilefp"})%>
 <%= link_to("投稿", "/user/mroadi/#{@user.id}", {class: "goshowfp"})%>
-<h1 class="profilemiddle">プロフィール</h1>
+<p class="profilemiddle">プロフィール</p>
 </div>
 </div>
 <div class="usermain">
 <div class="imagezone">
-<img src="<%= "/user_images/#{@user.image_name}"%>">
-<%= "#{@user.name}" %>
+<img src="<%= "/user_images/#{@user.image_name}"%>" class="circleimg">
+<p class="username"><%= "#{@user.name}" %>
 </div>
 <%= "#{@user.comment}" %>
 <%= "#{@user.link}" %>
