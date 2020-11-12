@@ -41,8 +41,6 @@ class RoadmapsController < ApplicationController
       @a = "checked"
     elsif @roadmap.category_id == 2
       @b = "checked"
-    elsif @roadmap.category_id == 3
-      @c = "checked"
     elsif @roadmap.category_id == 4
       @d = "checked"
     end

@@ -10,11 +10,10 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
-<div class="roadmaptop">
-  <div class="miniroadt">
+<div class="editroadmaptop">
 <%=form_tag("/roadmap/update/#{@roadmap.id}") do %>
-　<p class="minirtitle">タイトル：</p><input type="text" value="<%= @roadmap.title%>" name="title" class="inputsize">
-　</div>
+　<p class="editrtitle">タイトル：</p><input type="text" value="<%= @roadmap.title%>" name="title" class="editsize">
+　<div class="titlebox"></div>
 　<div class="editmap">
 　<p class="editstadytime">勉強時間：　平日　　時間</p>
 　<input type="number" value= "<%= @roadmap.stady_time_week %>" name="stady_time_week" class="editweekstady">
@@ -31,9 +30,9 @@
 　<p class="editcommentall">コメント：</p>
 　<textarea name="total_comment" class="editcommentallinput"><%= @roadmap.total_comment%></textarea>
 　
-   <p class="editgenre">ジャンル：</p>
-  <input type="radio" name="category_id" value="1" <%= @a %> class="genrefront"><p class="fronttitle">フロントエンド</p><input type="radio" name="category_id" value="2" <%= @b %> class="genreback"><p class="backtitle">バックエンド</p>
-  <input type="radio" name="category_id" value="4" <%= @d %> class="genrefree"><p class="freetitle">フリーランス</p>
+  <p class="editgenre">ジャンル：</p>
+  <input type="radio" name="category_id" value="1" <%= @a %> class="genreeditfront"><p class="frontedittitle">フロントエンド</p><input type="radio" name="category_id" value="2" <%= @b %> class="genreeditback"><p class="backedittitle">バックエンド</p>
+  <input type="radio" name="category_id" value="4" <%= @d %> class="genreeditfree"><p class="freeedittitle">フリーランス</p>
 　</div>
 　<input type="submit" value="ロードマップも編集する" name="continue" class="roadnewsubmit">
 　<input type="submit" value="編集完了" name="finish" class="finishedit">
