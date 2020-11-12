@@ -25,15 +25,16 @@
 <img src="<%= "/user_images/#{@user.image_name}"%>" class="circleimg">
 <p class="username"><%= "#{@user.name}" %>
 </div>
-<%= "#{@user.comment}" %>
-<%= "#{@user.link}" %>
+<p class="usercomment"><%= "#{@user.comment}" %></p>
+<p class="sublink"><%= @user.name %>について</p>
+<%= link_to("#{@user.link}", "#{@user.link}", {class: "userlink"})%>
 <%if @current_user && @user.id == @current_user.id %>
-  <%= "#{@user.email}" %>
-  <%= link_to("編集", "/user/showedit/#{@user.id}")%>
+  <p class="useremail"><%= "#{@user.email}" %></p>
+  <%= link_to("編集", "/user/showedit/#{@user.id}", {class: "edituser"})%>
 <%end%>
 <% if @current_user %>
   <% if @current_user.admin? && !(@current_user.id == @user.id) %>
-    <%= link_to("削除", "/user/destroy/#{@user.id}", method: :post,
+    <%= link_to("削除", "/user/destroy/#{@user.id}", class: "deleteuser", method: :post,
                                     data: { confirm: "You sure?" }) %>
   <%end%>
 <%end%>

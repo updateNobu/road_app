@@ -1,25 +1,35 @@
-<h3>My page</h3>
-<h3>プロフィール</h3>
-<h1>プロフィール　編集</h1>
+<div class="maketitle">
+<h3 class="makename">My page</h3>
+</div>
+<div class="usermiddle">
+<p class="profile">プロフィール</p>
+<div class="probox"></div>
+<p class="profilemiddle">プロフィール編集</p>
+</div>
 <% @user.errors.full_messages.each do |message| %>
 <div>
     <%= message %>
 </div>
 <%end%>
+<div class="editusermain">
+<div class="imageuseredit">
 <%=form_tag("/user/updateshow/#{@user.id}", {multipart: true}) do %>
-　<img src="<%= "/user_images/#{@user.image_name}"%>">
-　<input type="file" name="image">
+　<img src="<%= "/user_images/#{@user.image_name}"%>" class="showimg">
+　<label for="file_edit">
+　<div class="cercle"><span class="fas fa-plus editphoto"></span></div>
+　<input type="file" name="image" id="file_edit" class="editfile" value="&#xf067;" class="editphoto">
+　</label>
+　<input type="text" value= "<%= @user.name %>" name="name" class="editname">
+</div>
+　<p class="editusercomment">コメント</p>
+　<textarea name="comment" class="editcommentinput"><%= @user.comment%></textarea>
 　
-　<input type="text" value= "<%= @user.name %>" name="name">
+　<p class="editlink">リンク先</p>
+　<input type="text" value= "<%= @user.link %>" name="link" class="edituserlink">
 　
-　<p>コメント</p>
-　<textarea name="comment"><%= @user.comment%></textarea>
+　<p class="editmail">メールアドレス</p>
+　<input type="text" value= "<%= @user.email %>" name="email" class="editusermail">
 　
-　<p>リンク先</p>
-　<input type="text" value= "<%= @user.link %>" name="link">
-　
-　<p>メールアドレス</p>
-　<input type="text" value= "<%= @user.email %>" name="email">
-　
-　<input type="submit" value="完了">
+　<input type="submit" value="完了" class="editfinish">
 <%end%>
+</div>

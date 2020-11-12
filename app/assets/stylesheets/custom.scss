@@ -1523,10 +1523,208 @@ color: #ff1493;
 }
 
 .username {
-  font-size: 45px;
+  font-size: 50px;
   color: white;
   left: 50%;
   position: absolute;
   top: 31%;
   transform: translate(-50%, -50%);
+}
+
+.usercomment {
+  width: 90%;
+  margin: 40px auto 20px;
+  font-size: 20px;
+}
+
+.sublink {
+  width: 90%;
+  font-size: 20px;
+  margin: 0px auto 0px;
+  border-top: solid rgba(17, 17, 17, 0.7) 2px;
+}
+
+.userlink {
+  width: 90%;
+  font-size: 20px;
+  left: 5%;
+  position: absolute;
+  color: rgb(9, 221, 206);
+  font-weight: bold;
+}
+
+.useremail {
+  width: 90%;
+  font-size: 25px;
+  border-top: solid rgba(17, 17, 17, 0.7) 2px;
+  margin: 60px auto;
+}
+
+.edituser {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 220px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 50%;
+  position: absolute;
+  top: 78%;
+  transform: translate(-50%, 0%);
+}
+
+.deleteuser {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 220px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 50%;
+  position: absolute;
+  top: 78%;
+  transform: translate(-50%, 0%);
+}
+
+
+//プロフィール編集
+.editusermain {
+  width: 100%;
+  height: 1000px;
+  margin-top: 88px;
+  margin-bottom: 200px;
+  position: relative;
+}
+
+.imageuseredit {
+  width: 100%;
+  height: 580px;
+  background-color: rgb(9, 221, 206);
+}
+
+.showimg {
+  left: 50%;
+  position: absolute;
+  top: 24%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+}
+
+.editname {
+  font-size: 35px;
+  color: rgb(9, 221, 206);
+  width: 180px;
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  top: 38%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
+
+.editfile {
+  display: none;
+}
+
+.editphoto {
+  font-size: 180px;
+  border: none;
+  font-family: FontAwesome;
+  color: rgba(9, 221, 206, 0.7);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.cercle {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  position: absolute;
+  top: 24%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.editusercomment {
+  width: 90%;
+  margin: 10px auto 0px;
+  font-size: 20px;
+}
+
+.editcommentinput {
+  width: 90%;
+  height: 80px;
+  margin: 10px 27px 0px;
+  border-radius: 10px;
+}
+
+.editlink {
+  width: 90%;
+  margin: 0px auto 0px;
+  font-size: 20px;
+  border-top: solid rgba(17, 17, 17, 0.7) 2px;
+}
+
+.edituserlink {
+  width: 70%;
+  height: 25px;
+  margin: 10px 29px 0px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.editmail {
+  width: 90%;
+  margin: 20px auto 0px;
+  font-size: 20px;
+  border-top: solid rgba(17, 17, 17, 0.7) 2px;
+}
+
+.editusermail {
+  width: 70%;
+  height: 25px;
+  margin: 10px 29px 0px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.editfinish {
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  height: 80px;
+  width: 250px;
+  display: inline-block;
+  text-align: center;
+  line-height: 53px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 50%;
+  position: absolute;
+  top: 100%;
+  transform: translate(-50%, 0%);
+  border-radius: 10px;
 }
