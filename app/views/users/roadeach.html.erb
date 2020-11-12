@@ -1,36 +1,43 @@
 <!--No10-->
+<div class="maketitle">
 <%if @current_user && @user.id == @current_user.id %>
-  <h3>My page</h3>
+<h3 class="makename">My page</h3>
 <%else%>
-  <h3><%= @user.name%> page</h3>
+<h3 class="makename"><%= @user.name %> page</h3>
 <%end%>
-<%= link_to("プロフィール", "/user/show/#{@user.id}")%>
-<p>ロードマップ</p>
-<%= link_to("お気に入り", "/user/#{@user.id}/likepage")%>
-<%= link_to("投稿", "/user/mroadi/#{@user.id}")%>
-<div>
-<%if @current_user && @user.id == @current_user.id %>
-  <h1>My ロードマップ</h1>
-<%else%>
-  <h1><%= @user.name %> ロードマップ</h1>
-<%end%>
-<%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %>
-<%= "必要期間: 上記のペースで#{@roadmap.period_stady}ケ月ほど"%>
-<%= "合計時間目安: #{@roadmap.total_stady_time}時間" %>
-<%= "コメント: #{@roadmap.total_comment}" %>
 </div>
-<div>
+<div class="usermiddle">
+<%= link_to("プロフィール", "/user/show/#{@user.id}", {class: "goprofr"})%>
+<p class="roadmodel">ロードマップ</p>
+<div class="roadbox"></div>
+<%= link_to("お気に入り", "/user/#{@user.id}/likepage", {class: "golilefp"})%>
+<%= link_to("投稿", "/user/mroadi/#{@user.id}", {class: "goshowfp"})%>
+<%if @current_user && @user.id == @current_user.id %>
+  <p class="roadmiddle">My ロードマップ</p>
+<%else%>
+  <p class="roadmiddle"><%= @user.name %> ロードマップ</p>
+<%end%>
+</div>
+<div class="roaddetail">
+<p class="stadytime"><%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %></p>
+<p class="period"><%= "必要期間: 上記のペースで#{@roadmap.period_stady}ケ月ほど"%></p>
+<p class="totaltime"><%= "合計時間目安: #{@roadmap.total_stady_time}時間" %></p>
+<p class="comment"><%= "コメント: #{@roadmap.total_comment}" %></p>
+</div>
   <% @mymaps.each do |map| %>
-      <%= "・#{map.content}" %>
-      <%= "アプローチ：#{map.method}" %>
+  <div class="roadmap">
+      <p class="minititle"><%= "・#{map.content}" %></p>
+      <p class="method"><%= "アプローチ：#{map.method}" %></p>
       <% if map.hour_required != 0 %>
-      <p class=""><%= "所要時間：#{map.time_required}時間　#{map.hour_required}分" %></p>
+      <p class="require"><%= "所要時間：#{map.time_required}時間　#{map.hour_required}分" %></p>
       <%else%>
-      <p class=""><%= "所要時間：#{map.time_required}時間" %></p>
+      <p class="require"><%= "所要時間：#{map.time_required}時間" %></p>
       <%end%>
-      <%= "コメント：#{map.comment}" %>
+      <p class="minicomment"><%= "コメント：#{map.comment}" %></p>
+      </div>
   <% end %>
-</div>
+<div class="showbottom">
 <%if @current_user && @user.id == @current_user.id %>
-  <%= link_to("編集", "/roadmap/myroad/#{@roadmap.id}")%>
+  <%= link_to("編集", "/roadmap/myroad/#{@roadmap.id}", {class: "goedit"})%>
 <%end%>
+</div>

@@ -953,11 +953,11 @@ color: #ff1493;
 
 
 //ロードマップ詳細
-.makesubsub {
-  width: 100%;
-  height: 140px;
-  margin-top: 80px;
-}
+// .makesubsub {
+//   width: 100%;
+//   height: 140px;
+//   margin-top: 80px;
+// }
 
 .makesubsubname {
   text-align: center;
@@ -1727,4 +1727,107 @@ color: #ff1493;
   top: 100%;
   transform: translate(-50%, 0%);
   border-radius: 10px;
+}
+
+
+
+//myroadmap show
+.roadmiddle {
+  width: 100%;
+  text-align: center;
+  line-height: 120px;
+  font-size: 65px;
+  left: 50%;
+  position: absolute;
+  top: 85%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.goprofr {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  left: 9%;
+  position: absolute;
+  top: 18%;
+}
+
+.roadmodel {
+  color: rgb(9, 221, 206);
+  font-size: 30px;
+  font-weight: bold;
+  left: 32%;
+  position: absolute;
+  top: 8%;
+}
+
+.roadbox {
+  width: 6px;
+  height: 35px;
+  background-color: rgb(9, 221, 206);
+  left: 41%;
+  position: absolute;
+  top: 37%;
+}
+
+
+
+
+.roaddetail {
+ background-color: rgba(17, 17, 17, 0.7);
+ background-color: cover;
+ width: 100%;
+ margin-top: 87.8px;
+ border-top: solid rgba(17, 17, 17, 0.7) 0.3px;
+}
+
+
+
+
+.selectchoise {
+  width: 100%;
+  height: 200px;
+}
+
+.fromroad {
+  width: 210px;
+  height: 140px;
+  background-color: rgb(9, 221, 206);
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  display: inline-block;
+  white-space: pre;
+  // text-align: center;
+  padding: 40px 30px;
+  margin: 0 20px 0 30px;
+}
+
+.fromlike {
+  width: 210px;
+  height: 140px;
+  background-color: rgb(9, 221, 206);
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  display: inline-block;
+  white-space: pre;
+  padding: 40px 30px;
+  margin: 0 20px 0 20px;
+}
+
+.frommy {
+  width: 210px;
+  height: 140px;
+  background-color: rgb(9, 221, 206);
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  display: inline-block;
+  white-space: pre;
+  padding: 40px 30px;
+  margin: 0 0px 0 20px;
 }
