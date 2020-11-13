@@ -1,35 +1,45 @@
-<h3>Edit roadmap</h3>
-<h2>ロードマップ詳細</h2>
-<div>
-  <% @roadmap_shows.each do |show| %>
-      <%= "・#{show.content}" %>
-      <%= "アプローチ：#{show.method}" %>
-      <%= "所要時間：#{show.time_required}時間" %>
-      <%= "コメント：#{show.comment}" %>
-      <%= link_to("編集", "/roadmap/mreiz/#{show.id}")%>
-      <%= link_to("削除", "/roadmap/destroymre/#{show.id}", {method: "post"}) %>
-  <% end %>
+<div class="maketitle">
+<h3 class="makename">Edit roadmap</h3>
 </div>
+<div class="makesubsub">
+<h1 class="makesubsubname">ロードマップ編集</h1>
+</div>
+  <% @roadmap_shows.each do |show| %>
+    <div class="roadmapshow">
+      <p class="minititle"><%= "・#{show.content}" %></p>
+    <p class="method"><%= "アプローチ：#{show.method}" %></p>
+    <% if show.hour_required != 0 %>
+    <p class="require"><%= "所要時間：#{show.time_required}時間　#{show.hour_required}分" %></p>
+    <%else%>
+    <p class="require"><%= "所要時間：#{show.time_required}時間" %></p>
+    <%end%>
+    <p class="minicomment"><%= "コメント：#{show.comment}" %></p>
+      <%= link_to("編集", "/roadmap/mreiz/#{show.id}", {class: "showedit"})%>
+      <%= link_to("削除", "/roadmap/destroymre/#{show.id}", {method: "post", class: "showdestroy"}) %>
+  </div>
+  <% end %>
 <% if flash[:notice]%>
  <div>
    <%= flash[:notice]%>
  </div>
 <% end %>
-<div>
+<div class="mapshowsubmit">
+<div class="mapshowbottom">
     <%= form_with url: {controller: 'roadmaps', action: 'mrefini' } do  |f| %>
-      <%= f.label :タイトル %>
-      <%= f.text_field :content %>
+      <%= f.label :タイトル：, class: "mstitle"%>
+      <%= f.text_field :content, class: "inputmstitle" %>
       
-      <%= f.label :勉強方法、教材など %>
-      <%= f.text_field :method %>
+      <%= f.label :勉強方法、教材など：, class: "msmethod" %>
+      <%= f.text_field :method, class: "msmethodinput" %>
             
-      <%= f.label :所要時間 %>
-      <%= f.number_field :time_required %>時間
+      <%= f.label :所要時間：　　　　　　　　　時間, class: "msrequired" %>
+      <%= f.number_field :time_required, class: "msrequiredinput" %>
               
-      <%= f.label :コメント %>
-      <%= f.text_area :comment %>
+      <%= f.label :コメント：, class: "mscomment" %>
+      <%= f.text_area :comment, class: "mscommentinput" %>
       <%= f.hidden_field :roadmap_id, value: @id %>
-     <input type="submit" value="add" name="continue">
-  　 <input type="submit" value="編集完了" name="finish">
+    </div>
+     <input type="submit" value="&#xf055;" name="continue" class="icn_search plus" >
+  　 <input type="submit" value="投稿" name="finish" class="mssend">
+    </div>
     <%end%>
-</div>

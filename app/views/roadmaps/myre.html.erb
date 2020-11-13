@@ -1,33 +1,39 @@
-<h3>Edit roadmap</h3>
-<h1>ロードマップ編集</h1>
+<div class="maketitle">
+<h3 class="makename">Edit roadmap</h3>
+</div>
+<div class="makesub">
+<h1 class="makesubname">ロードマップ編集</h1>
+</div>
 <% if flash[:notice]%>
  <div>
    <%= flash[:notice]%>
  </div>
 <% end %>
+<div class="editroadmaptop">
 <%=form_tag("/roadmap/updatemyre/#{@roadmap.id}") do %>
-　<p>タイトル</p>
-　<textarea name="title"><%= @roadmap.title%></textarea>
+　<p class="editrtitle">タイトル：</p><input type="text" value="<%= @roadmap.title%>" name="title" class="editsize">
+　<div class="titlebox"></div>
+　<div class="editmap">
+　<p class="editstadytime">勉強時間：　平日　　時間</p>
+　<input type="number" value= "<%= @roadmap.stady_time_week %>" name="stady_time_week" class="editweekstady">
 　
-　<p>勉強時間:　平日</p>
-　<input type="number" value= "<%= @roadmap.stady_time_week %>" name="stady_time_week">時間
+　<p class="editholiday">休日　　時間</p>
+　<input type="number" value= "<%= @roadmap.stady_time_holiday %>" name="stady_time_holiday" class="editholidaystady">
 　
-　<p>休日</p>
-　<input type="number" value= "<%= @roadmap.stady_time_holiday %>" name="stady_time_holiday">時間
+　<p class="editperiod">必要期間：　上記のペースで　　か月</p>
+　<input type="number" value= "<%= @roadmap.period_stady %>" name="period_stady" class="editneedmonth">
 　
-　<p>必要期間:</p>
-　上記のペースで<input type="number" value= "<%= @roadmap.period_stady %>" name="period_stady">ヶ月
+　<p class="edittotaltime">合計時間：　目安　　　　時間</p>
+　<input type="number" value= "<%= @roadmap.total_stady_time %>" name="total_stady_time" class="edittotaltimeinput">
 　
-　<p>合計時間目安:</p>
-　<input type="number" value= "<%= @roadmap.total_stady_time %>" name="total_stady_time">時間
+　<p class="editcommentall">コメント：</p>
+　<textarea name="total_comment" class="editcommentallinput"><%= @roadmap.total_comment%></textarea>
 　
-　<p>コメント:</p>
-　<textarea name="total_comment"><%= @roadmap.total_comment%></textarea>
-
-  <p>ジャンル</p>
-  <input type="radio" name="category_id" value="1" <%= @a %> >フロントエンド <input type="radio" name="category_id" value="2" <%= @b %> >バックエンド
-  <input type="radio" name="category_id" value="3" <%= @c %> >web制作 <input type="radio" name="category_id" value="4" <%= @d %> >フリーランス
-　
-　<input type="submit" value="ロードマップも編集する" name="continue">
-　<input type="submit" value="編集完了" name="finish">
+  <p class="editgenre">ジャンル：</p>
+  <input type="radio" name="category_id" value="1" <%= @a %> class="genreeditfront"><p class="frontedittitle">フロントエンド</p><input type="radio" name="category_id" value="2" <%= @b %> class="genreeditback"><p class="backedittitle">バックエンド</p>
+  <input type="radio" name="category_id" value="4" <%= @d %> class="genreeditfree"><p class="freeedittitle">フリーランス</p>
+　</div>
+　<input type="submit" value="ロードマップも編集する" name="continue" class="roadnewsubmit">
+　<input type="submit" value="編集完了" name="finish" class="finishedit">
 <%end%>
+</div>

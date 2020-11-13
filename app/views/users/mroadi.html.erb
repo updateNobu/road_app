@@ -1,35 +1,50 @@
 <!--no12-->
+<div class="maketitle">
 <%if @current_user && @user.id == @current_user.id %>
-  <h3>My page</h3>
+<h3 class="makename">My page</h3>
 <%else%>
-  <h3><%= @user.name%> page</h3>
+<h3 class="makename"><%= @user.name %> page</h3>
 <%end%>
-<%= link_to("プロフィール", "/user/show/#{@user.id}")%>
-<%= link_to("ロードマップ", "/user/road/#{@user.id}")%>
-<%= link_to("お気に入り", "/user/#{@user.id}/likepage")%>
-<p>投稿</p>
-<h3>投稿</h3>
+</div>
+<div class="likemiddle">
+<%= link_to("プロフィール", "/user/show/#{@user.id}", {class: "goprofr"})%>
+<%= link_to("ロードマップ", "/user/road/#{@user.id}", {class: "goroadfp"})%>
+<%= link_to("お気に入り", "/user/#{@user.id}/likepage", {class: "golilefp"})%>
+<p class="roadmapapp">投稿</p>
+<div class="appbox"></div>
+<p class="userlikemiddle">投稿</p>
+</div>
 <% @roadmaps.each do |roadmap| %>
- <div>
-  <%= link_to(roadmap.title,"/roadmap/myshow/#{roadmap.id}") %>
-  <%= @user.name%>
+  <%= link_to("/roadmap/myshow/#{roadmap.id}") do %>
+ <div class="likeindex">
+   <p class="roadtitle"><%= "#{roadmap.title}"%></p>
+  <p class="roadusername"><%= @user.name%></p>
+  <div class="like">
   <%if @current_user%>
       <%if Like.find_by(user_id: @current_user.id, roadmap_id: roadmap.id)%>
-        <%= link_to("いいね！外す", "/like/#{roadmap.id}/destroymroadi", {method: "post"})%>
+        <%= link_to("/like/#{roadmap.id}/destroymroadi", {method: "post"}) do %>
+          <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
+        <%end%>
       <%else%>
-        <%= link_to("いいね！する", "/like/#{roadmap.id}/createmroadi", {method: "post"})%>
+        <%= link_to("/like/#{roadmap.id}/createmroadi", {method: "post"}) do %>
+          <span class="fa fa-heart like-btn-unlike fa-lg"></span>
+        <%end%>
       <%end%>
   <%else%>
-      <%= link_to("いいね!", "/login") %>
+      <%= link_to("/login") do %>
+        <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
+      <%end%>
   <%end%>
   <%= Like.where(roadmap_id: roadmap.id).count %>
+  </div>
   
-  <%= roadmap.updated_at%>
-  <img src="<%= "/user_images/#{@user.image_name}"%>">
+  <p class="time"><%= "#{roadmap.updated_at}"%></p>
+  <img src="<%= "/user_images/#{@user.image_name}"%>"  class="icon">
  </div>
 <% end %>
+<% end %>
 <%if @current_user && @user.id == @current_user.id %>
-<div>
-  <%= link_to("投稿", "/roadmap/new")%>
+<div class="likebottom">
+  <%= link_to("投稿", "/roadmap/new", {class: "likeback"})%>
 </div>
 <% end %>
