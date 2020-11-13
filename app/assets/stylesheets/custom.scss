@@ -719,7 +719,7 @@ color: #ff1493;
 
 
 .maketitle {
-  margin-top: 105px;
+  margin-top: 135px;
   width: 75%;
   height: 160px;
   background-color: rgb(9, 221, 206);
@@ -2045,3 +2045,46 @@ color: #ff1493;
   position: absolute;
   top: 0%;
  }
+ 
+ 
+ 
+ 
+ //紹介ページ
+.abouttitle {
+  margin-top: 135px;
+  width: 75%;
+  height: 160px;
+  background-color: rgb(9, 221, 206);
+  position: relative;
+}
+
+.about-logo {
+  width: 370px;
+  left: 35%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.subabout {
+  color: white;
+  font-size: 50px;
+  left: 78%;
+  position: absolute;
+  top: 22%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.detailall {
+  width: 90%;
+  background-color: rgb(234, 234, 234);
+  background-color: cover;
+  margin: 60px auto;
+}
+
+.literal {
+  white-space: pre-wrap;
+  font-size: 12px;
+  padding: 20px 10px;
+}
