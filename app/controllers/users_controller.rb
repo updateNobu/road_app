@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     
   def ensure_correct_user
     if @current_user.id != params[:id].to_i
-      flash[:notice]= "権限がありません"
+      flash[:denger]= "権限がありません"
       redirect_to("/")
     end
   end
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      flash[:notice] = "ログインしました"
+      flash[:success] = "ログインしました"
       redirect_to("/user/show/#{@user.id}")
     else
       @error_massage = "メールアドレスまたはパスワードが間違っています"
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   
   def logout
       session[:user_id] = nil
-      flash[:notice] = "ログアウトしました"
+      flash[:denger] = "ログアウトしました"
       redirect_to("/")
   end
   
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
       session[:user_id]=@user.id
       @roadmap = Roadmap.create(title: "-", stady_time_week: 0, stady_time_holiday: 0, period_stady: 0, total_stady_time: 0, total_comment: "My ロードマップを作ろう", user_id: "#{@user.id}", category_id: 1, display: false)
       @user.update(mymap: "#{@roadmap.id}")
-      flash[:notice] = "ユーザー登録が完了しました"
+      flash[:success] = "ユーザー登録が完了しました"
       redirect_to("/user/show/#{@user.id}")
     else
       render("users/new")
@@ -89,7 +89,6 @@ class UsersController < ApplicationController
   
   def updateshow
     @user = User.find_by(id: params[:id])
-    # @user.写真 = params[:content]
     @user.name = params[:name]
     @user.comment = params[:comment]
     @user.link = params[:link]
@@ -101,7 +100,7 @@ class UsersController < ApplicationController
     end
     if @user.save(validate: false)
       redirect_to("/user/show/#{@user.id}")
-      flash[:notice]= "投稿完了！"
+      flash[:success]= "編集完了！"
     else
       render("users/showedit")
     end
@@ -119,7 +118,7 @@ class UsersController < ApplicationController
   
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "ユーザーを削除しました"
+    flash[:denger] = "ユーザーを削除しました"
     redirect_to("/")
   end
 

@@ -1,15 +1,4 @@
 // topページ
-.flash{
-  width: 100%;
-  height: 60px;
-  background-color: red;
-  margin: 140px auto 0px auto;
-  color: white;
-  font-size: 40px;
-  line-height: 60px;
-  text-align: center;
-}
-
 .main-logo {
   width: 700px;
   left: 50%;
@@ -1086,7 +1075,7 @@ color: #ff1493;
   width: 600px;
   height: 60px;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 11px;
 }
 
 .mssend {
@@ -1202,7 +1191,7 @@ color: #ff1493;
   width: 680px;
   height: 60px;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 11px;
 }
 
 
@@ -2087,4 +2076,39 @@ color: #ff1493;
   white-space: pre-wrap;
   font-size: 12px;
   padding: 20px 10px;
+}
+
+
+//flash
+.alert-denger{
+  width: 100%;
+  height: 60px;
+  background-color: red;
+  margin: 115px auto -100px auto;
+  color: white;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.alert-success {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(9, 221, 206);
+  margin: 115px auto -100px auto;
+  color: white;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.erorr {
+  width: 100%;
+  height: 60px;
+  background-color: red;
+  margin: 0px auto 0px auto;
+  color: white;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
 }

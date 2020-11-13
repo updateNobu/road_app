@@ -15,11 +15,7 @@
 ロードマップ
 にする", "/user/cfmroad/#{@current_user.id}", {class: "frommy"})%>
 </div>
-<% if flash[:notice]%>
- <div>
-   <%= flash[:notice]%>
- </div>
-<% end %>
+
 <div class="editroadmaptop">
 <%=form_tag("/roadmap/updatemyroad/#{@roadmap.id}") do %>
 　<p class="editrtitle">タイトル：</p><input type="text" value="<%= @roadmap.title%>" name="title" class="editsize">

@@ -5,11 +5,7 @@
 <div class="makesub">
 <h1 class="makesubname">ロードマップ編集</h1>
 </div>
-<% if flash[:notice]%>
- <div>
-   <%= flash[:notice]%>
- </div>
-<% end %>
+
 <div class="editroadmaptop">
 <%=form_tag("/roadmap/update/#{@roadmap.id}") do %>
 　<p class="editrtitle">タイトル：</p><input type="text" value="<%= @roadmap.title%>" name="title" class="editsize">

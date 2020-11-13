@@ -4,11 +4,6 @@
 <div class="makesub">
 <h1 class="makesubname">My ロードマップ作製</h1>
 </div>
-<% if flash[:notice]%>
- <div>
-   <%= flash[:notice]%>
- </div>
-<% end %>
 <div class="roadmaptop">
   <%= form_tag("/roadmap/cmr") do %>
       <p class="minirtitle">タイトル：</p><input type="text" name="title" class="inputsize">

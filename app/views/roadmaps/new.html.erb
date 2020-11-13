@@ -10,11 +10,7 @@
     <%#= message %>
 <!--</div>-->
 <!--<%#end%>-->
-<% if flash[:notice]%>
- <div>
-   <%= flash[:notice]%>
- </div>
-<% end %>
+
 <div class="roadmaptop">
   <%= form_tag("/roadmap/create") do %>
       <p class="minirtitle">タイトル：</p><input type="text" name="title" class="inputsize">

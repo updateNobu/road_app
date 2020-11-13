@@ -7,7 +7,7 @@ class RoadmapsController < ApplicationController
   def ensure_correct_user
     @roadmap = Roadmap.find_by(id: params[:id])
     if @current_user.id != @roadmap.user_id
-      flash[:notice]= "権限がありません"
+      flash[:denger]= "権限がありません"
       redirect_to("/")
     end
   end
@@ -15,14 +15,14 @@ class RoadmapsController < ApplicationController
   def ensure_correct_user_show
     @roadmap = Roadmap.find_by(id: Roadmapshow.find_by(id: params[:id]).roadmap_id)
     if @current_user.id != @roadmap.user_id
-      flash[:notice]= "権限がありません"
+      flash[:denger]= "権限がありません"
       redirect_to("/")
     end
   end
   
   def ensure_correct_user_mapedit
     if @current_user.id != params[:id].to_i
-      flash[:notice]= "権限がありません"
+      flash[:denger]= "権限がありません"
       redirect_to("/")
     end
   end
@@ -52,8 +52,6 @@ class RoadmapsController < ApplicationController
       @a = "checked"
     elsif @roadmap.category_id == 2
       @b = "checked"
-    elsif @roadmap.category_id == 3
-      @c = "checked"
     elsif @roadmap.category_id == 4
       @d = "checked"
     end
@@ -65,8 +63,6 @@ class RoadmapsController < ApplicationController
       @a = "checked"
     elsif @roadmap.category_id == 2
       @b = "checked"
-    elsif @roadmap.category_id == 3
-      @c = "checked"
     elsif @roadmap.category_id == 4
       @d = "checked"
     end
@@ -90,10 +86,10 @@ class RoadmapsController < ApplicationController
     if params[:finish]
       @roadmap_show.save
       redirect_to ("/roadmap/#{@roadmap.category_id}/#{@roadmap_show.roadmap_id}")
-      flash[:notice]= "編集成功！"
+      flash[:success]= "編集成功！"
     else
       if !@roadmap_show.save
-        flash[:notice]= "項目をすべて埋めてください"
+        flash[:denger]= "項目をすべて埋めてください"
       end
       redirect_to ("/roadmap/editsend/#{@roadmap_show.roadmap_id}")
     end
@@ -105,10 +101,10 @@ class RoadmapsController < ApplicationController
     if params[:finish]
       @roadmap_show.save
       redirect_to ("/user/mroadi/#{@roadmap.user_id}")
-      flash[:notice]= "編集成功！"
+      flash[:success]= "編集成功！"
     else
       if !@roadmap_show.save
-        flash[:notice]= "項目をすべて埋めてください"
+        flash[:denger]= "項目をすべて埋めてください"
       end
       redirect_to ("/roadmap/mrei/#{@roadmap_show.roadmap_id}")
     end
@@ -120,10 +116,10 @@ class RoadmapsController < ApplicationController
     if params[:finish]
       @roadmap_show.save
       redirect_to ("/user/road/#{@roadmap.user_id}")
-      flash[:notice]= "編集成功！"
+      flash[:success]= "編集成功！"
     else
       if !@roadmap_show.save
-        flash[:notice]= "項目をすべて埋めてください"
+        flash[:denger]= "項目をすべて埋めてください"
       end
       redirect_to ("/roadmap/mapedit/#{@roadmap.user_id}")
     end
@@ -143,11 +139,11 @@ class RoadmapsController < ApplicationController
       redirect_to("/roadmap/editsend/#{@roadmap.id}")
      else
       redirect_to("/roadmap/#{@roadmap.category_id}/#{@roadmap.id}")
-      flash[:notice]= "編集成功！"
+      flash[:success]= "編集成功！"
      end
     else
       redirect_to("/roadmap/edit/#{@roadmap.id}")
-      flash[:notice]= "空欄の場所がありました"
+      flash[:denger]= "空欄の場所がありました"
     end
   end
   
@@ -166,11 +162,11 @@ class RoadmapsController < ApplicationController
       redirect_to("/roadmap/mrei/#{@roadmap.id}")
      else
       redirect_to("/user/mroadi/#{@roadmap.user_id}")
-      flash[:notice]= "編集成功！"
+      flash[:success]= "編集成功！"
      end
     else
       redirect_to("/roadmap/myre/#{@roadmap.id}")
-      flash[:notice]= "空欄の場所がありました"
+      flash[:denger]= "空欄の場所がありました"
     end
   end
   
@@ -189,11 +185,11 @@ class RoadmapsController < ApplicationController
       redirect_to("/roadmap/mapedit/#{@current_user.id}")
      else
       redirect_to("/user/road/#{@current_user.id}")
-      flash[:notice]= "編集成功！"
+      flash[:success]= "編集成功！"
      end
     else
-      redirect_to("/roadmap/myrroad/#{@roadmap.id}")
-      flash[:notice]= "空欄の場所がありました"
+      redirect_to("/roadmap/myroad/#{@roadmap.id}")
+      flash[:denger]= "空欄の場所がありました"
     end
   end
   
@@ -216,7 +212,7 @@ class RoadmapsController < ApplicationController
      redirect_to ("/roadmap/cmroad/#{@roadmap.id}")
     else
      redirect_to ("/roadmap/cmroad")
-     flash[:notice]= "項目をすべて埋めてください"
+     flash[:denger]= "項目をすべて埋めてください"
     end
   end
   
@@ -303,12 +299,12 @@ class RoadmapsController < ApplicationController
     if @roadmap_show.save
      if params[:finish]
         redirect_to ("/roadmap/#{@roadmap.category_id}")
-        flash[:notice]= "投稿完了！"
+        flash[:success]= "投稿成功！"
      else
         redirect_to("/roadmap/new/#{@roadmap_show.roadmap_id}")
      end
     else 
-       flash[:notice]= "項目をすべて埋めてください"
+       flash[:denger]= "項目をすべて埋めてください"
        redirect_to ("/roadmap/new/#{@roadmap_show.roadmap_id}")
     end
   end
@@ -324,12 +320,12 @@ class RoadmapsController < ApplicationController
         roadmap = Roadmap.find_by(id: @roadmap.id)
         roadmap.update(display: false)
         redirect_to ("/user/road/#{@current_user.id}")
-        flash[:notice]= "更新完了！"
+        flash[:success]= "更新完了！"
      else
         redirect_to("/roadmap/cmroad/#{@roadmap_show.roadmap_id}")
      end
     else 
-       flash[:notice]= "項目をすべて埋めてください"
+       flash[:denger]= "項目をすべて埋めてください"
        redirect_to ("/roadmap/cmroad/#{@roadmap_show.roadmap_id}")
     end
   end
@@ -366,7 +362,7 @@ class RoadmapsController < ApplicationController
     @roadmapshow.comment = params[:comment]
     if @roadmapshow.save
       redirect_to("/roadmap/new/#{@roadmapshow.roadmap_id}")
-      flash[:notice]= "投稿完了！"
+      flash[:success]= "編集完了！"
     else
       render("roadmaps/editshow")
     end
@@ -380,7 +376,7 @@ class RoadmapsController < ApplicationController
     @roadmapshow.comment = params[:comment]
     if @roadmapshow.save
       redirect_to("/roadmap/cmroad/#{@roadmapshow.roadmap_id}")
-      flash[:notice]= "投稿完了！"
+      flash[:success]= "投稿完了！"
     else
       render("roadmaps/cmrsedit")
     end
@@ -394,14 +390,14 @@ class RoadmapsController < ApplicationController
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.destroy
     redirect_to("/roadmap/new/#{@roadmapshow.roadmap_id}")
-    flash[:notice]= "ロードマップを削除しました。"
+    flash[:denger]= "ロードマップを削除しました。"
   end
   
   def destroycmr
     @roadmapshow = Roadmapshow.find_by(id: params[:id])
     @roadmapshow.destroy
     redirect_to("/roadmap/cmroad/#{@roadmapshow.roadmap_id}")
-    flash[:notice]= "ロードマップを削除しました。"
+    flash[:denger]= "ロードマップを削除しました。"
   end
   
   def destroyz
@@ -426,14 +422,14 @@ class RoadmapsController < ApplicationController
     @roadmap = Roadmap.find_by(id: params[:id])
     @roadmap.destroy
     redirect_to("/roadmap/#{@roadmap.category_id}")
-    flash[:notice]= "投稿を削除しました。"
+    flash[:denger]= "投稿を削除しました。"
   end
   
   def destroymy
     @roadmap = Roadmap.find_by(id: params[:id])
     @roadmap.destroy
     redirect_to("/user/mroadi/#{@roadmap.user_id}")
-    flash[:notice]= "投稿を削除しました。"
+    flash[:denger]= "投稿を削除しました。"
   end
   
   def updateedit
@@ -444,7 +440,7 @@ class RoadmapsController < ApplicationController
     @roadmapshow.comment = params[:comment]
     if @roadmapshow.save
       redirect_to("/roadmap/editsend/#{@roadmapshow.roadmap_id}")
-      flash[:notice]= "編集成功！"
+      flash[:success]= "編集成功！"
     else
       render("roadmaps/editz")
     end
@@ -458,7 +454,7 @@ class RoadmapsController < ApplicationController
     @roadmapshow.comment = params[:comment]
     if @roadmapshow.save
       redirect_to("/roadmap/mrei/#{@roadmapshow.roadmap_id}")
-      flash[:notice]= "編集成功！"
+      flash[:success]= "編集成功！"
     else
       render("roadmaps/mreiz")
     end
@@ -473,7 +469,7 @@ class RoadmapsController < ApplicationController
     @roadmap = Roadmap.find_by(id: @roadmapshow.roadmap_id)
     if @roadmapshow.save
       redirect_to("/roadmap/mapedit/#{@roadmap.user_id}")
-      flash[:notice]= "編集成功！"
+      flash[:success]= "編集成功！"
     else
       render("roadmaps/medit")
     end
@@ -500,7 +496,7 @@ class RoadmapsController < ApplicationController
       myroadmapshow.update(content: "#{roadmapshow.content}", method: "#{roadmapshow.method}", time_required: "#{roadmapshow.time_required}", comment: "#{roadmapshow.comment}", roadmap_id: "#{@myroadmap.id}")
     end
     redirect_to("/user/road/#{@current_user.id}")
-    flash[:notice]= "投稿完了！"
+    flash[:success]= "Myロードマップを更新しました。"
   end
   
   def choosefm
@@ -518,5 +514,6 @@ class RoadmapsController < ApplicationController
       myroadmapshow.update(content: "#{roadmapshow.content}", method: "#{roadmapshow.method}", time_required: "#{roadmapshow.time_required}", comment: "#{roadmapshow.comment}", roadmap_id: "#{@myroadmap.id}")
     end
     redirect_to("/user/road/#{@current_user.id}")
+    flash[:success]= "Myロードマップを更新しました。"
   end
 end

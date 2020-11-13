@@ -1,4 +1,5 @@
 <!--No21-->
+
 <div class="maketitle">
 <h3 class="makename">Edit roadmap</h3>
 </div>
@@ -19,11 +20,6 @@
       <%= link_to("削除", "/roadmap/destroyz/#{show.id}", {method: "post", class: "showdestroy"}) %>
   </div>
   <% end %>
-<% if flash[:notice]%>
- <div>
-   <%= flash[:notice]%>
- </div>
-<% end %>
 <div class="mapshowsubmit">
 <div class="mapshowbottom">
     <%= form_with url: {controller: 'roadmaps', action: 'fini' } do  |f| %>

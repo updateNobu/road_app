@@ -18,11 +18,7 @@
       <%= link_to("削除", "/roadmap/destroymap/#{map.id}", {method: "post", class: "showdestroy"}) %>
       </div>
   <% end %>
-  <% if flash[:notice]%>
- <div>
-   <%= flash[:notice]%>
- </div>
-<% end %>
+  
 <div class="mapshowsubmit">
 <div class="mapshowbottom">
     <%= form_with url: {controller: 'roadmaps', action: 'mfini' } do  |f| %>
