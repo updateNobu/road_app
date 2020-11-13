@@ -1,11 +1,23 @@
-<h3>My roadmap</h3>
-<h2>自分の投稿から選ぶ</h2>
+<div class="maketitle">
+<h3 class="makename">My roadmap from like</h3>
+</div>
+<div class="makesubsub">
+<h1 class="makesubsubname">自分の投稿から選ぶ</h1>
+</div>
 <% @roadmaps.each do |roadmap| %>
- <div>
-  <%= link_to(roadmap.title,"/roadmap/cfmrshow/#{roadmap.id}") %>
-  <p>いいね！</p>
+  <%= link_to("/roadmap/cfmrshow/#{roadmap.id}") do %>
+ <div class="likeindex">
+  <p class="roadtitle"><%= "#{roadmap.title}"%></p>
+  <p class="likeuser"><%= @user.name %></p>
+  <div class="like">
+        <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
   <%= Like.where(roadmap_id: roadmap.id).count %>
-  <%= roadmap.updated_at%>
-  <img src="<%= "/user_images/#{@user.image_name}"%>">
+  </div>
+  <p class="time"><%= "#{roadmap.updated_at}"%></p>
+  <img src="<%= "/user_images/#{@user.image_name}"%>" class="icon">
+<% end %>
  </div>
 <% end %>
+<div class="likebottom">
+<%= link_to("編集ページに戻る", "/roadmap/myroad/#{@user.mymap}", {class: "likeback"}) %>
+</div>
