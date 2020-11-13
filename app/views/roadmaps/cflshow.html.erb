@@ -3,25 +3,38 @@
    <%= flash[:notice]%>
  </div>
 <% end %>
-<div>
-  <%= @roadmap.title %>
-  <p>いいね！</p>
+<div class="show">
+  <p class="showtitle"><%= @roadmap.title %></p>
+  <p class="showuser"><%= @user.name %></p>
+  <div class="showlike">
+    <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
   <%= Like.where(roadmap_id: @roadmap.id).count %>
-  <%= @user.name %>
-  <%= @roadmap.updated_at %>
-  <%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %>
-  <%= "必要期間: 上記のペースで#{@roadmap.period_stady}ケ月ほど"%>
-  <%= "合計時間目安: #{@roadmap.total_stady_time}時間" %>
-  <%= "コメント: #{@roadmap.total_comment}" %>
+  </div>
+  <img src="<%= "/user_images/#{@user.image_name}"%>" class="samicon">
+  <p class="timeshow"><%= @roadmap.updated_at %></p>
+  </div>
+  <div class="showdetail">
+  <p class="stadytime"><%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %></p>
+  <p class="period"><%= "必要期間: 上記のペースで#{@roadmap.period_stady}ケ月ほど"%></p>
+  <p class="totaltime"><%= "合計時間目安: #{@roadmap.total_stady_time}時間" %></p>
+  <p class="comment"><%= "コメント: #{@roadmap.total_comment}" %></p>
 </div>
-<div>
+<div class="road">
   <h1>ロードマップ</h1>
-  <% @roadmap_shows.each do |show| %>
-    <%= "・#{show.content}" %>
-    <%= "アプローチ：#{show.method}" %>
-    <%= "所要時間：#{show.time_required}時間" %>
-    <%= "コメント：#{show.comment}" %>
-  <% end %>
 </div>
-<%= link_to("投稿一覧", "/user/#{@current_user.id}/cflike")%>
-<%= link_to("My ロードマップにする", "/roadmap/choosefl/#{@roadmap.id}",  {method: "post"})%>
+  <% @roadmap_shows.each do |show| %>
+   <div class="roadmap">
+    <p class="minititle"><%= "・#{show.content}" %></p>
+    <p class="method"><%= "アプローチ：#{show.method}" %></p>
+    <% if show.hour_required != 0 %>
+    <p class="require"><%= "所要時間：#{show.time_required}時間　#{show.hour_required}分" %></p>
+    <%else%>
+    <p class="require"><%= "所要時間：#{show.time_required}時間" %></p>
+    <%end%>
+    <p class="minicomment"><%= "コメント：#{show.comment}" %></p>
+   </div>
+  <% end %>
+<div class="likeshowbottom">
+<%= link_to("投稿一覧", "/user/#{@current_user.id}/cflike", {class: "backlikeindex"})%>
+<%= link_to("My ロードマップにする", "/roadmap/choosefl/#{@roadmap.id}",  {method: "post", class: "mapset"})%>
+</div>

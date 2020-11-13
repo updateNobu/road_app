@@ -6,33 +6,40 @@
 <h1 class="makesubsubname">My ロードマップ編集</h1>
 </div>
 <% @mymaps.each do |map| %>
-      <%= "・#{map.content}" %>
-      <%= "アプローチ：#{map.method}" %>
-      <%= "所要時間：#{map.time_required}時間" %>
-      <%= "コメント：#{map.comment}" %>
-      <%= link_to("編集", "/roadmap/medit/#{map.id}")%>
-      <%= link_to("削除", "/roadmap/destroymap/#{map.id}", {method: "post"}) %>
+<div class="roadmapshow">
+      <p class="minititle"><%= "・#{map.content}" %></p>
+      <p class="method"><%= "アプローチ：#{map.method}" %></p>
+      <% if map.hour_required != 0 %>
+      <p class="require"><%= "所要時間：#{map.time_required}時間　#{map.hour_required}分" %></p>
+      <%else%>
+      <p class="require"><%= "所要時間：#{map.time_required}時間" %></p>
+      <%end%>
+      <%= link_to("編集", "/roadmap/medit/#{map.id}", {class: "showedit"})%>
+      <%= link_to("削除", "/roadmap/destroymap/#{map.id}", {method: "post", class: "showdestroy"}) %>
+      </div>
   <% end %>
   <% if flash[:notice]%>
  <div>
    <%= flash[:notice]%>
  </div>
 <% end %>
-<div>
+<div class="mapshowsubmit">
+<div class="mapshowbottom">
     <%= form_with url: {controller: 'roadmaps', action: 'mfini' } do  |f| %>
-      <%= f.label :タイトル %>
-      <%= f.text_field :content %>
+      <%= f.label :タイトル：, class: "mstitle"%>
+      <%= f.text_field :content, class: "inputmstitle" %>
       
-      <%= f.label :勉強方法、教材など %>
-      <%= f.text_field :method %>
+      <%= f.label :勉強方法、教材など：, class: "msmethod" %>
+      <%= f.text_field :method, class: "msmethodinput" %>
             
-      <%= f.label :所要時間 %>
-      <%= f.number_field :time_required %>時間
+      <%= f.label :所要時間：　　　　　　　　　時間, class: "msrequired" %>
+      <%= f.number_field :time_required, class: "msrequiredinput" %>
               
-      <%= f.label :コメント %>
-      <%= f.text_area :comment %>
+      <%= f.label :コメント：, class: "mscomment" %>
+      <%= f.text_area :comment, class: "mscommentinput" %>
       <%= f.hidden_field :roadmap_id, value: @id %>
-     <input type="submit" value="add" name="continue">
-  　 <input type="submit" value="更新" name="finish">
+      </div>
+     <input type="submit" value="&#xf055;" name="continue" class="icn_search plus" >
+  　 <input type="submit" value="更新" name="finish" class="mssend">
+    </div>
     <%end%>
-</div>
