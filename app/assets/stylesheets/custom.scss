@@ -2410,7 +2410,7 @@ header {
 
 // 各カテゴリーごとのページ
 .sam {
-  width: 100%;
+  width: 35%;
   height: 300px;
   margin-top: 62px;
   position: relative;
@@ -2421,7 +2421,7 @@ header {
 }
 
 .bigtitle{
-  width: 35%;
+  width: 100%;
   background-color: rgb(9, 221, 206);
   height: 300px;
   left: 0%;
@@ -2557,58 +2557,61 @@ color: #ff1493;
 // 投稿詳細ページ
 
 .show{
-  width: 100%;
-  height: 180px;
-  margin-top: 105px;
+  width: 40%;
+  height: 375px;
+  margin-top: -10px;
   background-color: rgb(9, 221, 206);
   position: relative;
+  position: fixed;
+  z-index: 10px;
 }
 
 .showtitle {
   font-size: 40px;
   color: white;
   font-weight: bold;
-  left: 4%;
+  left: 10%;
   position: absolute;
-  top: -10%;
+  top: 2%;
 }
 
 .showuser {
-  font-size: 40px;
+  font-size: 30px;
   color: white;
-  left: 4%;
+  left: 50%;
   position: absolute;
   top: 40%;
   font-weight: bold;
 }
 
 .showlike {
-  left: 25.5%;
+  left: 50%;
   position: absolute;
-  top: 68%;
+  top: 62%;
   font-size: 25px;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .timeshow {
-  font-size: 30px;
-  left: 35%;
+  font-size: 20px;
+  left: 50%;
   position: absolute;
-  top: 50%;
+  top: 70%;
   color: white;
 }
 
 .fa-black {
   color: black;
+  text-decoration: none;
 }
 
 .samicon {
   height: 180px;
   width: 200px;
-  right: 0%;
+  left: 7%;
   position: absolute;
-  top: 0%;
+  top: 45%;
   background-color: white;
   object-fit: cover;
 }
@@ -2620,7 +2623,10 @@ color: #ff1493;
  background-color: rgba(17, 17, 17, 0.7);
  background-color: cover;
 // height: 220px;
- width: 100%;
+ width: 40%;
+ position: fixed;
+ z-index: 10px;
+ margin-top: 365px;
 }
 
 .stadytime {
@@ -2653,10 +2659,12 @@ color: #ff1493;
 
 
 
+
+
 .road {
-  width: 100%;
+  width: 55%;
   height: 100px;
-  margin-bottom: 60px;
+  margin: 90px 0 60px 600px;
 }
 
 .road h1 {
@@ -2671,10 +2679,10 @@ color: #ff1493;
 
 
 .roadmap {
-  width: 90%;
+  width: 50%;
   background-color: rgb(234, 234, 234);
   background-color: cover;
-  margin: 0px auto 20px;
+  margin: 0px 0 20px 650px;
 }
 
 .minititle {
@@ -2706,9 +2714,9 @@ color: #ff1493;
 
 .showbottom {
   width: 100%;
-  height: 70px;
+  height: 200px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
 }
 
 .backindex {
@@ -2722,9 +2730,9 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 15%;
+  left: 45%;
   position: absolute;
-  top: 0%;
+  top: 70%;
 }
 
 .goedit {
@@ -2738,9 +2746,9 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 42%;
+  left: 65%;
   position: absolute;
-  top: 0%;
+  top: 70%;
 }
 
 .showdelite {
@@ -2754,9 +2762,9 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  right: 18%;
+  left: 80%;
   position: absolute;
-  top: 0%;
+  top: 70%;
 }
 
 
