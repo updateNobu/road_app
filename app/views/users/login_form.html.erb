@@ -14,6 +14,9 @@
 　<p class="passtitle">パスワード</p>
 　<input type="password" value= "<%= @password %>" name="password" class="passinput">
 　
-　<input type="submit" value="ログイン" class="loginpush">
-</div>
+　<input type="submit" value="ログイン" name="normal" class="loginpush">
 <%end%>
+　<%= link_to("簡単ログイン", "/logineasy", {method: "post", class: "loginpusheasy"})%>
+　<p class="detaileasy">※簡単ログインはポートフォリオ閲覧用です。メールアドレスやパスワードは必要ありません
+</p>
+</div>

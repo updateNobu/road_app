@@ -26,17 +26,24 @@ class UsersController < ApplicationController
   
   
   def login
-    @user = User.find_by(email: params[:email])
-    if @user && @user.authenticate(params[:password])
+      @user = User.find_by(email: params[:email])
+      if @user && @user.authenticate(params[:password])
+        session[:user_id] = @user.id
+        flash[:success] = "ログインしました"
+        redirect_to("/user/show/#{@user.id}")
+      else
+        @error_massage = "メールアドレスまたはパスワードが間違っています"
+        @email = params[:email]
+        @password = params[:password]
+        render("users/login_form")
+      end
+  end
+  
+  def logineasy
+      @user = User.find_by(email: "testuser@mail")
       session[:user_id] = @user.id
       flash[:success] = "ログインしました"
       redirect_to("/user/show/#{@user.id}")
-    else
-      @error_massage = "メールアドレスまたはパスワードが間違っています"
-      @email = params[:email]
-      @password = params[:password]
-      render("users/login_form")
-    end
   end
   
   def logout

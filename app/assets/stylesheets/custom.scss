@@ -1,3 +1,5 @@
+/* スマホ向けレイアウト */
+@media all and (max-width: 670px) {
 // topページ
 .main-logo {
   width: 700px;
@@ -2111,4 +2113,36 @@ color: #ff1493;
   font-size: 40px;
   line-height: 60px;
   text-align: center;
+}
+
+
+//簡単ログイン
+.loginpusheasy {
+  width: 430px;
+  height: 115px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 115px;
+  left: 50%;
+  position: absolute;
+  top: 110%;
+  transform: translate(-50%, 0%);
+  background-color: rgb(9, 221, 206);
+  border-radius: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
+}
+
+.detaileasy {
+  width: 100%;
+  left: 50%;
+  position: absolute;
+  top: 130%;
+  text-align: center;
+  transform: translate(-50%, 0%);
+  font-size: 22px;
+}
+
 }

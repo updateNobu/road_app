@@ -64,6 +64,7 @@ Rails.application.routes.draw do
   get "user/:id/cflike" => "users#cflike"
   post "user/create" => "users#create"
   post "login" => "users#login"
+  post "logineasy" => "users#logineasy"
   post "logout" => "users#logout"
   post "user/updateshow/:id" => "users#updateshow"
   post "/user/destroy/:id" => "users#destroy"
