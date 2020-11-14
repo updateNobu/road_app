@@ -1,4 +1,4 @@
-@media (max-width: 670px){
+@media (min-width: 0px){
 
 
 // topページ
@@ -2144,5 +2144,15 @@ color: #ff1493;
   text-align: center;
   transform: translate(-50%, 0%);
   font-size: 22px;
+}
+}
+
+@media (min-width: 1024px){
+  .main-logo {
+  width: 100px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 }
