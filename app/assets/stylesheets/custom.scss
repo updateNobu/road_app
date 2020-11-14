@@ -2147,12 +2147,2237 @@ color: #ff1493;
 }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 1024px){
-  .main-logo {
-  width: 100px;
+  // topページ
+.main-logo {
+  width: 500px;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+　
+.container {
+  // margin: 0 auto;
+}
+.top-wrapper {
+  width: 75%;
+  height: 120px;
+  margin: 100px 0 30px 0;
+  padding: 15px 0;
+  background-color: rgb(9, 221, 206);
+  position: relative;
+}
+
+
+
+
+
+
+
+.contents {
+  width: 100%;
+  height: 370px;
+  position: relative;
+  margin-top: -20px;
+}
+
+.content{
+  width: 30%;
+  background-color: rgba(17, 17, 17, 0.7);
+}
+
+.pcfront {
+  left: 2%;
+  position: absolute;
+  top: 5%;
+  height: 412px;
+}
+
+.pcback {
+  left: 50%;
+  position: absolute;
+  top: 5%;
+  transform: translate(-50%, 0%);
+}
+
+.pcfree {
+  left: 68%;
+  position: absolute;
+  top: 5%;
+  height: 412px;
+}
+
+.content a {
+  color: white;
+  text-decoration: none;
+  
+}
+
+.ti{
+  margin: 15px auto 0px;
+  font-size: 25px;
+}
+.lo {
+  font-size: 15.2px;
+  padding: 0px 40px 0px 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-align: left;
+}
+
+.front {
+  width: 100%;
+  hight: 60%;
+  border-bottom: solid rgb(9, 221, 206) 12px;
+}
+
+.back {
+  width: 100%;
+  hight: 60%;
+  border-bottom: solid rgb(9, 221, 206) 12px;
+}
+
+.free {
+  width: 100%;
+  hight: 60%;
+  border-bottom: solid rgb(9, 221, 206) 12px;
+}
+
+
+
+
+
+
+.what {
+  width: 90%;
+  color: white;
+  background-color: rgb(9, 221, 206);
+  margin: 80px auto;
+  text-align: center;
+  position: relative;
+}
+
+.sub-logo {
+  width: 220px;
+  right: 28%;
+  position: absolute;
+  top: 21%;
+  transform: translate(-50%, -50%);
+}
+
+.qes {
+  font-size: 40px;
+  left: 35%;
+  position: absolute;
+  top: 4%;
+  transform: translate(-50%, -70%);
+}
+
+.mark{
+  font-size: 40px;
+  right: 29%;
+  position: absolute;
+  top: 4%;
+  transform: translate(-50%, -70%);
+}
+
+.detail {
+  font-size: 20px;
+  padding: 60px 40px 0px 40px;
+  display: inline-block;
+  text-align: left;
+}
+
+.send {
+  font-size: 25px;
+  margin-top: -10px;
+  display: inline-block;
+  text-align: left;
+  padding: 0px 0px 0px 0px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  border-bottom: solid white 2px;
+}
+
+
+
+
+// header部分
+.head-logo {
+  width: 200px;
+  left: 15%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+
+header {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(17, 17, 17, 0.7);
+  position:fixed;
+  top: 0px;
+  z-index:10;
+}
+
+.head {
+  width: 100%;
+  height: 90px;
+  position: relative;
+}
+
+.head ul {
+  list-style: none;
+  right: 2%;
+  position: absolute;
+  top: 20%;
+  transform: translate(0%,-50%);
+}
+
+.head li {
+  float: right;
+  margin: auto 20px auto 0px;
+}
+
+.head a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+
+
+
+
+// hooter部分
+
+.hooter {
+  height: 60px;
+  width: 90%;
+  margin: -45px auto;
+  background-color: rgba(17, 17, 17, 0.7);
+  position: relative;
+  // background-color: cover;
+}
+
+.hoot {
+  width: 150px;
+  left: 12%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.return {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  right: 3%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-20%, -50%);
+}
+
+
+
+
+
+
+// 各カテゴリーごとのページ
+.sam {
+  width: 100%;
+  height: 300px;
+  margin-top: 62px;
+  position: relative;
+  padding-bottom: 35px;
+  position: fixed;
+  margin-bottom: 200px;
+  z-index: 10;
+}
+
+.bigtitle{
+  width: 35%;
+  background-color: rgb(9, 221, 206);
+  height: 300px;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+}
+
+.bigtitle p{
+  font-size: 50px;
+  color: white;
+  left: 3%;
+  position: absolute;
+  top: 3%;
+  font-weight: bold;
+  white-space: pre;
+  text-align: left;
+}
+
+.samlogo{
+  display: none;
+  // left: 150%;
+  // position: absolute;
+  // top: 0%;
+  // width: 60%;
+  // height: 60px;
+  // display: block;
+  // margin: ;
+}
+
+.block {
+  width: 60%;
+  height: 70px;
+  margin: 0 0px 40px 630px;
+}
+
+
+
+
+
+.index{
+  width: 40%;
+  height: 90px;
+  background-color: rgb(234, 234, 234);
+  margin: 0 0px 20px 690px;
+  position: relative;
+}
+
+.index a {
+  text-decoration: none;
+  color: black;
+}
+.roadtitle {
+  padding: 10px 0px 0 50px;
+  font-size: 22px;
+}
+
+.user{
+  font-size: 20px;
+  left: 5%;
+  position: absolute;
+  top: 53%;
+}
+
+.icon {
+  right: 0%;
+  position: absolute;
+  top: 0%;
+  height: 90px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.time {
+  font-size: 15px;
+  right: 25%;
+  position: absolute;
+  top: 45%;
+}
+
+.fa-pink {
+color: #ff1493;
+}
+
+.like {
+  left: 23.5%;
+  position: absolute;
+  top: 55%;
+  font-size: 15px;
+}
+
+
+
+// 下の画面遷移用のボタン
+
+.low{
+  width: 100%;
+  height: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.choise {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  left: 3%;
+  position: absolute;
+  top: -100%;
+  background-color: none;
+}
+
+.up {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  left: 25%;
+  position: absolute;
+  top: -100%;
+}
+
+
+
+
+
+// 投稿詳細ページ
+
+.show{
+  width: 100%;
+  height: 180px;
+  margin-top: 105px;
+  background-color: rgb(9, 221, 206);
+  position: relative;
+}
+
+.showtitle {
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  left: 4%;
+  position: absolute;
+  top: -10%;
+}
+
+.showuser {
+  font-size: 40px;
+  color: white;
+  left: 4%;
+  position: absolute;
+  top: 40%;
+  font-weight: bold;
+}
+
+.showlike {
+  left: 25.5%;
+  position: absolute;
+  top: 68%;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+.timeshow {
+  font-size: 30px;
+  left: 35%;
+  position: absolute;
+  top: 50%;
+  color: white;
+}
+
+.fa-black {
+  color: black;
+}
+
+.samicon {
+  height: 180px;
+  width: 200px;
+  right: 0%;
+  position: absolute;
+  top: 0%;
+  background-color: white;
+  object-fit: cover;
+}
+
+
+
+
+.showdetail {
+ background-color: rgba(17, 17, 17, 0.7);
+ background-color: cover;
+// height: 220px;
+ width: 100%;
+}
+
+.stadytime {
+  margin-top: 0px;
+  padding: 15px 0px 0px 20px;
+  color: white;
+  font-size: 27px;
+}
+
+.period {
+  margin-top: -30px;
+  padding: 0px 0px 0px 20px;
+  color: white;
+  font-size: 27px;
+}
+
+.totaltime {
+  margin-top: -30px;
+  padding: 0px 0px 0px 20px;
+  color: white;
+  font-size: 27px;
+}
+
+.comment {
+  margin-top: -30px;
+  padding: 0px 0px 20px 20px;
+  color: white;
+  font-size: 27px;
+}
+
+
+
+.road {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 60px;
+}
+
+.road h1 {
+  margin-top: -10px;
+  font-size: 50px;
+  color: black;
+  border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
+  text-align: center;
+  line-height: 100px;
+}
+
+
+
+.roadmap {
+  width: 90%;
+  background-color: rgb(234, 234, 234);
+  background-color: cover;
+  margin: 0px auto 20px;
+}
+
+.minititle {
+  font-size: 23px;
+  padding: 15px 0 0 20px;
+}
+
+.method {
+  font-size: 23px;
+  padding: 0 0 0 20px;
+  margin-top: -17px;
+}
+
+.require {
+  font-size: 23px;
+  padding: 0 0 0 20px;
+  margin-top: -17px;
+}
+
+.minicomment {
+  font-size: 23px;
+  padding: 0 0 15px 20px;
+  margin-top: -17px;
+}
+
+
+
+
+
+.showbottom {
+  width: 100%;
+  height: 70px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.backindex {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 180px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 15%;
+  position: absolute;
+  top: 0%;
+}
+
+.goedit {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 120px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 42%;
+  position: absolute;
+  top: 0%;
+}
+
+.showdelite {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 190px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  right: 18%;
+  position: absolute;
+  top: 0%;
+}
+
+
+
+//ログイン画面
+.intitle {
+  height: 160px;
+  width: 75%;
+  margin-top: 105px;
+  background-color: rgb(9, 221, 206);
+}
+
+.titlelog {
+  color: white;
+  font-size: 50px;
+  line-height: 160px;
+  text-align: center;
+}
+
+
+
+
+.inputlogin {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  margin-bottom: 300px;
+}
+
+.mailtitle {
+  left: 10%;
+  position: absolute;
+  top: 12%;
+  font-size: 30px;
+}
+
+.mailinput {
+  left: 50%;
+  position: absolute;
+  top: 24%;
+  transform: translate(-50%, 0%);
+  border-radius: 10px;
+  width: 85%;
+  height: 60px;
+  font-size: 30px;
+  background-color: white;
+}
+
+.passtitle {
+  left: 10%;
+  position: absolute;
+  top: 40%;
+  font-size: 30px;
+}
+
+.passinput {
+  left: 50%;
+  position: absolute;
+  top: 52%;
+  transform: translate(-50%, 0%);
+  border-radius: 10px;
+  width: 85%;
+  height: 60px;
+  font-size: 30px;
+  background-color: white;
+}
+
+.loginpush {
+  width: 430px;
+  height: 115px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 100px;
+  left: 50%;
+  position: absolute;
+  top: 85%;
+  transform: translate(-50%, 0%);
+  background-color: rgb(9, 221, 206);
+  border-radius: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+
+
+
+//新規登録
+.signtitle {
+  height: 160px;
+  width: 75%;
+  margin-top: 105px;
+  background-color: rgb(9, 221, 206);
+}
+
+.uptitle {
+  color: white;
+  font-size: 50px;
+  line-height: 160px;
+  text-align: center;
+}
+
+
+
+
+
+
+.form {
+  width: 100%;
+  height: 900px;
+  position: relative;
+}
+
+.newname {
+  left: 10%;
+  position: absolute;
+  top: 6%;
+  font-size: 30px;
+}
+
+.newuser {
+  left: 50%;
+  position: absolute;
+  top: 16%;
+  transform: translate(-50%, 0%);
+  border-radius: 10px;
+  width: 85%;
+  height: 60px;
+  font-size: 35px;
+  background-color: white;
+}
+
+.newadress {
+  left: 10%;
+  position: absolute;
+  top: 26%;
+  font-size: 30px;
+}
+
+.newmail {
+  left: 50%;
+  position: absolute;
+  top: 36%;
+  transform: translate(-50%, 0%);
+  border-radius: 10px;
+  width: 85%;
+  height: 60px;
+  font-size: 35px;
+  background-color: white;
+}
+
+.newpass {
+  left: 10%;
+  position: absolute;
+  top: 46%;
+  font-size: 30px;
+}
+
+.newpassword {
+  left: 50%;
+  position: absolute;
+  top: 56%;
+  transform: translate(-50%, 0%);
+  border-radius: 10px;
+  width: 85%;
+  height: 60px;
+  font-size: 30px;
+  background-color: white;
+}
+
+.newsubmit {
+  width: 400px;
+  height: 100px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 100px;
+  left: 50%;
+  position: absolute;
+  top: 72%;
+  transform: translate(-50%, 0%);
+  background-color: rgb(9, 221, 206);
+  border-radius: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+
+.maketitle {
+  margin-top: 135px;
+  width: 75%;
+  height: 160px;
+  background-color: rgb(9, 221, 206);
+}
+
+.makename {
+  text-align: center;
+  line-height: 160px;
+  color: white;
+  font-size: 40px;
+}
+
+.makesub {
+  width: 100%;
+  height: 140px;
+  margin-top: 130px;
+}
+
+.makesubname {
+  text-align: center;
+  line-height: 130px;
+  border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
+  font-size: 60px;
+}
+
+
+
+
+
+
+
+.roadmaptop {
+  width: 100%;
+  height: 600px;
+  margin: 120px auto 500px;
+  position: relative;
+}
+
+.titlebox {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(234, 234, 234);
+}
+
+.minirtitle {
+  font-size: 25px;
+  left: 9%;
+  position: absolute;
+  top: 0%;
+  font-weight: bold;
+}
+
+.inputsize {
+  width: 670px;
+  height: 43px;
+  left: 23%;
+  position: absolute;
+  top: 3%;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+
+
+
+
+.newshowmap {
+  width: 100%;
+  height: 280px;
+  background-color: rgba(17, 17, 17, 0.7);
+  margin-top: -20px;
+}
+
+
+.inputstadytime {
+  color: white;
+  font-size: 22px;
+  padding: 15px 0 0 20px;
+}
+
+.weekstady {
+  left: 20.7%;
+  position: absolute;
+  top: 16%;
+  border-radius: 8px;
+  height: 27px;
+  width: 27px;
+  font-size: 22px;
+}
+
+.inputholiday {
+  color: white;
+  font-size: 22px;
+  left: 33%;
+  position: absolute;
+  top: 12.5%;
+}
+
+.holidaystady {
+  border-radius: 8px;
+  height: 27px;
+  width: 27px;
+  left: 38%;
+  position: absolute;
+  top: 16%;
+  font-size: 22px;
+}
+
+.needperiod {
+  color: white;
+  font-size: 22px;
+  margin: -20px 0 0 20px;
+}
+
+.needmonth {
+  border-radius: 8px;
+  height: 27px;
+  width: 27px;
+  left: 32.3%;
+  position: absolute;
+  top: 22%;
+  font-size: 22px;
+}
+
+.totaltimetitle {
+  color: white;
+  font-size: 22px;
+  margin: 4px 0 0 20px;
+}
+
+.totaltimeinput {
+  height: 27px;
+  width: 48px;
+  left: 23%;
+  position: absolute;
+  top: 28%;
+  border-radius: 8px;
+  font-size: 22px;
+}
+
+.commentall {
+  color: white;
+  font-size: 22px;
+  margin: 4px 0 0 20px;
+}
+
+.commentallinput {
+  height: 50px;
+  width: 600px;
+  left: 15.5%;
+  position: absolute;
+  top: 35%;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.genre {
+  color: white;
+  font-size: 22px;
+  margin: 35px 0 0 20px;
+}
+
+.genrefront {
+  left: 5%;
+  position: absolute;
+  top: 52%;
+  width: 23px;
+  height: 23px;
+}
+
+.fronttitle{
+  font-size: 20px;
+  color: white;
+  left: 9%;
+  position: absolute;
+  top: 49%;
+}
+
+.genreback {
+  left: 26%;
+  position: absolute;
+  top: 52%;
+  width: 23px;
+  height: 23px;
+}
+
+.backtitle{
+  font-size: 20px;
+  color: white;
+  left: 30%;
+  position: absolute;
+  top: 49%;
+}
+
+.genrefree {
+  left: 45%;
+  position: absolute;
+  top: 52%;
+  width: 23px;
+  height: 23px;
+}
+
+.freetitle{
+  font-size: 20px;
+  color: white;
+  left: 49%;
+  position: absolute;
+  top: 49%;
+}
+
+
+.roadnewsubmit {
+  width: 80%;
+  height: 100px;
+  font-size: 35px;
+  text-align: center;
+  line-height: 100px;
+  left: 50%;
+  position: absolute;
+  top: 72%;
+  transform: translate(-50%, 0%);
+  background-color: rgb(9, 221, 206);
+  border-radius: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin: 100px auto;
+}
+
+
+
+
+//ロードマップ詳細
+// .makesubsub {
+//   width: 100%;
+//   height: 140px;
+//   margin-top: 80px;
+// }
+
+.makesubsubname {
+  text-align: center;
+  line-height: 80px;
+  border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
+  font-size: 50px;
+}
+
+
+
+.roadmapshow {
+  width: 90%;
+  background-color: rgb(234, 234, 234);
+  background-color: cover;
+  margin: 0px auto 20px;
+}
+
+.showedit {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 53px;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  line-height: 53px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  margin: -40px 0 20px 250px;
+  border-radius: 10px;
+}
+
+.showdestroy {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 53px;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  line-height: 53px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  margin: -40px 0 25px 120px;
+  border-radius: 10px;
+}
+
+
+
+.mapshowsubmit {
+  width: 100%;
+  height: 600px;
+  margin: 0px auto 20px;
+  position: relative;
+}
+
+.mapshowbottom {
+  width: 90%;
+  background-color: rgb(234, 234, 234);
+  height: 250px;
+  margin: 0px auto 20px;
+}
+
+.mstitle {
+  left: 7%;
+  position: absolute;
+  top: 3.2%;
+  font-size: 23px;
+}
+
+.inputmstitle {
+  left: 19%;
+  position: absolute;
+  top: 3.2%;
+  width: 680px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.msmethod {
+  left: 7%;
+  position: absolute;
+  top: 12%;
+  font-size: 23px;
+}
+
+.msmethodinput {
+  left: 32%;
+  position: absolute;
+  top: 11.8%;
+  width: 450px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.msrequired {
+  left: 7%;
+  position: absolute;
+  top: 20%;
+  font-size: 23px;
+}
+
+.msrequiredinput {
+  left: 32%;
+  position: absolute;
+  top: 19.5%;
+  width: 50px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.mscomment {
+  left: 7%;
+  position: absolute;
+  top: 28%;
+  font-size: 23px;
+}
+
+.mscommentinput {
+  left: 20%;
+  position: absolute;
+  top: 28%;
+  width: 600px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.mssend {
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 35px;
+  height: 100px;
+  width: 400px;
+  display: inline-block;
+  text-align: center;
+  line-height: 53px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 29%;
+  position: absolute;
+  top: 82%;
+  border-radius: 10px;
+}
+
+.icn_search {
+  font-family: FontAwesome;
+}
+
+.plus {
+  font-size: 130px;
+  border: none;
+  background-color: white;
+  color: rgb(9, 221, 206);
+  right: 10%;
+  position: absolute;
+  top: 45%;
+}
+
+
+//ロードマップ編集　editshow
+.updatenewshow {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin-bottom: 400px;
+}
+
+.updateshowbottom {
+  width: 90%;
+  background-color: rgb(234, 234, 234);
+  height: 250px;
+  margin: 30px auto 0px;
+}
+
+.ustitle {
+  left: 7%;
+  position: absolute;
+  top: 0%;
+  font-size: 23px;
+}
+
+.inputustitle {
+  left: 20%;
+  position: absolute;
+  top: 3.4%;
+  width: 680px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.usmethod {
+  left: 7%;
+  position: absolute;
+  top: 8%;
+  font-size: 23px;
+}
+
+.inputusmethod {
+  left: 32%;
+  position: absolute;
+  top: 11.8%;
+  width: 450px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.usrequired {
+  left: 7%;
+  position: absolute;
+  top: 15.5%;
+  font-size: 23px;
+}
+
+.inputusrequired {
+  left: 32%;
+  position: absolute;
+  top: 19%;
+  width: 50px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.uscomment {
+  left: 7%;
+  position: absolute;
+  top: 24%;
+  font-size: 23px;
+}
+
+.inputuscomment {
+  left: 20%;
+  position: absolute;
+  top: 28%;
+  width: 680px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+
+.ussend {
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  height: 90px;
+  width: 370px;
+  display: inline-block;
+  text-align: center;
+  line-height: 90px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 30%;
+  position: absolute;
+  top: 70%;
+  border-radius: 10px;
+}
+
+
+
+//ろーそマップ編集　edit
+.editroadmaptop {
+  width: 100%;
+  height: 600px;
+  margin: 100px auto 500px;
+  position: relative;
+}
+
+.editrtitle {
+  font-size: 25px;
+  left: 9%;
+  position: absolute;
+  top: 4%;
+  font-weight: bold;
+}
+
+.editsize {
+  width: 670px;
+  height: 43px;
+  left: 23%;
+  position: absolute;
+  top: 7%;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.editmap {
+  width: 100%;
+  height: 280px;
+  background-color: rgba(17, 17, 17, 0.7);
+  margin-top: -23px;
+}
+
+.editstadytime {
+  color: white;
+  font-size: 22px;
+  left: 2.2%;
+  position: absolute;
+  top: 16%;
+}
+
+.editweekstady {
+  left: 21%;
+  position: absolute;
+  top: 19%;
+  border-radius: 8px;
+  height: 27px;
+  width: 27px;
+  font-size: 22px;
+}
+
+.editholiday {
+  color: white;
+  font-size: 22px;
+  left: 33%;
+  position: absolute;
+  top: 16%;
+}
+
+.editholidaystady {
+  border-radius: 8px;
+  height: 27px;
+  width: 27px;
+  left: 38%;
+  position: absolute;
+  top: 19%;
+  font-size: 22px;
+}
+
+.editperiod {
+  color: white;
+  font-size: 22px;
+  left: 2.2%;
+  position: absolute;
+  top: 21.5%;
+}
+
+.editneedmonth {
+  border-radius: 8px;
+  height: 27px;
+  width: 27px;
+  left: 32.3%;
+  position: absolute;
+  top: 24.7%;
+  font-size: 22px;
+}
+
+.edittotaltime {
+  color: white;
+  font-size: 22px;
+  left: 2.2%;
+  position: absolute;
+  top: 28%;
+}
+
+.edittotaltimeinput {
+  height: 27px;
+  width: 48px;
+  left: 23%;
+  position: absolute;
+  top: 31.5%;
+  border-radius: 8px;
+  font-size: 22px;
+}
+
+.editcommentall {
+  color: white;
+  font-size: 22px;
+  left: 2.2%;
+  position: absolute;
+  top: 35%;
+}
+
+.editcommentallinput {
+  height: 50px;
+  width: 600px;
+  left: 15.5%;
+  position: absolute;
+  top: 39%;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.editgenre {
+  color: white;
+  font-size: 22px;
+  left: 2.2%;
+  position: absolute;
+  top: 46.5%;
+}
+
+.genreeditfront {
+  left: 5%;
+  position: absolute;
+  top: 57%;
+  width: 23px;
+  height: 23px;
+}
+
+.frontedittitle{
+  font-size: 20px;
+  color: white;
+  left: 9%;
+  position: absolute;
+  top: 53.7%;
+}
+
+.genreeditback {
+  left: 26%;
+  position: absolute;
+  top: 57%;
+  width: 23px;
+  height: 23px;
+}
+
+.backedittitle{
+  font-size: 20px;
+  color: white;
+  left: 30%;
+  position: absolute;
+  top: 53.7%;
+}
+
+.genreeditfree {
+  left: 45%;
+  position: absolute;
+  top: 57%;
+  width: 23px;
+  height: 23px;
+}
+
+.freeedittitle{
+  font-size: 20px;
+  color: white;
+  left: 49%;
+  position: absolute;
+  top: 53.7%;
+}
+
+.finishedit {
+  width: 60%;
+  height: 100px;
+  font-size: 35px;
+  text-align: center;
+  line-height: 100px;
+  left: 50%;
+  position: absolute;
+  top: 100%;
+  transform: translate(-50%, 0%);
+  background-color: rgb(9, 221, 206);
+  border-radius: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin: 100px auto;
+}
+
+
+
+
+//ユーザーページ
+.usermiddle {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  margin: 50px auto;
+}
+
+.profile {
+  color: rgb(9, 221, 206);
+  font-size: 30px;
+  font-weight: bold;
+  left: 9%;
+  position: absolute;
+  top: 8%;
+}
+
+.goroadfp {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  left: 32%;
+  position: absolute;
+  top: 18%;
+}
+
+.golilefp {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  left: 56%;
+  position: absolute;
+  top: 18%;
+}
+
+.goshowfp {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  left: 78%;
+  position: absolute;
+  top: 18%;
+}
+
+.profilemiddle {
+  width: 100%;
+  text-align: center;
+  line-height: 120px;
+  border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
+  font-size: 65px;
+  left: 50%;
+  position: absolute;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.probox {
+  width: 6px;
+  height: 35px;
+  background-color: rgb(9, 221, 206);
+  left: 17%;
+  position: absolute;
+  top: 37%;
+}
+
+
+
+
+.usermain {
+  width: 100%;
+  height: 1200px;
+  margin-top: 88px;
+  position: relative;
+}
+
+.imagezone {
+  width: 100%;
+  height: 580px;
+  background-color: rgb(9, 221, 206);
+}
+
+.circleimg {
+  left: 50%;
+  position: absolute;
+  top: 22%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+}
+
+.username {
+  font-size: 50px;
+  color: white;
+  left: 50%;
+  position: absolute;
+  top: 31%;
+  transform: translate(-50%, -50%);
+}
+
+.usercomment {
+  width: 90%;
+  margin: 40px auto 20px;
+  font-size: 20px;
+}
+
+.sublink {
+  width: 90%;
+  font-size: 20px;
+  margin: 0px auto 0px;
+  border-top: solid rgba(17, 17, 17, 0.7) 2px;
+}
+
+.userlink {
+  width: 90%;
+  font-size: 20px;
+  left: 5%;
+  position: absolute;
+  color: rgb(9, 221, 206);
+  font-weight: bold;
+}
+
+.useremail {
+  width: 90%;
+  font-size: 25px;
+  border-top: solid rgba(17, 17, 17, 0.7) 2px;
+  margin: 60px auto;
+}
+
+.edituser {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 220px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 50%;
+  position: absolute;
+  top: 78%;
+  transform: translate(-50%, 0%);
+}
+
+.deleteuser {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 220px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 50%;
+  position: absolute;
+  top: 78%;
+  transform: translate(-50%, 0%);
+}
+
+
+//プロフィール編集
+.editusermain {
+  width: 100%;
+  height: 1000px;
+  margin-top: 88px;
+  margin-bottom: 200px;
+  position: relative;
+}
+
+.imageuseredit {
+  width: 100%;
+  height: 580px;
+  background-color: rgb(9, 221, 206);
+}
+
+.showimg {
+  left: 50%;
+  position: absolute;
+  top: 24%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+}
+
+.editname {
+  font-size: 35px;
+  color: rgb(9, 221, 206);
+  width: 180px;
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  top: 38%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
+
+.editfile {
+  display: none;
+}
+
+.editphoto {
+  font-size: 180px;
+  border: none;
+  font-family: FontAwesome;
+  color: rgba(9, 221, 206, 0.7);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.cercle {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  position: absolute;
+  top: 24%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.editusercomment {
+  width: 90%;
+  margin: 10px auto 0px;
+  font-size: 20px;
+}
+
+.editcommentinput {
+  width: 90%;
+  height: 80px;
+  margin: 10px 27px 0px;
+  border-radius: 10px;
+}
+
+.editlink {
+  width: 90%;
+  margin: 0px auto 0px;
+  font-size: 20px;
+  border-top: solid rgba(17, 17, 17, 0.7) 2px;
+}
+
+.edituserlink {
+  width: 90%;
+  height: 35px;
+  margin: 10px 29px 0px;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+.editmail {
+  width: 90%;
+  margin: 20px auto 0px;
+  font-size: 20px;
+  border-top: solid rgba(17, 17, 17, 0.7) 2px;
+}
+
+.editusermail {
+  width: 70%;
+  height: 35px;
+  margin: 10px 29px 0px;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+.editfinish {
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  height: 80px;
+  width: 250px;
+  display: inline-block;
+  text-align: center;
+  line-height: 53px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 50%;
+  position: absolute;
+  top: 100%;
+  transform: translate(-50%, 0%);
+  border-radius: 10px;
+}
+
+
+
+//myroadmap show
+.roadmiddle {
+  width: 100%;
+  text-align: center;
+  line-height: 120px;
+  font-size: 65px;
+  left: 50%;
+  position: absolute;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+
+
+.goprofr {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  left: 9%;
+  position: absolute;
+  top: 18%;
+}
+
+.roadmodel {
+  color: rgb(9, 221, 206);
+  font-size: 30px;
+  font-weight: bold;
+  left: 32%;
+  position: absolute;
+  top: 8%;
+}
+
+.roadbox {
+  width: 6px;
+  height: 35px;
+  background-color: rgb(9, 221, 206);
+  left: 41%;
+  position: absolute;
+  top: 37%;
+}
+
+
+
+
+.roaddetail {
+ background-color: rgba(17, 17, 17, 0.7);
+ background-color: cover;
+ width: 100%;
+ margin-top: 87.8px;
+ border-top: solid rgba(17, 17, 17, 0.7) 0.3px;
+}
+
+
+
+
+.selectchoise {
+  width: 100%;
+  height: 200px;
+}
+
+.fromroad {
+  width: 210px;
+  height: 140px;
+  background-color: rgb(9, 221, 206);
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  display: inline-block;
+  white-space: pre;
+  padding: 40px 30px;
+  margin: 0 20px 0 30px;
+}
+
+.fromlike {
+  width: 210px;
+  height: 140px;
+  background-color: rgb(9, 221, 206);
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  display: inline-block;
+  white-space: pre;
+  padding: 40px 30px;
+  margin: 0 20px 0 20px;
+}
+
+.frommy {
+  width: 210px;
+  height: 140px;
+  background-color: rgb(9, 221, 206);
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  display: inline-block;
+  white-space: pre;
+  padding: 40px 30px;
+  margin: 0 0px 0 20px;
+}
+
+
+
+
+//お気に入りから選ぶ
+.likeuser {
+  font-size: 30px;
+  left: 5%;
+  position: absolute;
+  top: 32%;
+}
+
+.likeindex {
+  width: 80%;
+  height: 130px;
+  background-color: rgb(234, 234, 234);
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.likeindex a {
+  text-decoration: none;
+  color: black;
+}
+
+.likebottom {
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.likeback {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 90px;
+  width: 270px;
+  display: inline-block;
+  text-align: center;
+  line-height: 90px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  border-radius: 8px;
+}
+
+
+
+
+.likeshowbottom {
+  width: 100%;
+  height: 70px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.backlikeindex {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 180px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 15%;
+  position: absolute;
+  top: 0%;
+}
+
+.mapset {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 300px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  right: 14%;
+  position: absolute;
+  top: 0%;
+}
+
+
+
+// ユーザーお気に入り
+.mylike {
+  color: rgb(9, 221, 206);
+  font-size: 30px;
+  font-weight: bold;
+  left: 56%;
+  position: absolute;
+  top: 8%;
+}
+
+.likebox {
+  width: 6px;
+  height: 35px;
+  background-color: rgb(9, 221, 206);
+  left: 63.5%;
+  position: absolute;
+  top: 37%;
+}
+
+.userlikemiddle {
+  width: 100%;
+  text-align: center;
+  line-height: 120px;
+  border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
+  font-size: 65px;
+  left: 50%;
+  position: absolute;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.likemiddle {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  margin: 50px auto 120px;
+}
+
+
+
+
+//user 投稿ページ
+.roadmapapp {
+  color: rgb(9, 221, 206);
+  font-size: 30px;
+  font-weight: bold;
+  left: 78%;
+  position: absolute;
+  top: 8%;
+}
+
+.appbox {
+  width: 6px;
+  height: 35px;
+  background-color: rgb(9, 221, 206);
+  left: 80.7%;
+  position: absolute;
+  top: 37%;
+}
+
+
+
+
+
+
+// user投稿編集ページ
+ .roadusername {
+  font-size: 25px;
+  left: 6%;
+  position: absolute;
+  top: 38%;
+ }
+ 
+ 
+ 
+ 
+ .editstart {
+   text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 120px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 15%;
+  position: absolute;
+  top: 0%;
+ }
+ 
+ .roaddelite {
+   text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 200px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  left: 38%;
+  position: absolute;
+  top: 0%;
+ }
+ 
+ .backtable {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 60px;
+  width: 130px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  background-color: rgb(9, 221, 206);
+  right: 18%;
+  position: absolute;
+  top: 0%;
+ }
+ 
+ 
+ 
+ 
+ //紹介ページ
+.abouttitle {
+  margin-top: 135px;
+  width: 75%;
+  height: 160px;
+  background-color: rgb(9, 221, 206);
+  position: relative;
+}
+
+.about-logo {
+  width: 370px;
+  left: 35%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.subabout {
+  color: white;
+  font-size: 50px;
+  left: 78%;
+  position: absolute;
+  top: 22%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.detailall {
+  width: 90%;
+  background-color: rgb(234, 234, 234);
+  background-color: cover;
+  margin: 60px auto;
+}
+
+.literal {
+  white-space: pre-wrap;
+  font-size: 12px;
+  padding: 20px 10px;
+}
+
+
+//flash
+.alert-denger{
+  width: 100%;
+  height: 30px;
+  background-color: red;
+  margin: 90px auto -100px auto;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.alert-success {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(9, 221, 206);
+  margin: 115px auto -100px auto;
+  color: white;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.erorr {
+  width: 100%;
+  height: 60px;
+  background-color: red;
+  margin: 0px auto 0px auto;
+  color: white;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+}
+
+
+//簡単ログイン
+.loginpusheasy {
+  width: 430px;
+  height: 115px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 115px;
+  left: 50%;
+  position: absolute;
+  top: 110%;
+  transform: translate(-50%, 0%);
+  background-color: rgb(9, 221, 206);
+  border-radius: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
+}
+
+.detaileasy {
+  width: 100%;
+  left: 50%;
+  position: absolute;
+  top: 130%;
+  text-align: center;
+  transform: translate(-50%, 0%);
+  font-size: 22px;
 }
 }

@@ -2,10 +2,12 @@
 
 <div class="sam">
 <div class="bigtitle">
-  <p>フリーランスエンジニア</p>
+  <p>フリーランス
+エンジニア</p>
 </div>
 <img class = "samlogo"  src="/user_images/frsphone.jpg">
 </div>
+<div class="block"></div>
 <% @roadmaps.zip(@users) do |roadmap, user| %>
   <%= link_to("/roadmap/4/#{roadmap.id}") do %>
   <div class="index">
