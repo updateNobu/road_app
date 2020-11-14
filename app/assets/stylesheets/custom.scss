@@ -1,5 +1,4 @@
-/* スマホ向けレイアウト */
-@media all and (max-width: 670px) {
+
 // topページ
 .main-logo {
   width: 700px;
@@ -2145,4 +2144,6 @@ color: #ff1493;
   font-size: 22px;
 }
 
+@media screen and (min-width:1024px) {
+  
 }
