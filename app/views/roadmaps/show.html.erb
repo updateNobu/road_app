@@ -22,7 +22,7 @@
   <%= Like.where(roadmap_id: @roadmap.id).count %>
   </div>
   <img src="<%= "/user_images/#{@user.image_name}"%>" class="samicon">
-  <p class="timeshow"><%= @roadmap.updated_at %></p>
+  <p class="timeshow"><%= shape_create_time(@roadmap.created_at) %></p>
   </div>
   <div class="showdetail">
   <p class="stadytime"><%= "勉強時間: 平日#{@roadmap.stady_time_week}時間　休日#{@roadmap.stady_time_week}時間" %></p>

@@ -15,7 +15,7 @@
         <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
   <%= Like.where(roadmap_id: @roadmap.id).count %>
   </div>
-  <p class="time liketime"><%= "#{@roadmap.updated_at}"%></p>
+  <p class="time liketime"><%= "#{shape_create_time(@roadmap.created_at)}"%></p>
   <img src="<%= "/user_images/#{User.find_by(id: @roadmap.user_id).image_name}"%>" class="icon">
 <% end %>
  </div>
