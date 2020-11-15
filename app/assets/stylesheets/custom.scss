@@ -1194,7 +1194,7 @@ color: #ff1493;
   width: 680px;
   height: 60px;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 
@@ -2210,7 +2210,7 @@ color: #ff1493;
   left: 2%;
   position: absolute;
   top: 5%;
-  height: 412px;
+  height: 395px;
 }
 
 .pcback {
@@ -2218,13 +2218,14 @@ color: #ff1493;
   position: absolute;
   top: 5%;
   transform: translate(-50%, 0%);
+  height: 395px;
 }
 
 .pcfree {
   left: 68%;
   position: absolute;
   top: 5%;
-  height: 412px;
+  height: 395px;
 }
 
 .content a {
@@ -3710,7 +3711,7 @@ color: #ff1493;
   width: 100%;
   height: 300px;
   position: relative;
-  margin: 50px auto;
+  margin: 5px auto;
 }
 
 .profile {
@@ -3727,7 +3728,7 @@ color: #ff1493;
   color: black;
   font-size: 30px;
   font-weight: bold;
-  left: 32%;
+  left: 33%;
   position: absolute;
   top: 18%;
 }
@@ -3737,7 +3738,7 @@ color: #ff1493;
   color: black;
   font-size: 30px;
   font-weight: bold;
-  left: 56%;
+  left: 59%;
   position: absolute;
   top: 18%;
 }
@@ -3747,21 +3748,21 @@ color: #ff1493;
   color: black;
   font-size: 30px;
   font-weight: bold;
-  left: 78%;
+  left: 85%;
   position: absolute;
   top: 18%;
 }
 
 .profilemiddle {
-  width: 100%;
-  text-align: center;
+  width: 50%;
+  text-align: left;
   line-height: 120px;
   border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
-  font-size: 65px;
-  left: 50%;
+  font-size: 50px;
+  left: 0%;
   position: absolute;
-  top: 85%;
-  transform: translate(-50%, -50%);
+  top: 65%;
+  transform: translate(0%, -50%);
   font-weight: bold;
 }
 
@@ -3769,7 +3770,7 @@ color: #ff1493;
   width: 6px;
   height: 35px;
   background-color: rgb(9, 221, 206);
-  left: 17%;
+  left: 15%;
   position: absolute;
   top: 37%;
 }
@@ -3780,23 +3781,24 @@ color: #ff1493;
 .usermain {
   width: 100%;
   height: 1200px;
-  margin-top: 88px;
+  margin-top: 50px;
   position: relative;
+  margin-bottom: -600px;
 }
 
 .imagezone {
-  width: 100%;
+  width: 50%;
   height: 580px;
   background-color: rgb(9, 221, 206);
 }
 
 .circleimg {
-  left: 50%;
+  left: 25%;
   position: absolute;
-  top: 22%;
+  top: 20%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
   background-color: white;
@@ -3805,39 +3807,39 @@ color: #ff1493;
 .username {
   font-size: 50px;
   color: white;
-  left: 50%;
+  left: 25%;
   position: absolute;
-  top: 31%;
+  top: 32%;
   transform: translate(-50%, -50%);
 }
 
 .usercomment {
-  width: 90%;
-  margin: 40px auto 20px;
+  width: 45%;
+  margin: -530px 0 20px 750px;
   font-size: 20px;
 }
 
 .sublink {
-  width: 90%;
-  font-size: 20px;
-  margin: 0px auto 0px;
+  width: 45%;
+  font-size: 30px;
+  margin: 0px 0 0px 750px;
   border-top: solid rgba(17, 17, 17, 0.7) 2px;
 }
 
 .userlink {
-  width: 90%;
-  font-size: 20px;
-  left: 5%;
+  width: 40%;
+  font-size: 15px;
+  left: 55%;
   position: absolute;
   color: rgb(9, 221, 206);
   font-weight: bold;
 }
 
 .useremail {
-  width: 90%;
+  width: 45%;
   font-size: 25px;
   border-top: solid rgba(17, 17, 17, 0.7) 2px;
-  margin: 60px auto;
+  margin: 60px 0 0 750px;
 }
 
 .edituser {
@@ -3851,10 +3853,9 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 50%;
+  left: 75%;
   position: absolute;
-  top: 78%;
-  transform: translate(-50%, 0%);
+  top: 40%;
 }
 
 .deleteuser {
@@ -3875,42 +3876,44 @@ color: #ff1493;
 }
 
 
+
+
 //プロフィール編集
 .editusermain {
   width: 100%;
-  height: 1000px;
-  margin-top: 88px;
-  margin-bottom: 200px;
+  height: 600px;
+  margin-top: 50px;
+  margin-bottom: 100px;
   position: relative;
 }
 
 .imageuseredit {
-  width: 100%;
+  width: 50%;
   height: 580px;
   background-color: rgb(9, 221, 206);
 }
 
 .showimg {
-  left: 50%;
+  left: 25%;
   position: absolute;
-  top: 24%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
+  top: 18%;
+  transform: translate(-50%, 0%);
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
   background-color: white;
 }
 
 .editname {
-  font-size: 35px;
+  font-size: 40px;
   color: rgb(9, 221, 206);
-  width: 180px;
-  height: 50px;
-  left: 50%;
+  width: 200px;
+  height: 60px;
+  left: 25%;
   position: absolute;
-  top: 38%;
-  transform: translate(-50%, -50%);
+  top: 65%;
+  transform: translate(-50%, 0%);
   border-radius: 10px;
   border: none;
   text-align: center;
@@ -3921,7 +3924,7 @@ color: #ff1493;
 }
 
 .editphoto {
-  font-size: 180px;
+  font-size: 230px;
   border: none;
   font-family: FontAwesome;
   color: rgba(9, 221, 206, 0.7);
@@ -3935,12 +3938,12 @@ color: #ff1493;
 .cercle {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  left: 50%;
+  width: 250px;
+  height: 250px;
+  left: 25%;
   position: absolute;
-  top: 24%;
-  transform: translate(-50%, -50%);
+  top: 18%;
+  transform: translate(-50%, 0%);
 }
 
 
@@ -3948,44 +3951,45 @@ color: #ff1493;
 
 
 .editusercomment {
-  width: 90%;
-  margin: 10px auto 0px;
-  font-size: 20px;
+  width: 45%;
+  margin: -600px 0 0 750px;
+  font-size: 25px;
 }
 
 .editcommentinput {
-  width: 90%;
-  height: 80px;
-  margin: 10px 27px 0px;
+  width: 45%;
+  height: 120px;
+  margin: 10px 0px 0px 725px;
   border-radius: 10px;
+  font-size: 15px;
 }
 
 .editlink {
-  width: 90%;
-  margin: 0px auto 0px;
-  font-size: 20px;
+  width: 45%;
+  margin: 10px 0 0px 750px;
+  font-size: 25px;
   border-top: solid rgba(17, 17, 17, 0.7) 2px;
 }
 
 .edituserlink {
-  width: 90%;
+  width: 45%;
   height: 35px;
-  margin: 10px 29px 0px;
+  margin: 10px 0px 0px 725px;
   border-radius: 5px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .editmail {
-  width: 90%;
-  margin: 20px auto 0px;
-  font-size: 20px;
+  width: 45%;
+  margin: 10px 0 0px 750px;
+  font-size: 25px;
   border-top: solid rgba(17, 17, 17, 0.7) 2px;
 }
 
 .editusermail {
-  width: 70%;
+  width: 45%;
   height: 35px;
-  margin: 10px 29px 0px;
+  margin: 10px 0px 0px 725px;
   border-radius: 5px;
   font-size: 25px;
 }
@@ -4002,10 +4006,9 @@ color: #ff1493;
   line-height: 53px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 50%;
+  left: 75%;
   position: absolute;
-  top: 100%;
-  transform: translate(-50%, 0%);
+  top: 80%;
   border-radius: 10px;
 }
 
