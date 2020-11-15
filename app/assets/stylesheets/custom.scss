@@ -3343,7 +3343,7 @@ color: #ff1493;
   width: 550px;
   height: 60px;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .mssend {
@@ -3608,7 +3608,7 @@ color: #ff1493;
   position: absolute;
   top: 39%;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 22px;
 }
 
 .editgenre {
@@ -3960,7 +3960,7 @@ color: #ff1493;
   height: 120px;
   margin: 10px 0px 0px 770px;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 22px;
 }
 
 .editlink {
@@ -4425,7 +4425,7 @@ color: #ff1493;
   width: 100%;
   height: 30px;
   background-color: red;
-  margin: 90px auto -100px auto;
+  margin: 80px auto -88px auto;
   color: white;
   font-size: 20px;
   line-height: 30px;
@@ -4434,23 +4434,23 @@ color: #ff1493;
 
 .alert-success {
   width: 100%;
-  height: 60px;
+  height: 30px;
   background-color: rgb(9, 221, 206);
-  margin: 115px auto -100px auto;
+  margin: 80px auto -80px auto;
   color: white;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 20px;
+  line-height: 30px;
   text-align: center;
 }
 
 .erorr {
   width: 100%;
-  height: 60px;
+  height: 30px;
   background-color: red;
-  margin: 0px auto 0px auto;
+  margin: 20px auto 0px auto;
   color: white;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 20px;
+  line-height: 30px;
   text-align: center;
 }
 
@@ -4480,5 +4480,10 @@ color: #ff1493;
   top: 75%;
   text-align: center;
   font-size: 15px;
+}
+
+.bottomspace {
+  width: 100%;
+  height: 40px;
 }
 }
