@@ -793,19 +793,19 @@ color: #ff1493;
 }
 
 .weekstady {
-  left: 20.7%;
+  left: 22%;
   position: absolute;
   top: 16%;
   border-radius: 8px;
   height: 27px;
-  width: 27px;
+  width: 32px;
   font-size: 22px;
 }
 
 .inputholiday {
   color: white;
   font-size: 22px;
-  left: 33%;
+  left: 35%;
   position: absolute;
   top: 12.5%;
 }
@@ -813,8 +813,8 @@ color: #ff1493;
 .holidaystady {
   border-radius: 8px;
   height: 27px;
-  width: 27px;
-  left: 38%;
+  width: 32px;
+  left: 41%;
   position: absolute;
   top: 16%;
   font-size: 22px;
@@ -829,8 +829,8 @@ color: #ff1493;
 .needmonth {
   border-radius: 8px;
   height: 27px;
-  width: 27px;
-  left: 32.3%;
+  width: 32px;
+  left: 33%;
   position: absolute;
   top: 22%;
   font-size: 22px;
@@ -1078,7 +1078,7 @@ color: #ff1493;
   width: 600px;
   height: 60px;
   border-radius: 8px;
-  font-size: 11px;
+  font-size: 20px;
 }
 
 .mssend {
@@ -1194,7 +1194,7 @@ color: #ff1493;
   width: 680px;
   height: 60px;
   border-radius: 8px;
-  font-size: 11px;
+  font-size: 18px;
 }
 
 
@@ -1260,9 +1260,9 @@ color: #ff1493;
 }
 
 .editweekstady {
-  left: 21%;
+  left: 22%;
   position: absolute;
-  top: 19%;
+  top: 19.5%;
   border-radius: 8px;
   height: 27px;
   width: 27px;
@@ -1272,7 +1272,7 @@ color: #ff1493;
 .editholiday {
   color: white;
   font-size: 22px;
-  left: 33%;
+  left: 36%;
   position: absolute;
   top: 16%;
 }
@@ -1281,9 +1281,9 @@ color: #ff1493;
   border-radius: 8px;
   height: 27px;
   width: 27px;
-  left: 38%;
+  left: 42%;
   position: absolute;
-  top: 19%;
+  top: 19.5%;
   font-size: 22px;
 }
 
@@ -1299,9 +1299,9 @@ color: #ff1493;
   border-radius: 8px;
   height: 27px;
   width: 27px;
-  left: 32.3%;
+  left: 34%;
   position: absolute;
-  top: 24.7%;
+  top: 25.2%;
   font-size: 22px;
 }
 
@@ -2769,6 +2769,10 @@ color: #ff1493;
 
 
 
+
+
+
+
 //ログイン画面
 .intitle {
   height: 160px;
@@ -2789,65 +2793,67 @@ color: #ff1493;
 
 .inputlogin {
   width: 100%;
-  height: 700px;
+  height: 500px;
   position: relative;
-  margin-bottom: 300px;
+  margin-bottom: 0px;
 }
 
 .mailtitle {
-  left: 10%;
+  left: 5%;
   position: absolute;
-  top: 12%;
+  top: 10%;
   font-size: 30px;
 }
 
 .mailinput {
-  left: 50%;
+  left: 2%;
   position: absolute;
-  top: 24%;
-  transform: translate(-50%, 0%);
+  top: 30%;
+  transform: translate(0%, 0%);
   border-radius: 10px;
-  width: 85%;
-  height: 60px;
-  font-size: 30px;
+  width: 50%;
+  height: 40px;
+  font-size: 25px;
   background-color: white;
 }
 
 .passtitle {
-  left: 10%;
+  left: 5%;
   position: absolute;
-  top: 40%;
+  top: 43%;
   font-size: 30px;
 }
 
 .passinput {
-  left: 50%;
+  left: 2%;
   position: absolute;
-  top: 52%;
-  transform: translate(-50%, 0%);
+  top: 63%;
+  transform: translate( 0%, 0%);
   border-radius: 10px;
-  width: 85%;
-  height: 60px;
-  font-size: 30px;
+  width: 50%;
+  height: 40px;
+  font-size: 25px;
   background-color: white;
 }
 
 .loginpush {
-  width: 430px;
-  height: 115px;
-  font-size: 40px;
+  width: 350px;
+  height: 90px;
+  font-size: 30px;
   text-align: center;
-  line-height: 100px;
-  left: 50%;
+  line-height: 90px;
+  left: 65%;
   position: absolute;
-  top: 85%;
-  transform: translate(-50%, 0%);
+  top: 25%;
+  transform: translate(0%, 0%);
   background-color: rgb(9, 221, 206);
   border-radius: 14px;
   color: white;
   font-weight: bold;
   border: none;
 }
+
+
 
 
 
@@ -2874,64 +2880,64 @@ color: #ff1493;
 
 .form {
   width: 100%;
-  height: 900px;
+  height: 600px;
   position: relative;
 }
 
 .newname {
-  left: 10%;
+  left: 5%;
   position: absolute;
   top: 6%;
   font-size: 30px;
 }
 
 .newuser {
-  left: 50%;
+  left: 2%;
   position: absolute;
-  top: 16%;
-  transform: translate(-50%, 0%);
+  top: 22%;
+  transform: translate(0%, 0%);
   border-radius: 10px;
-  width: 85%;
-  height: 60px;
-  font-size: 35px;
+  width: 50%;
+  height: 40px;
+  font-size: 25px;
   background-color: white;
 }
 
 .newadress {
-  left: 10%;
+  left: 5%;
   position: absolute;
-  top: 26%;
+  top: 30%;
   font-size: 30px;
 }
 
 .newmail {
-  left: 50%;
+  left: 2%;
   position: absolute;
-  top: 36%;
-  transform: translate(-50%, 0%);
+  top: 45%;
+  transform: translate( 0%, 0%);
   border-radius: 10px;
-  width: 85%;
-  height: 60px;
-  font-size: 35px;
+  width: 50%;
+  height: 40px;
+  font-size: 25px;
   background-color: white;
 }
 
 .newpass {
-  left: 10%;
+  left: 5%;
   position: absolute;
-  top: 46%;
+  top: 54%;
   font-size: 30px;
 }
 
 .newpassword {
-  left: 50%;
+  left: 2%;
   position: absolute;
-  top: 56%;
-  transform: translate(-50%, 0%);
+  top: 67%;
+  transform: translate( 0%, 0%);
   border-radius: 10px;
-  width: 85%;
-  height: 60px;
-  font-size: 30px;
+  width: 50%;
+  height: 40px;
+  font-size: 25px;
   background-color: white;
 }
 
@@ -2941,10 +2947,9 @@ color: #ff1493;
   font-size: 40px;
   text-align: center;
   line-height: 100px;
-  left: 50%;
+  left: 77%;
   position: absolute;
-  top: 72%;
-  transform: translate(-50%, 0%);
+  top: 41%;
   background-color: rgb(9, 221, 206);
   border-radius: 14px;
   color: white;
@@ -2953,8 +2958,12 @@ color: #ff1493;
 }
 
 
+
+
+//create
+
 .maketitle {
-  margin-top: 135px;
+  margin-top: 90px;
   width: 75%;
   height: 160px;
   background-color: rgb(9, 221, 206);
@@ -2968,16 +2977,16 @@ color: #ff1493;
 }
 
 .makesub {
-  width: 100%;
+  width: 30%;
   height: 140px;
-  margin-top: 130px;
+  margin-top: 50px;
 }
 
 .makesubname {
-  text-align: center;
+  text-align: left;
   line-height: 130px;
   border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 
@@ -2987,34 +2996,35 @@ color: #ff1493;
 
 
 .roadmaptop {
-  width: 100%;
+  width: 70%;
   height: 600px;
-  margin: 120px auto 500px;
+  margin: -20px 0px 0px 480px;
   position: relative;
 }
 
 .titlebox {
-  width: 100%;
+  width: 80%;
   height: 80px;
+  margin: 0 auto;
   background-color: rgb(234, 234, 234);
 }
 
 .minirtitle {
-  font-size: 25px;
-  left: 9%;
+  font-size: 23px;
+  left: 17%;
   position: absolute;
   top: 0%;
   font-weight: bold;
 }
 
 .inputsize {
-  width: 670px;
-  height: 43px;
-  left: 23%;
+  width: 550px;
+  height: 38px;
+  left: 31%;
   position: absolute;
   top: 3%;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
@@ -3022,10 +3032,10 @@ color: #ff1493;
 
 
 .newshowmap {
-  width: 100%;
+  width: 80%;
   height: 280px;
   background-color: rgba(17, 17, 17, 0.7);
-  margin-top: -20px;
+  margin: -20px auto 0;
 }
 
 
@@ -3036,19 +3046,19 @@ color: #ff1493;
 }
 
 .weekstady {
-  left: 20.7%;
+  left: 29.5%;
   position: absolute;
   top: 16%;
   border-radius: 8px;
   height: 27px;
-  width: 27px;
+  width: 40px;
   font-size: 22px;
 }
 
 .inputholiday {
   color: white;
   font-size: 22px;
-  left: 33%;
+  left: 47%;
   position: absolute;
   top: 12.5%;
 }
@@ -3056,8 +3066,8 @@ color: #ff1493;
 .holidaystady {
   border-radius: 8px;
   height: 27px;
-  width: 27px;
-  left: 38%;
+  width: 40px;
+  left: 52%;
   position: absolute;
   top: 16%;
   font-size: 22px;
@@ -3072,8 +3082,8 @@ color: #ff1493;
 .needmonth {
   border-radius: 8px;
   height: 27px;
-  width: 27px;
-  left: 32.3%;
+  width: 40px;
+  left: 40%;
   position: absolute;
   top: 22%;
   font-size: 22px;
@@ -3087,8 +3097,8 @@ color: #ff1493;
 
 .totaltimeinput {
   height: 27px;
-  width: 48px;
-  left: 23%;
+  width: 54px;
+  left: 30%;
   position: absolute;
   top: 28%;
   border-radius: 8px;
@@ -3104,11 +3114,11 @@ color: #ff1493;
 .commentallinput {
   height: 50px;
   width: 600px;
-  left: 15.5%;
+  left: 25%;
   position: absolute;
   top: 35%;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .genre {
@@ -3118,9 +3128,9 @@ color: #ff1493;
 }
 
 .genrefront {
-  left: 5%;
+  left: 12%;
   position: absolute;
-  top: 52%;
+  top: 53%;
   width: 23px;
   height: 23px;
 }
@@ -3128,15 +3138,15 @@ color: #ff1493;
 .fronttitle{
   font-size: 20px;
   color: white;
-  left: 9%;
+  left: 16%;
   position: absolute;
-  top: 49%;
+  top: 49.5%;
 }
 
 .genreback {
-  left: 26%;
+  left: 34%;
   position: absolute;
-  top: 52%;
+  top: 53%;
   width: 23px;
   height: 23px;
 }
@@ -3144,15 +3154,15 @@ color: #ff1493;
 .backtitle{
   font-size: 20px;
   color: white;
-  left: 30%;
+  left: 38%;
   position: absolute;
-  top: 49%;
+  top: 49.5%;
 }
 
 .genrefree {
-  left: 45%;
+  left: 53%;
   position: absolute;
-  top: 52%;
+  top: 53%;
   width: 23px;
   height: 23px;
 }
@@ -3160,24 +3170,24 @@ color: #ff1493;
 .freetitle{
   font-size: 20px;
   color: white;
-  left: 49%;
+  left: 57%;
   position: absolute;
-  top: 49%;
+  top: 49.5%;
 }
 
 
 .roadnewsubmit {
-  width: 80%;
-  height: 100px;
-  font-size: 35px;
+  width: 50%;
+  height: 60px;
+  font-size: 25px;
   text-align: center;
-  line-height: 100px;
-  left: 50%;
+  line-height: 60px;
+  left: 52%;
   position: absolute;
-  top: 72%;
+  top: 55%;
   transform: translate(-50%, 0%);
   background-color: rgb(9, 221, 206);
-  border-radius: 14px;
+  border-radius: 10px;
   color: white;
   font-weight: bold;
   border: none;
@@ -3187,158 +3197,169 @@ color: #ff1493;
 
 
 
+
+
 //ロードマップ詳細
-// .makesubsub {
-//   width: 100%;
-//   height: 140px;
-//   margin-top: 80px;
-// }
+.makesubsub {
+  width: 30%;
+  height: 140px;
+  margin-top: 10px;
+  position: fixed;
+}
 
 .makesubsubname {
-  text-align: center;
-  line-height: 80px;
+  text-align: left;
+  line-height: 130px;
   border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 
 
+.spaceforpc {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 150px;
+}
+
+
 .roadmapshow {
-  width: 90%;
+  width: 52%;
   background-color: rgb(234, 234, 234);
   background-color: cover;
-  margin: 0px auto 20px;
+  margin: 40px 0px 0px 630px;
 }
 
 .showedit {
   text-decoration: none;
   color: white;
-  font-size: 25px;
-  height: 53px;
-  width: 100px;
+  font-size: 20px;
+  height: 40px;
+  width: 70px;
   display: inline-block;
   text-align: center;
-  line-height: 53px;
+  line-height: 40px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  margin: -40px 0 20px 250px;
+  margin: -40px 0 10px 260px;
   border-radius: 10px;
 }
 
 .showdestroy {
   text-decoration: none;
   color: white;
-  font-size: 25px;
-  height: 53px;
-  width: 100px;
+  font-size: 20px;
+  height: 40px;
+  width: 70px;
   display: inline-block;
   text-align: center;
-  line-height: 53px;
+  line-height: 40px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  margin: -40px 0 25px 120px;
+  margin: -40px 0 10px 120px;
   border-radius: 10px;
 }
 
 
 
+
 .mapshowsubmit {
-  width: 100%;
-  height: 600px;
-  margin: 0px auto 20px;
+  width: 52%;
+  height: 400px;
+  margin: 40px 0px 130px 630px;
   position: relative;
 }
 
 .mapshowbottom {
-  width: 90%;
+  width: 100%;
   background-color: rgb(234, 234, 234);
   height: 250px;
   margin: 0px auto 20px;
 }
 
 .mstitle {
-  left: 7%;
+  left: 2%;
   position: absolute;
-  top: 3.2%;
+  top: 4%;
   font-size: 23px;
 }
 
 .inputmstitle {
   left: 19%;
   position: absolute;
-  top: 3.2%;
-  width: 680px;
+  top: 4%;
+  width: 550px;
   height: 30px;
   border-radius: 8px;
   font-size: 20px;
 }
 
 .msmethod {
-  left: 7%;
+  left: 2%;
   position: absolute;
-  top: 12%;
+  top: 16%;
   font-size: 23px;
 }
 
 .msmethodinput {
-  left: 32%;
+  left: 34%;
   position: absolute;
-  top: 11.8%;
-  width: 450px;
+  top: 16%;
+  width: 440px;
   height: 30px;
   border-radius: 8px;
   font-size: 20px;
 }
 
 .msrequired {
-  left: 7%;
+  left: 2%;
   position: absolute;
-  top: 20%;
+  top: 28%;
   font-size: 23px;
 }
 
 .msrequiredinput {
-  left: 32%;
+  left: 34%;
   position: absolute;
-  top: 19.5%;
-  width: 50px;
+  top: 28%;
+  width: 60px;
   height: 30px;
   border-radius: 8px;
   font-size: 20px;
 }
 
 .mscomment {
-  left: 7%;
+  left: 2%;
   position: absolute;
-  top: 28%;
+  top: 43%;
   font-size: 23px;
 }
 
 .mscommentinput {
-  left: 20%;
+  left: 19%;
   position: absolute;
-  top: 28%;
-  width: 600px;
+  top: 43%;
+  width: 550px;
   height: 60px;
   border-radius: 8px;
-  font-size: 11px;
+  font-size: 18px;
 }
 
 .mssend {
   text-decoration: none;
   border: none;
   color: white;
-  font-size: 35px;
-  height: 100px;
-  width: 400px;
+  font-size: 25px;
+  height: 80px;
+  width: 300px;
   display: inline-block;
   text-align: center;
   line-height: 53px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 29%;
+  left: 15%;
   position: absolute;
-  top: 82%;
+  top: 80%;
   border-radius: 10px;
 }
 
@@ -3347,33 +3368,36 @@ color: #ff1493;
 }
 
 .plus {
-  font-size: 130px;
+  font-size: 100px;
   border: none;
   background-color: white;
   color: rgb(9, 221, 206);
-  right: 10%;
+  right: 5%;
   position: absolute;
-  top: 45%;
+  top: 65%;
 }
+
+
+
 
 
 //ロードマップ編集　editshow
 .updatenewshow {
-  width: 100%;
+  width: 60%;
   height: 600px;
   position: relative;
-  margin-bottom: 400px;
+  margin: 50px 0px -250px 530px;
 }
 
 .updateshowbottom {
-  width: 90%;
+  width: 100%;
   background-color: rgb(234, 234, 234);
   height: 250px;
-  margin: 30px auto 0px;
+  margin: 0px auto 0px;
 }
 
 .ustitle {
-  left: 7%;
+  left: 3%;
   position: absolute;
   top: 0%;
   font-size: 23px;
@@ -3390,7 +3414,7 @@ color: #ff1493;
 }
 
 .usmethod {
-  left: 7%;
+  left: 3%;
   position: absolute;
   top: 8%;
   font-size: 23px;
@@ -3407,7 +3431,7 @@ color: #ff1493;
 }
 
 .usrequired {
-  left: 7%;
+  left: 3%;
   position: absolute;
   top: 15.5%;
   font-size: 23px;
@@ -3424,7 +3448,7 @@ color: #ff1493;
 }
 
 .uscomment {
-  left: 7%;
+  left: 3%;
   position: absolute;
   top: 24%;
   font-size: 23px;
@@ -3437,7 +3461,7 @@ color: #ff1493;
   width: 680px;
   height: 60px;
   border-radius: 8px;
-  font-size: 11px;
+  font-size: 18px;
 }
 
 
@@ -3445,123 +3469,125 @@ color: #ff1493;
   text-decoration: none;
   border: none;
   color: white;
-  font-size: 30px;
-  height: 90px;
-  width: 370px;
+  font-size: 25px;
+  height: 75px;
+  width: 280px;
   display: inline-block;
   text-align: center;
-  line-height: 90px;
+  line-height: 75px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 30%;
+  left: -50%;
   position: absolute;
-  top: 70%;
+  top: 30%;
   border-radius: 10px;
 }
 
 
 
+
+
 //ろーそマップ編集　edit
 .editroadmaptop {
-  width: 100%;
+  width: 70%;
   height: 600px;
-  margin: 100px auto 500px;
+  margin: -20px 0px 0px 480px;
   position: relative;
 }
 
 .editrtitle {
-  font-size: 25px;
-  left: 9%;
+  font-size: 23px;
+  left: 17%;
   position: absolute;
   top: 4%;
   font-weight: bold;
 }
 
 .editsize {
-  width: 670px;
-  height: 43px;
-  left: 23%;
+  width: 550px;
+  height: 38px;
+  left: 31%;
   position: absolute;
   top: 7%;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .editmap {
-  width: 100%;
+  width: 80%;
   height: 280px;
   background-color: rgba(17, 17, 17, 0.7);
-  margin-top: -23px;
+  margin: -20px auto 0;
 }
 
 .editstadytime {
   color: white;
   font-size: 22px;
-  left: 2.2%;
+  left: 12%;
   position: absolute;
-  top: 16%;
+  top: 17%;
 }
 
 .editweekstady {
-  left: 21%;
+  left: 30%;
   position: absolute;
-  top: 19%;
+  top: 20.5%;
   border-radius: 8px;
   height: 27px;
-  width: 27px;
+  width: 40px;
   font-size: 22px;
 }
 
 .editholiday {
   color: white;
   font-size: 22px;
-  left: 33%;
+  left: 45%;
   position: absolute;
-  top: 16%;
+  top: 17%;
 }
 
 .editholidaystady {
   border-radius: 8px;
   height: 27px;
-  width: 27px;
-  left: 38%;
+  width: 40px;
+  left: 50%;
   position: absolute;
-  top: 19%;
+  top: 20.5%;
   font-size: 22px;
 }
 
 .editperiod {
   color: white;
   font-size: 22px;
-  left: 2.2%;
+  left: 12%;
   position: absolute;
-  top: 21.5%;
+  top: 22.5%;
 }
 
 .editneedmonth {
   border-radius: 8px;
   height: 27px;
-  width: 27px;
-  left: 32.3%;
+  width: 40px;
+  left: 40%;
   position: absolute;
-  top: 24.7%;
+  top: 26%;
   font-size: 22px;
 }
 
 .edittotaltime {
   color: white;
   font-size: 22px;
-  left: 2.2%;
+  left: 12%;
   position: absolute;
   top: 28%;
 }
 
 .edittotaltimeinput {
   height: 27px;
-  width: 48px;
-  left: 23%;
+  width: 54px;
+  left: 30%;
   position: absolute;
-  top: 31.5%;
+  top: 31.7%;
   border-radius: 8px;
   font-size: 22px;
 }
@@ -3569,7 +3595,7 @@ color: #ff1493;
 .editcommentall {
   color: white;
   font-size: 22px;
-  left: 2.2%;
+  left: 12%;
   position: absolute;
   top: 35%;
 }
@@ -3577,23 +3603,23 @@ color: #ff1493;
 .editcommentallinput {
   height: 50px;
   width: 600px;
-  left: 15.5%;
+  left: 25%;
   position: absolute;
   top: 39%;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .editgenre {
   color: white;
   font-size: 22px;
-  left: 2.2%;
+  left: 12%;
   position: absolute;
   top: 46.5%;
 }
 
 .genreeditfront {
-  left: 5%;
+  left: 12%;
   position: absolute;
   top: 57%;
   width: 23px;
@@ -3603,13 +3629,13 @@ color: #ff1493;
 .frontedittitle{
   font-size: 20px;
   color: white;
-  left: 9%;
+  left: 16%;
   position: absolute;
   top: 53.7%;
 }
 
 .genreeditback {
-  left: 26%;
+  left: 32%;
   position: absolute;
   top: 57%;
   width: 23px;
@@ -3619,13 +3645,13 @@ color: #ff1493;
 .backedittitle{
   font-size: 20px;
   color: white;
-  left: 30%;
+  left: 36%;
   position: absolute;
   top: 53.7%;
 }
 
 .genreeditfree {
-  left: 45%;
+  left: 51%;
   position: absolute;
   top: 57%;
   width: 23px;
@@ -3635,21 +3661,20 @@ color: #ff1493;
 .freeedittitle{
   font-size: 20px;
   color: white;
-  left: 49%;
+  left: 55%;
   position: absolute;
   top: 53.7%;
 }
 
-.finishedit {
-  width: 60%;
-  height: 100px;
-  font-size: 35px;
+.pceditsubmit {
+  width: 35%;
+  height: 60px;
+  font-size: 20px;
   text-align: center;
-  line-height: 100px;
-  left: 50%;
+  line-height: 60px;
+  left: 34%;
   position: absolute;
-  top: 100%;
-  transform: translate(-50%, 0%);
+  top: 55%;
   background-color: rgb(9, 221, 206);
   border-radius: 14px;
   color: white;
@@ -3657,6 +3682,25 @@ color: #ff1493;
   border: none;
   margin: 100px auto;
 }
+
+.finishedit {
+  width: 15%;
+  height: 60px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 60px;
+  left: 74%;
+  position: absolute;
+  top: 55%;
+  background-color: rgb(9, 221, 206);
+  border-radius: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin: 100px auto;
+}
+
+
 
 
 
@@ -4362,30 +4406,28 @@ color: #ff1493;
 
 //簡単ログイン
 .loginpusheasy {
-  width: 430px;
-  height: 115px;
-  font-size: 40px;
+  width: 350px;
+  height: 90px;
+  font-size: 30px;
   text-align: center;
-  line-height: 115px;
-  left: 50%;
+  line-height: 90px;
+  left: 65%;
   position: absolute;
-  top: 110%;
-  transform: translate(-50%, 0%);
+  top: 55%;
+  transform: translate(0%, 0%);
   background-color: rgb(9, 221, 206);
   border-radius: 14px;
   color: white;
   font-weight: bold;
   border: none;
-  text-decoration: none;
 }
 
 .detaileasy {
   width: 100%;
-  left: 50%;
+  left: 77%;
   position: absolute;
-  top: 130%;
+  top: 75%;
   text-align: center;
-  transform: translate(-50%, 0%);
-  font-size: 22px;
+  font-size: 15px;
 }
 }
