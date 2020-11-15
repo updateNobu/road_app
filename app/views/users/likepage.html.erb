@@ -39,8 +39,8 @@
   </div>
   
   <p class="time"><%= "#{@roadmap.updated_at}"%></p>
-  <img src="<%= "/user_images/#{User.find_by(id: @roadmap.user_id).image_name}"%>" class="icon">
+  <img src="<%= "/user_images/#{User.find_by(id: @roadmap.user_id).image_name}"%>" class="icon iconliking">
  </div>
  <% end %>
  <% end %>
- 
+ <div class="likesubspace"></div>

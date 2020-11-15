@@ -4,17 +4,18 @@
 <div class="makesubsub">
 <h1 class="makesubsubname">お気に入りから選ぶ</h1>
 </div>
+<div class="likespace"></div>
 <% @likes.each do |like| %>
  <% @roadmap = Roadmap.find_by(id: like.roadmap_id, display: true)%>
  <%= link_to("/roadmap/cflshow/#{@roadmap.id}") do %>
  <div class="likeindex">
   <p class="roadtitle"><%= "#{@roadmap.title}"%></p>
   <p class="likeuser"><%= User.find_by(id: @roadmap.user_id).name %></p>
-  <div class="like">
+  <div class="like likelike">
         <span class="fa fa-heart like-btn fa-pink fa-lg"></span>
   <%= Like.where(roadmap_id: @roadmap.id).count %>
   </div>
-  <p class="time"><%= "#{@roadmap.updated_at}"%></p>
+  <p class="time liketime"><%= "#{@roadmap.updated_at}"%></p>
   <img src="<%= "/user_images/#{User.find_by(id: @roadmap.user_id).image_name}"%>" class="icon">
 <% end %>
  </div>

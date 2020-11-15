@@ -2663,14 +2663,14 @@ color: #ff1493;
 
 
 .road {
-  width: 55%;
+  width: 50%;
   height: 100px;
-  margin: 90px 0 60px 600px;
+  margin: 90px 0 60px 720px;
 }
 
 .road h1 {
   margin-top: -10px;
-  font-size: 50px;
+  font-size: 40px;
   color: black;
   border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
   text-align: center;
@@ -2680,10 +2680,10 @@ color: #ff1493;
 
 
 .roadmap {
-  width: 50%;
+  width: 45%;
   background-color: rgb(234, 234, 234);
   background-color: cover;
-  margin: 0px 0 20px 650px;
+  margin: 0px 0 20px 760px;
 }
 
 .minititle {
@@ -2692,19 +2692,19 @@ color: #ff1493;
 }
 
 .method {
-  font-size: 23px;
+  font-size: 20px;
   padding: 0 0 0 20px;
   margin-top: -17px;
 }
 
 .require {
-  font-size: 23px;
+  font-size: 20px;
   padding: 0 0 0 20px;
   margin-top: -17px;
 }
 
 .minicomment {
-  font-size: 23px;
+  font-size: 20px;
   padding: 0 0 15px 20px;
   margin-top: -17px;
 }
@@ -2731,7 +2731,7 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 45%;
+  left: 50%;
   position: absolute;
   top: 70%;
 }
@@ -2747,7 +2747,7 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 65%;
+  left: 69%;
   position: absolute;
   top: 70%;
 }
@@ -2763,7 +2763,7 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 80%;
+  left: 84%;
   position: absolute;
   top: 70%;
 }
@@ -3815,21 +3815,21 @@ color: #ff1493;
 
 .usercomment {
   width: 45%;
-  margin: -530px 0 20px 750px;
+  margin: -530px 0 20px 800px;
   font-size: 20px;
 }
 
 .sublink {
   width: 45%;
-  font-size: 30px;
-  margin: 0px 0 0px 750px;
+  font-size: 25px;
+  margin: 0px 0 0px 790px;
   border-top: solid rgba(17, 17, 17, 0.7) 2px;
 }
 
 .userlink {
   width: 40%;
   font-size: 15px;
-  left: 55%;
+  left: 54%;
   position: absolute;
   color: rgb(9, 221, 206);
   font-weight: bold;
@@ -3839,7 +3839,7 @@ color: #ff1493;
   width: 45%;
   font-size: 25px;
   border-top: solid rgba(17, 17, 17, 0.7) 2px;
-  margin: 60px 0 0 750px;
+  margin: 60px 0 0 790px;
 }
 
 .edituser {
@@ -3869,10 +3869,9 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 50%;
+  left: 75%;
   position: absolute;
-  top: 78%;
-  transform: translate(-50%, 0%);
+  top: 40%;
 }
 
 
@@ -3952,21 +3951,21 @@ color: #ff1493;
 
 .editusercomment {
   width: 45%;
-  margin: -600px 0 0 750px;
+  margin: -600px 0 0 790px;
   font-size: 25px;
 }
 
 .editcommentinput {
   width: 45%;
   height: 120px;
-  margin: 10px 0px 0px 725px;
+  margin: 10px 0px 0px 770px;
   border-radius: 10px;
   font-size: 15px;
 }
 
 .editlink {
   width: 45%;
-  margin: 10px 0 0px 750px;
+  margin: 10px 0 0px 790px;
   font-size: 25px;
   border-top: solid rgba(17, 17, 17, 0.7) 2px;
 }
@@ -3974,14 +3973,14 @@ color: #ff1493;
 .edituserlink {
   width: 45%;
   height: 35px;
-  margin: 10px 0px 0px 725px;
+  margin: 10px 0px 0px 770px;
   border-radius: 5px;
   font-size: 20px;
 }
 
 .editmail {
   width: 45%;
-  margin: 10px 0 0px 750px;
+  margin: 10px 0 0px 790px;
   font-size: 25px;
   border-top: solid rgba(17, 17, 17, 0.7) 2px;
 }
@@ -3989,7 +3988,7 @@ color: #ff1493;
 .editusermail {
   width: 45%;
   height: 35px;
-  margin: 10px 0px 0px 725px;
+  margin: 10px 0px 0px 770px;
   border-radius: 5px;
   font-size: 25px;
 }
@@ -4016,17 +4015,17 @@ color: #ff1493;
 
 //myroadmap show
 .roadmiddle {
-  width: 100%;
-  text-align: center;
-  line-height: 120px;
-  font-size: 65px;
-  left: 50%;
+  width: 40%;
+  text-align: left;
+  line-height: 105px;
+  border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
+  font-size: 50px;
+  left: 0%;
   position: absolute;
-  top: 85%;
-  transform: translate(-50%, -50%);
+  top: 65%;
+  transform: translate(0%, -50%);
   font-weight: bold;
 }
-
 
 
 .goprofr {
@@ -4043,7 +4042,7 @@ color: #ff1493;
   color: rgb(9, 221, 206);
   font-size: 30px;
   font-weight: bold;
-  left: 32%;
+  left: 33%;
   position: absolute;
   top: 8%;
 }
@@ -4052,7 +4051,7 @@ color: #ff1493;
   width: 6px;
   height: 35px;
   background-color: rgb(9, 221, 206);
-  left: 41%;
+  left: 39%;
   position: absolute;
   top: 37%;
 }
@@ -4063,9 +4062,14 @@ color: #ff1493;
 .roaddetail {
  background-color: rgba(17, 17, 17, 0.7);
  background-color: cover;
- width: 100%;
- margin-top: 87.8px;
- border-top: solid rgba(17, 17, 17, 0.7) 0.3px;
+ width: 40%;
+ margin: 60px 0 -300px 0;
+}
+
+.pcgoedit {
+  left: 70%;
+  position: absolute;
+  top: 10%;
 }
 
 
@@ -4074,63 +4078,95 @@ color: #ff1493;
 .selectchoise {
   width: 100%;
   height: 200px;
+  margin: -450px 0 500px 0;
 }
 
 .fromroad {
-  width: 210px;
+  width: 15%;
   height: 140px;
   background-color: rgb(9, 221, 206);
   color: white;
   font-size: 30px;
   text-decoration: none;
   display: inline-block;
-  white-space: pre;
-  padding: 40px 30px;
-  margin: 0 20px 0 30px;
+  padding: 15px 30px;
+  margin: 0px 20px 0 500px;
 }
 
 .fromlike {
-  width: 210px;
+  width: 15%;
   height: 140px;
   background-color: rgb(9, 221, 206);
   color: white;
   font-size: 30px;
   text-decoration: none;
   display: inline-block;
-  white-space: pre;
-  padding: 40px 30px;
-  margin: 0 20px 0 20px;
+  padding: 15px 30px;
+  margin: 0px 20px 0 20px;
 }
 
 .frommy {
-  width: 210px;
+  width: 15%;
   height: 140px;
   background-color: rgb(9, 221, 206);
   color: white;
   font-size: 30px;
   text-decoration: none;
   display: inline-block;
-  white-space: pre;
-  padding: 40px 30px;
-  margin: 0 0px 0 20px;
+  padding: 15px 30px;
+  margin: 500px 0px 0 20px;
 }
 
+.subfinishedit{
+  width: 20%;
+  font-size: 20px;
+  left: 75%;
+  position: absolute;
+  top: 60%;
+  margin-bottom: 50px;
+}
 
-
+.subnewsubmit {
+  width: 40%;
+  left: 37%;
+  position: absolute;
+  top: 60%;
+}
 
 //お気に入りから選ぶ
+
+.likespace {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 140px;
+}
+
 .likeuser {
-  font-size: 30px;
+  font-size: 23px;
   left: 5%;
   position: absolute;
-  top: 32%;
+  top: 35%;
+}
+
+.liketime {
+  font-size: 18px;
+  right: 25%;
+  position: absolute;
+  top: 49%;
+}
+
+.likelike {
+  left: 24.5%;
+  position: absolute;
+  top: 63%;
+  font-size: 18px;
 }
 
 .likeindex {
-  width: 80%;
-  height: 130px;
+  width: 50%;
+  height: 100px;
   background-color: rgb(234, 234, 234);
-  margin: 0 auto 40px;
+  margin: 40px 0px 0px 690px;
   position: relative;
 }
 
@@ -4140,10 +4176,9 @@ color: #ff1493;
 }
 
 .likebottom {
-  width: 100%;
+  width: 50%;
   height: 250px;
-  text-align: center;
-  margin-top: 80px;
+  margin: 80px 0 0 700px;
 }
 
 .likeback {
@@ -4167,7 +4202,7 @@ color: #ff1493;
   width: 100%;
   height: 70px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .backlikeindex {
   text-decoration: none;
@@ -4180,7 +4215,7 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 15%;
+  left: 53%;
   position: absolute;
   top: 0%;
 }
@@ -4196,7 +4231,7 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  right: 14%;
+  right: 7%;
   position: absolute;
   top: 0%;
 }
@@ -4208,7 +4243,7 @@ color: #ff1493;
   color: rgb(9, 221, 206);
   font-size: 30px;
   font-weight: bold;
-  left: 56%;
+  left: 59%;
   position: absolute;
   top: 8%;
 }
@@ -4223,26 +4258,36 @@ color: #ff1493;
 }
 
 .userlikemiddle {
-  width: 100%;
-  text-align: center;
-  line-height: 120px;
+  width: 40%;
+  text-align: left;
+  line-height: 105px;
   border-bottom: solid rgba(17, 17, 17, 0.7) 16px;
-  font-size: 65px;
-  left: 50%;
+  font-size: 50px;
+  left: 2%;
   position: absolute;
-  top: 85%;
-  transform: translate(-50%, -50%);
+  top: 58%;
+  transform: translate(0%, -50%);
   font-weight: bold;
+  position: fixed;
 }
 
 .likemiddle {
   width: 100%;
   height: 300px;
   position: relative;
-  margin: 50px auto 120px;
+  margin: 5px auto;
 }
 
 
+.iconliking {
+  height: 100px;
+  width: 100px;
+}
+
+.likesubspace {
+  width: 100%;
+  height: 80px;
+}
 
 
 //user 投稿ページ
@@ -4250,7 +4295,7 @@ color: #ff1493;
   color: rgb(9, 221, 206);
   font-size: 30px;
   font-weight: bold;
-  left: 78%;
+  left: 85%;
   position: absolute;
   top: 8%;
 }
@@ -4259,7 +4304,7 @@ color: #ff1493;
   width: 6px;
   height: 35px;
   background-color: rgb(9, 221, 206);
-  left: 80.7%;
+  left: 87%;
   position: absolute;
   top: 37%;
 }
@@ -4271,17 +4316,17 @@ color: #ff1493;
 
 // user投稿編集ページ
  .roadusername {
-  font-size: 25px;
-  left: 6%;
+  font-size: 20px;
+  left: 5%;
   position: absolute;
-  top: 38%;
+  top: 53%;
  }
  
  
  
  
  .editstart {
-   text-decoration: none;
+  text-decoration: none;
   color: white;
   font-size: 25px;
   height: 60px;
@@ -4291,9 +4336,10 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 15%;
+  left: 52%;
   position: absolute;
-  top: 0%;
+  top: 40%;
+  border-radius: 10px;
  }
  
  .roaddelite {
@@ -4307,9 +4353,10 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  left: 38%;
+  left: 65%;
   position: absolute;
-  top: 0%;
+  top: 40%;
+  border-radius: 10px;
  }
  
  .backtable {
@@ -4323,9 +4370,10 @@ color: #ff1493;
   line-height: 60px;
   font-weight: bold;
   background-color: rgb(9, 221, 206);
-  right: 18%;
+  left: 82%;
   position: absolute;
-  top: 0%;
+  top: 40%;
+  border-radius: 10px;
  }
  
  

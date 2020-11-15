@@ -38,6 +38,6 @@
   <% end %>
 <div class="showbottom">
 <%if @current_user && @user.id == @current_user.id %>
-  <%= link_to("編集", "/roadmap/myroad/#{@roadmap.id}", {class: "goedit"})%>
+  <%= link_to("編集", "/roadmap/myroad/#{@roadmap.id}", {class: "goedit pcgoedit"})%>
 <%end%>
 </div>
