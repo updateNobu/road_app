@@ -230,7 +230,7 @@ header {
 
 .index{
   width: 80%;
-  height: 130px;
+  height: 140px;
   background-color: rgb(234, 234, 234);
   margin: 0 auto 40px;
   position: relative;
@@ -239,24 +239,26 @@ header {
   text-decoration: none;
   color: black;
 }
+
 .roadtitle {
-  padding: 20px 0px 0 60px;
-  font-size: 30px;
+  padding: 10px 0px 0 20px;
+  font-size: 25px;
+  width: 76%;
 }
 
 .user{
   font-size: 25px;
   left: 5%;
   position: absolute;
-  top: 60%;
+  top: 69%;
 }
 
 .icon {
   right: 0%;
   position: absolute;
   top: 0%;
-  height: 130px;
-  width: 150px;
+  height: 140px;
+  width: 155px;
   object-fit: cover;
 }
 
@@ -264,7 +266,7 @@ header {
   font-size: 20px;
   right: 30%;
   position: absolute;
-  top: 45%;
+  top: 58%;
 }
 
 .fa-pink {
@@ -274,7 +276,7 @@ color: #ff1493;
 .like {
   left: 28%;
   position: absolute;
-  top: 62%;
+  top: 70%;
   font-size: 20px;
 }
 
@@ -330,37 +332,38 @@ color: #ff1493;
 }
 
 .showtitle {
-  font-size: 40px;
+  font-size: 35px;
   color: white;
   font-weight: bold;
-  left: 4%;
+  left: 2%;
   position: absolute;
   top: -10%;
+  width: 74%;
 }
 
 .showuser {
-  font-size: 40px;
+  font-size: 35px;
   color: white;
   left: 4%;
   position: absolute;
-  top: 40%;
+  top: 51%;
   font-weight: bold;
 }
 
 .showlike {
-  left: 25.5%;
+  left: 33%;
   position: absolute;
-  top: 68%;
+  top: 75%;
   font-size: 25px;
   text-decoration: none;
   color: white;
 }
 
 .timeshow {
-  font-size: 30px;
-  left: 35%;
+  font-size: 28px;
+  left: 44%;
   position: absolute;
-  top: 50%;
+  top: 58%;
   color: white;
 }
 
@@ -2464,7 +2467,7 @@ header {
 
 .index{
   width: 40%;
-  height: 90px;
+  height: 110px;
   background-color: rgb(234, 234, 234);
   margin: 0 0px 20px 690px;
   position: relative;
@@ -2475,23 +2478,24 @@ header {
   color: black;
 }
 .roadtitle {
-  padding: 10px 0px 0 50px;
-  font-size: 22px;
+  padding: 8px 0px 0 10px;
+  font-size: 20px;
+  width: 80%;
 }
 
 .user{
-  font-size: 20px;
+  font-size: 18px;
   left: 5%;
   position: absolute;
-  top: 53%;
+  top: 70%;
 }
 
 .icon {
   right: 0%;
   position: absolute;
   top: 0%;
-  height: 90px;
-  width: 100px;
+  height: 110px;
+  width: 120px;
   object-fit: cover;
 }
 
@@ -2499,7 +2503,7 @@ header {
   font-size: 15px;
   right: 25%;
   position: absolute;
-  top: 45%;
+  top: 60%;
 }
 
 .fa-pink {
@@ -2509,7 +2513,7 @@ color: #ff1493;
 .like {
   left: 30%;
   position: absolute;
-  top: 55%;
+  top: 72%;
   font-size: 15px;
 }
 
@@ -2568,12 +2572,13 @@ color: #ff1493;
 }
 
 .showtitle {
-  font-size: 40px;
+  font-size: 35px;
   color: white;
   font-weight: bold;
-  left: 10%;
+  left: 2%;
   position: absolute;
-  top: 2%;
+  top: -3%;
+  width: 98%;
 }
 
 .showuser {
@@ -2653,9 +2658,9 @@ color: #ff1493;
 
 .comment {
   margin-top: -30px;
-  padding: 0px 0px 20px 20px;
+  padding: 0px 0px 0px 20px;
   color: white;
-  font-size: 27px;
+  font-size: 22px;
 }
 
 

@@ -86,7 +86,6 @@ class RoadmapsController < ApplicationController
     if params[:finish]
       @roadmap_show.save
       redirect_to ("/roadmap/#{@roadmap.category_id}/#{@roadmap_show.roadmap_id}")
-      flash[:success]= "編集成功！"
     else
       if !@roadmap_show.save
         flash[:denger]= "項目をすべて埋めてください"
@@ -139,7 +138,6 @@ class RoadmapsController < ApplicationController
       redirect_to("/roadmap/editsend/#{@roadmap.id}")
      else
       redirect_to("/roadmap/#{@roadmap.category_id}/#{@roadmap.id}")
-      flash[:success]= "編集成功！"
      end
     else
       redirect_to("/roadmap/edit/#{@roadmap.id}")
