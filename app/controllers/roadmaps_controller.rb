@@ -254,7 +254,7 @@ class RoadmapsController < ApplicationController
   def show
     @roadmap = Roadmap.find_by(id: params[:id])
     @user = User.find_by(id: @roadmap.user_id)
-    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id]).order_by(created_at: "ASC")
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id]).order(created_at: "ASC")
   end
   
   def myshow
