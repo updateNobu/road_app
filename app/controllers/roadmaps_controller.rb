@@ -69,13 +69,13 @@ class RoadmapsController < ApplicationController
   end
   
   def editsend
-    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id]).order(created_at: "ASC")
     @id = params[:id]
     # @roadmap_show = Roadmapshow.find_by(roadmap_id: params[:id])
   end
   
   def mrei
-    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id]).order(created_at: "ASC")
     @id = params[:id]
     # @roadmap_show = Roadmapshow.find_by(roadmap_id: params[:id])
   end
@@ -260,34 +260,34 @@ class RoadmapsController < ApplicationController
   def myshow
     @roadmap = Roadmap.find_by(id: params[:id])
     @user = User.find_by(id: @roadmap.user_id)
-    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id]).order(created_at: "ASC")
   end
   
   def cfmrshow
     @roadmap = Roadmap.find_by(id: params[:id])
     @user = User.find_by(id: @roadmap.user_id)
-    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id]).order(created_at: "ASC")
   end
   
   def likeshow
     @roadmap = Roadmap.find_by(id: params[:id])
     @user = User.find_by(id: @roadmap.user_id)
-    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id]).order(created_at: "ASC")
   end
   
   def cflshow
     @roadmap = Roadmap.find_by(id: params[:id])
     @user = User.find_by(id: @roadmap.user_id)
-    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id]).order(created_at: "ASC")
   end
   
   def new_show
-    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id]).order(created_at: "ASC")
     @id = params[:id]
   end
   
   def cmroads
-    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id])
+    @roadmap_shows = Roadmapshow.where(roadmap_id: params[:id]).order(created_at: "ASC")
     @id = params[:id]
   end
   
@@ -476,7 +476,7 @@ class RoadmapsController < ApplicationController
   def mapedit
     @user = User.find_by(id: params[:id])
     @id = @user.mymap
-    @mymaps = Roadmapshow.where(roadmap_id: @user.mymap)
+    @mymaps = Roadmapshow.where(roadmap_id: @user.mymap).order(created_at: "ASC")
   end
   
   def choosefl
